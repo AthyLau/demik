@@ -4,12 +4,16 @@ import com.google.common.collect.Lists;
 import demik.springcloud.entity.domain.doo.GradeInfoDO;
 import demik.springcloud.entity.domain.dto.GradeInfoDTO;
 import demik.springcloud.entity.domain.po.GradeInfoPO;
+import demik.springcloud.entity.domain.vo.AClassInfoVO;
 import demik.springcloud.entity.domain.vo.GradeIdVO;
 import demik.springcloud.entity.domain.vo.GradeInfoVO;
 import demik.springcloud.studentmanagementsystem9001.manager.GradeInfoManager;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -24,6 +28,8 @@ import java.util.List;
 public class GradeInfoService {
     @Autowired
     private GradeInfoManager gradeInfoManager;
+    @Autowired
+    private AClassInfoService aClassInfoService;
     /**
      * 添加一个
      * @param gradeInfoDTO
@@ -40,7 +46,16 @@ public class GradeInfoService {
      * @param id
      * @return
      */
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, timeout = 3600)
     public boolean deleteGrade(Integer id){
+        List<AClassInfoVO> vos = aClassInfoService.findAClassInfoByPId(id);
+        if(vos!=null&&vos.size()>0){
+            vos.forEach(x->{
+                if(!aClassInfoService.deleteAClass(x.getAclassId())){
+                    throw new RuntimeException();
+                }
+            });
+        }
         return gradeInfoManager.deleteGrade(id);
     }
 

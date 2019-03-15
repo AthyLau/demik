@@ -10,10 +10,14 @@ import demik.springcloud.entity.domain.vo.AClassInfoVO;
 import demik.springcloud.studentmanagementsystem9001.service.AClassInfoService;
 import demik.springcloud.studentmanagementsystem9001.service.GradeInfoService;
 import demik.springcloud.studentmanagementsystem9001.service.PerfessionalInfoService;
+import demik.springcloud.studentmanagementsystem9001.service.StudentInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,7 +40,8 @@ public class AClassInfoController {
     private GradeInfoService gradeInfoService;
     @Autowired
     private PerfessionalInfoService perfessionalInfoService;
-
+    @Autowired
+    private StudentInfoService studentInfoService;
     /**
      * 添加一个班级
      * @param aClassInfoVO
@@ -62,10 +67,14 @@ public class AClassInfoController {
     @ApiOperation(value = "删除一个班级", httpMethod = "POST")
     @PostMapping("/deleteAClass")
     public Result deleteAClass(@RequestBody AClassIdVO aClassIdVO){
-        if(aClassInfoService.deleteAClass(aClassIdVO.getAclassId())){
-            return ResultGenerator.genSuccessResult();
+        try{
+            if(aClassInfoService.deleteAClass(aClassIdVO.getAclassId())){
+                return ResultGenerator.genSuccessResult();
+            }
+            return ResultGenerator.genFailResult("删除班级失败");
+        }catch (Exception e){
+            return ResultGenerator.genSuccessResult(ResultCode.TRANSCATION_EXCEPITON);
         }
-        return ResultGenerator.genFailResult("删除班级失败");
     }
 
     /**

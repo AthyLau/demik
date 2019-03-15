@@ -9,9 +9,13 @@ import demik.springcloud.entity.domain.vo.PerfessionalInfoVO;
 import demik.springcloud.studentmanagementsystem9001.manager.AClassInfoManager;
 import demik.springcloud.studentmanagementsystem9001.manager.GradeInfoManager;
 import demik.springcloud.studentmanagementsystem9001.manager.PerfessionalInfoManager;
+import demik.springcloud.studentmanagementsystem9001.manager.StudentInfoManager;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -31,6 +35,8 @@ public class AClassInfoService {
     private PerfessionalInfoManager perfessionalInfoManager;
     @Autowired
     private GradeInfoManager gradeInfoManager;
+    @Autowired
+    private StudentInfoManager studentInfoManager;
     /**
      * 添加一个班级
      * @param aClassInfoVO
@@ -44,7 +50,11 @@ public class AClassInfoService {
      * @param id
      * @return
      */
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, timeout = 3600)
     public boolean deleteAClass(Integer id) {
+        if(!studentInfoManager.deleteStudentByAClassId(id)){
+            throw new RuntimeException();
+        }
         return aClassInfoManager.deleteAClass(id);
     }
 
@@ -95,5 +105,20 @@ public class AClassInfoService {
         dto.setGradeInfoVO(gvo);
         dto.setPerfessionalInfoVO(pvo);
         return dto;
+    }
+
+    /**
+     * 根据专业id查询班级
+     * @return
+     */
+    public List<AClassInfoVO> findAClassInfoByPId(Integer pId){
+        return aClassInfoManager.findAClassInfoByPId(pId);
+    }
+    /**
+     * 根据年级id查询班级
+     * @return
+     */
+    public List<AClassInfoVO> findAClassInfoByGId(Integer gId){
+        return aClassInfoManager.findAClassInfoByGId(gId);
     }
 }

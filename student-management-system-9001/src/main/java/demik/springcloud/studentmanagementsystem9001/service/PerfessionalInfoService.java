@@ -1,9 +1,14 @@
 package demik.springcloud.studentmanagementsystem9001.service;
 
+import demik.springcloud.entity.domain.vo.AClassInfoVO;
 import demik.springcloud.entity.domain.vo.PerfessionalInfoVO;
+import demik.springcloud.studentmanagementsystem9001.manager.AClassInfoManager;
 import demik.springcloud.studentmanagementsystem9001.manager.PerfessionalInfoManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -19,6 +24,8 @@ public class PerfessionalInfoService {
 
     @Autowired
     private PerfessionalInfoManager perfessionalInfoManager;
+    @Autowired
+    private AClassInfoService aClassInfoService;
 
     /**
      * 添加一个专业
@@ -43,7 +50,16 @@ public class PerfessionalInfoService {
      * @param perrfessionalId
      * @return
      */
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, timeout = 3600)
     public boolean deletePerfessionalInfo(Integer perrfessionalId) {
+        List<AClassInfoVO> vos = aClassInfoService.findAClassInfoByPId(perrfessionalId);
+        if(vos!=null&&vos.size()>0){
+            vos.forEach(x->{
+                if(!aClassInfoService.deleteAClass(x.getAclassId())){
+                    throw new RuntimeException();
+                }
+            });
+        }
         return perfessionalInfoManager.deletePerfessionalInfo(perrfessionalId);
     }
 

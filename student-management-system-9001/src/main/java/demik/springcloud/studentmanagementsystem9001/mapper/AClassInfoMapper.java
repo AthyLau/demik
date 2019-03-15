@@ -49,4 +49,18 @@ public interface AClassInfoMapper {
      */
     @Select("SELECT aclass_id,aclass_name,aclass_description,aclass_slogan,grade_id,perfessional_id from aclass_info where aclass_id = #{id}")
     AClassInfoVO findAClassById(Integer id);
+    /**
+     * 根据年级id查询班级
+     * @param gId
+     * @return
+     */
+    @Select("SELECT aclass_id,aclass_name,aclass_description,aclass_slogan,grade_id,perfessional_id from aclass_info where grade_id = #{gId}")
+    List<AClassInfoVO> findAClassInfoByGId(Integer gId);
+    /**
+     * 根据专业id查询班级
+     * @param pId
+     * @return
+     */
+    @Select("SELECT aclass_id,aclass_name,aclass_description,aclass_slogan,grade_id,perfessional_id from aclass_info where perfessional_id = #{pId}")
+    List<AClassInfoVO> findAClassInfoByPId(Integer pId);
 }

@@ -40,6 +40,7 @@ public class StudentInfoController {
     @ApiOperation(value = "添加一个学生", httpMethod = "POST")
     @PostMapping("/addStudent")
     public Result addStudent(@RequestBody StudentInfoVO studentInfoVO){
+        //todo 每添加一个学生都要把这个学生添加到user表里 学号作为账号身份证后六位作为密码
         if(studentInfoService.findStudentCaseById(studentInfoVO.getStudentCaseId())==null){
             return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
         }

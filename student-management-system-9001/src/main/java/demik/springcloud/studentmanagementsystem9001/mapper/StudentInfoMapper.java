@@ -66,4 +66,11 @@ public interface StudentInfoMapper {
     @Select("SELECT student_case_id,student_case_description from student_case")
     List<StudentCasePO> findAllStudentCase();
 
+    /**
+     * 删除班级下的所有学生
+     * @param id
+     * @return
+     */
+    @Delete("DELETE from student_info where aclass_id = #{id}")
+    boolean deleteStudentByAClassId(Integer id);
 }

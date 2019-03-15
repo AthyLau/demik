@@ -59,4 +59,19 @@ public class AClassInfoManager {
     public AClassInfoVO findAClassById(Integer id) {
         return aClassInfoMapper.findAClassById(id);
     }
+    /**
+     * 根据专业id查询班级
+     * @return
+     */
+    public List<AClassInfoVO> findAClassInfoByPId(Integer pId){
+        return aClassInfoMapper.findAClassInfoByPId(pId);
+    }
+    /**
+     * 根据年级id查询班级
+     * @param gId
+     * @return
+     */
+    public List<AClassInfoVO> findAClassInfoByGId(Integer gId) {
+        return aClassInfoMapper.findAClassInfoByGId(gId);
+    }
 }

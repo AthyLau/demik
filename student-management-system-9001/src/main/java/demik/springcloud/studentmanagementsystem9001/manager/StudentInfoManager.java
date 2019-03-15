@@ -76,4 +76,13 @@ public class StudentInfoManager {
     public List<StudentCasePO> findAllStudentCase() {
         return studentInfoMapper.findAllStudentCase();
     }
+
+    /**
+     * 删除班级下的所有学生
+     * @param id
+     * @return
+     */
+    public boolean deleteStudentByAClassId(Integer id) {
+        return studentInfoMapper.deleteStudentByAClassId(id);
+    }
 }

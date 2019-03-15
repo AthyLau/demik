@@ -61,7 +61,8 @@ public enum ResultCode {
     USER_VERIFY_FAIL(4561, "User Verify Fail"),
     // 登出失败
     LOGOUT_FAIL(4562,"Log Out Fail !") ,
-
+    //事务异常
+    TRANSCATION_EXCEPITON(4600,"Transaction exception"),
     //服务器内部错误
     INTERNAL_SERVER_ERROR(5000, "Internal Server Error"),
 

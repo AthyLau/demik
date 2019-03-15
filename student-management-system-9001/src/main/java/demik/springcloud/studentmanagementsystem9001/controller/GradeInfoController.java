@@ -54,10 +54,14 @@ public class GradeInfoController {
     @ApiOperation(value = "删除", httpMethod = "POST")
     @PostMapping("/deleteGrade")
     public Result deleteGrade(@RequestBody GradeIdVO gradeIdVO){
-        if(gradeInfoService.deleteGrade(gradeIdVO.getGradeId())){
-            return ResultGenerator.genSuccessResult();
+        try {
+            if(gradeInfoService.deleteGrade(gradeIdVO.getGradeId())){
+                return ResultGenerator.genSuccessResult();
+            }
+            return ResultGenerator.genFailResult("删除班级失败");
+        }catch (Exception e){
+            return ResultGenerator.genSuccessResult(ResultCode.TRANSCATION_EXCEPITON);
         }
-        return ResultGenerator.genFailResult("删除班级失败");
     }
 
     /**

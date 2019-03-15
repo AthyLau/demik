@@ -49,10 +49,14 @@ public class PerfessionalInfoController {
     @ApiOperation(value = "删除一个专业", httpMethod = "POST")
     @PostMapping("/deletePerfessionalInfo")
     public Result deletePerfessionalInfo(@RequestBody PerfessionalIdVO perfessionalInfoVO){
-        if(perfessionalInfoService.deletePerfessionalInfo(perfessionalInfoVO.getPerfessionalId())){
-            return ResultGenerator.genSuccessResult();
+        try {
+            if(perfessionalInfoService.deletePerfessionalInfo(perfessionalInfoVO.getPerfessionalId())){
+                return ResultGenerator.genSuccessResult();
+            }
+            return ResultGenerator.genFailResult("删除专业失败");
+        }catch (Exception e){
+        return ResultGenerator.genSuccessResult(ResultCode.TRANSCATION_EXCEPITON);
         }
-        return ResultGenerator.genFailResult("删除专业失败");
     }
     /**
      * 更新一个专业
