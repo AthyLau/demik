@@ -1,0 +1,927 @@
+2019-03-14_17 17:00:09.109 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-03-14_17 17:00:10.562 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:00:12.271 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:01:08.442 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 3
+2019-03-14_17 17:01:09.113 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:01:09.945 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 3
+2019-03-14_17 17:01:10.564 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:01:11.653 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 3
+2019-03-14_17 17:01:12.274 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:02:00.352 INFO  [Thread-29] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6ed06f69: startup date [Thu Mar 14 16:59:12 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@8c11eee
+2019-03-14_17 17:02:00.357 INFO  [Thread-29] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application student-management-system with eureka with status DOWN
+2019-03-14_17 17:02:00.358 WARN  [Thread-29] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1552554120358, current=DOWN, previous=UP]
+2019-03-14_17 17:02:00.358 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001: registering service...
+2019-03-14_17 17:02:00.358 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-14_17 17:02:00.360 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Unregistering ...
+2019-03-14_17 17:02:00.370 INFO  [http-nio-7002-exec-2] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=false)
+2019-03-14_17 17:02:00.371 INFO  [http-nio-7002-exec-3] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=false)
+2019-03-14_17 17:02:00.372 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - deregister  status: 200
+2019-03-14_17 17:02:00.372 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - registration status: 204
+2019-03-14_17 17:02:00.379 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-14_17 17:02:00.387 INFO  [Thread-29] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-03-14_17 17:02:00.389 INFO  [Thread-29] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-14_17 17:02:00.391 INFO  [Thread-29] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:02:00.392 INFO  [Thread-29] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:02:00.392 INFO  [Thread-29] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:02:00.393 INFO  [Thread-29] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:02:00.411 WARN  [Thread-29] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-14_17 17:02:00.411 INFO  [Thread-29] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-14_17 17:02:00.416 INFO  [Thread-29] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:02:00.425 INFO  [Thread-29] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-03-14_17 17:02:00.882 INFO  [http-nio-7001-exec-8] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=true)
+2019-03-14_17 17:02:00.883 INFO  [http-nio-7001-exec-8] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=true)
+2019-03-14_17 17:02:00.887 INFO  [http-nio-7003-exec-8] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=true)
+2019-03-14_17 17:02:00.888 INFO  [http-nio-7003-exec-8] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=true)
+2019-03-14_17 17:02:09.117 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:02:10.565 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-03-14_17 17:02:12.279 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-03-14_17 17:02:21.774 INFO  [main] org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@8c11eee: startup date [Thu Mar 14 17:02:21 CST 2019]; root of context hierarchy
+2019-03-14_17 17:02:21.885 INFO  [background-preinit] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-03-14_17 17:02:22.044 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-14_17 17:02:22.104 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ab52102a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:02:22.449 INFO  [main] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Fetching config from server at: http://localhost:8888
+2019-03-14_17 17:02:22.521 WARN  [main] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/student-management-system/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2019-03-14_17 17:02:22.522 INFO  [main] demik.springcloud.studentmanagementsystem9001.StudentManagementSystem9001Application - No active profile set, falling back to default profiles: default
+2019-03-14_17 17:02:22.534 INFO  [main] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60e21209: startup date [Thu Mar 14 17:02:22 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@8c11eee
+2019-03-14_17 17:02:23.685 INFO  [main] org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ba64df38-2521-3a1e-bf4e-602598bda29e
+2019-03-14_17 17:02:23.721 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-14_17 17:02:23.760 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validatorConfig' of type [demik.springcloud.studentmanagementsystem9001.config.ValidatorConfig$$EnhancerBySpringCGLIB$$a5fe4c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:02:23.774 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:02:23.914 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8f380d2d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:02:24.075 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$c164b36e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:02:24.089 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ab52102a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:02:24.474 INFO  [main] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 9001 (http)
+2019-03-14_17 17:02:24.482 INFO  [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-03-14_17 17:02:24.483 INFO  [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-03-14_17 17:02:24.580 INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-03-14_17 17:02:24.580 INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2046 ms
+2019-03-14_17 17:02:24.998 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-14_17 17:02:25.001 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-03-14_17 17:02:25.005 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'metricsFilter' to: [/*]
+2019-03-14_17 17:02:25.005 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-14_17 17:02:25.005 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-14_17 17:02:25.005 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-14_17 17:02:25.006 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-14_17 17:02:25.006 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-03-14_17 17:02:25.006 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-14_17 17:02:25.006 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-03-14_17 17:02:25.043 INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2019-03-14_17 17:02:26.116 INFO  [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-03-14_17 17:02:26.745 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:02:26.758 INFO  [main] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-14_17 17:02:26.835 INFO  [main] org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2019-03-14_17 17:02:26.837 INFO  [main] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-03-14_17 17:02:26.839 INFO  [main] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2019-03-14_17 17:02:26.851 INFO  [main] org.hibernate.spatial.integration.SpatialService - HHH80000001: hibernate-spatial integration enabled : true
+2019-03-14_17 17:02:26.899 INFO  [main] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-03-14_17 17:02:27.016 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-14_17 17:02:27.217 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:02:28.300 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/addGrade],methods=[POST]}" onto public demik.springcloud.entity.commonbox.Result demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.addGrade(demik.springcloud.entity.domain.vo.GradeInfoVO)
+2019-03-14_17 17:02:28.301 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/deleteGrade],methods=[POST]}" onto public demik.springcloud.entity.commonbox.Result demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.deleteGrade(demik.springcloud.entity.domain.vo.GradeIdVO)
+2019-03-14_17 17:02:28.302 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/updateGrade],methods=[POST]}" onto public demik.springcloud.entity.commonbox.Result demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.updateGrade(demik.springcloud.entity.domain.vo.GradeInfoVO)
+2019-03-14_17 17:02:28.302 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/findAll],methods=[GET]}" onto public demik.springcloud.entity.commonbox.Result<java.util.List<demik.springcloud.entity.domain.vo.GradeInfoVO>> demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.findAllGrade()
+2019-03-14_17 17:02:28.303 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/findById],methods=[GET]}" onto public demik.springcloud.entity.commonbox.Result<demik.springcloud.entity.domain.vo.GradeInfoVO> demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.findGradeById(demik.springcloud.entity.domain.vo.GradeIdVO)
+2019-03-14_17 17:02:28.306 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-03-14_17 17:02:28.307 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-03-14_17 17:02:28.308 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-03-14_17 17:02:28.312 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-03-14_17 17:02:28.312 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-14_17 17:02:28.387 WARN  [main] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-14_17 17:02:28.387 INFO  [main] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-14_17 17:02:28.393 INFO  [main] com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2df0a4c3
+2019-03-14_17 17:02:29.399 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.401 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.402 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2019-03-14_17 17:02:29.403 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.404 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2019-03-14_17 17:02:29.405 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2019-03-14_17 17:02:29.407 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-03-14_17 17:02:29.407 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.408 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/hystrix.stream/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-03-14_17 17:02:29.408 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2019-03-14_17 17:02:29.410 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.411 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-03-14_17 17:02:29.411 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.413 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
+2019-03-14_17 17:02:29.413 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
+2019-03-14_17 17:02:29.414 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.415 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.415 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2019-03-14_17 17:02:29.417 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2019-03-14_17 17:02:29.418 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2019-03-14_17 17:02:29.418 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.419 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/features || /features.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.420 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+2019-03-14_17 17:02:29.421 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2019-03-14_17 17:02:29.422 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-03-14_17 17:02:29.423 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2019-03-14_17 17:02:29.424 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.424 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:02:29.830 INFO  [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-14_17 17:02:30.348 WARN  [main] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-14_17 17:02:30.348 INFO  [main] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-14_17 17:02:30.677 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60e21209: startup date [Thu Mar 14 17:02:22 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@8c11eee
+2019-03-14_17 17:02:30.820 INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-14_17 17:02:30.820 INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-14_17 17:02:30.895 INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-14_17 17:02:32.125 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-03-14_17 17:02:32.127 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2019-03-14_17 17:02:32.127 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-03-14_17 17:02:32.134 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+2019-03-14_17 17:02:32.137 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2019-03-14_17 17:02:32.137 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2019-03-14_17 17:02:32.138 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+2019-03-14_17 17:02:32.139 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
+2019-03-14_17 17:02:32.139 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+2019-03-14_17 17:02:32.142 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2019-03-14_17 17:02:32.153 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+2019-03-14_17 17:02:32.163 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
+2019-03-14_17 17:02:32.168 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2019-03-14_17 17:02:32.178 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=60e21209,type=ConfigurationPropertiesRebinder]
+2019-03-14_17 17:02:32.183 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2019-03-14_17 17:02:32.184 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+2019-03-14_17 17:02:32.186 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2019-03-14_17 17:02:32.186 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Registering beans for JMX exposure on startup
+2019-03-14_17 17:02:32.508 INFO  [main] org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 0
+2019-03-14_17 17:02:32.515 INFO  [main] org.springframework.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2019-03-14_17 17:02:32.543 INFO  [main] com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2019-03-14_17 17:02:32.763 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2019-03-14_17 17:02:32.763 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2019-03-14_17 17:02:32.854 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2019-03-14_17 17:02:32.854 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2019-03-14_17 17:02:33.032 INFO  [main] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2019-03-14_17 17:02:33.048 INFO  [main] com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2019-03-14_17 17:02:33.048 INFO  [main] com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2019-03-14_17 17:02:33.048 INFO  [main] com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2019-03-14_17 17:02:33.048 INFO  [main] com.netflix.discovery.DiscoveryClient - Application is null : false
+2019-03-14_17 17:02:33.048 INFO  [main] com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2019-03-14_17 17:02:33.049 INFO  [main] com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2019-03-14_17 17:02:33.049 INFO  [main] com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2019-03-14_17 17:02:33.161 INFO  [main] com.netflix.discovery.DiscoveryClient - The response status is 200
+2019-03-14_17 17:02:33.163 INFO  [main] com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2019-03-14_17 17:02:33.165 INFO  [main] com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-03-14_17 17:02:33.166 INFO  [main] com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1552554153166 with initial instances count: 1
+2019-03-14_17 17:02:33.213 INFO  [main] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Registering application student-management-system with eureka with status UP
+2019-03-14_17 17:02:33.213 INFO  [main] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1552554153213, current=UP, previous=STARTING]
+2019-03-14_17 17:02:33.215 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001: registering service...
+2019-03-14_17 17:02:33.220 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+2019-03-14_17 17:02:33.226 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'archaiusEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=archaiusEndpoint]
+2019-03-14_17 17:02:33.232 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'featuresEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=featuresEndpoint]
+2019-03-14_17 17:02:33.235 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2019-03-14_17 17:02:33.237 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2019-03-14_17 17:02:33.239 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2019-03-14_17 17:02:33.241 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2019-03-14_17 17:02:33.244 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2019-03-14_17 17:02:33.245 INFO  [http-nio-7002-exec-6] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status UP (replication=false)
+2019-03-14_17 17:02:33.247 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - registration status: 204
+2019-03-14_17 17:02:33.247 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+2019-03-14_17 17:02:33.253 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2019-03-14_17 17:02:33.255 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2019-03-14_17 17:02:33.257 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2019-03-14_17 17:02:33.259 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+2019-03-14_17 17:02:33.261 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2019-03-14_17 17:02:33.262 INFO  [main] org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2019-03-14_17 17:02:33.262 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-03-14_17 17:02:33.275 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-03-14_17 17:02:33.321 INFO  [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-03-14_17 17:02:33.452 INFO  [main] org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration$HystrixMetricsPollerConfiguration - Starting poller
+2019-03-14_17 17:02:33.660 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9001"]
+2019-03-14_17 17:02:33.670 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9001"]
+2019-03-14_17 17:02:33.696 INFO  [main] org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-03-14_17 17:02:33.711 INFO  [main] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 9001 (http)
+2019-03-14_17 17:02:33.712 INFO  [main] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration - Updating port to 9001
+2019-03-14_17 17:02:33.717 INFO  [main] demik.springcloud.studentmanagementsystem9001.StudentManagementSystem9001Application - Started StudentManagementSystem9001Application in 12.472 seconds (JVM running for 13.14)
+2019-03-14_17 17:02:33.758 INFO  [http-nio-7003-exec-9] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status UP (replication=true)
+2019-03-14_17 17:02:33.760 INFO  [http-nio-7001-exec-9] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status UP (replication=true)
+2019-03-14_17 17:02:34.102 INFO  [RMI TCP Connection(15)-127.0.0.1] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Fetching config from server at: http://localhost:8888
+2019-03-14_17 17:02:34.105 WARN  [RMI TCP Connection(15)-127.0.0.1] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/student-management-system/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2019-03-14_17 17:03:09.121 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:03:10.569 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:03:11.084 INFO  [http-nio-9001-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-14_17 17:03:11.084 INFO  [http-nio-9001-exec-1] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-14_17 17:03:11.112 INFO  [http-nio-9001-exec-1] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2019-03-14_17 17:03:12.283 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:03:50.602 INFO  [Thread-31] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60e21209: startup date [Thu Mar 14 17:02:22 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@8c11eee
+2019-03-14_17 17:03:50.603 INFO  [Thread-31] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application student-management-system with eureka with status DOWN
+2019-03-14_17 17:03:50.603 WARN  [Thread-31] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1552554230603, current=DOWN, previous=UP]
+2019-03-14_17 17:03:50.603 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001: registering service...
+2019-03-14_17 17:03:50.603 INFO  [Thread-31] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-14_17 17:03:50.605 INFO  [Thread-31] com.netflix.discovery.DiscoveryClient - Unregistering ...
+2019-03-14_17 17:03:50.612 INFO  [http-nio-7002-exec-8] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=false)
+2019-03-14_17 17:03:50.614 INFO  [http-nio-7002-exec-7] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=false)
+2019-03-14_17 17:03:50.617 INFO  [Thread-31] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - deregister  status: 200
+2019-03-14_17 17:03:50.618 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - registration status: 204
+2019-03-14_17 17:03:50.626 INFO  [Thread-31] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-14_17 17:03:50.628 INFO  [Thread-31] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-03-14_17 17:03:50.629 INFO  [Thread-31] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-14_17 17:03:50.631 INFO  [Thread-31] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:03:50.631 INFO  [Thread-31] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:03:50.632 INFO  [Thread-31] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:03:50.632 INFO  [Thread-31] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:03:50.645 WARN  [Thread-31] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-14_17 17:03:50.645 INFO  [Thread-31] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-14_17 17:03:50.649 INFO  [Thread-31] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:03:50.654 INFO  [Thread-31] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-03-14_17 17:03:51.130 INFO  [http-nio-7001-exec-2] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=true)
+2019-03-14_17 17:03:51.131 INFO  [http-nio-7001-exec-2] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=true)
+2019-03-14_17 17:03:51.138 INFO  [http-nio-7003-exec-2] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=true)
+2019-03-14_17 17:03:51.139 INFO  [http-nio-7003-exec-2] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=true)
+2019-03-14_17 17:04:09.125 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:04:10.572 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:04:12.284 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:04:24.625 INFO  [main] org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4b2a01d4: startup date [Thu Mar 14 17:04:24 CST 2019]; root of context hierarchy
+2019-03-14_17 17:04:24.761 INFO  [background-preinit] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-03-14_17 17:04:24.856 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-14_17 17:04:24.918 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$be10da6a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:04:25.278 INFO  [main] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Fetching config from server at: http://localhost:8888
+2019-03-14_17 17:04:25.359 WARN  [main] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/student-management-system/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2019-03-14_17 17:04:25.360 INFO  [main] demik.springcloud.studentmanagementsystem9001.StudentManagementSystem9001Application - No active profile set, falling back to default profiles: default
+2019-03-14_17 17:04:25.372 INFO  [main] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@49a71302: startup date [Thu Mar 14 17:04:25 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4b2a01d4
+2019-03-14_17 17:04:26.526 INFO  [main] org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ba64df38-2521-3a1e-bf4e-602598bda29e
+2019-03-14_17 17:04:26.560 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-14_17 17:04:26.596 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validatorConfig' of type [demik.springcloud.studentmanagementsystem9001.config.ValidatorConfig$$EnhancerBySpringCGLIB$$1d1eaf09] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:04:26.610 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:04:26.748 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a1f6d76d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:04:26.922 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$d4237dae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:04:26.936 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$be10da6a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:04:27.272 INFO  [main] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 9001 (http)
+2019-03-14_17 17:04:27.280 INFO  [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-03-14_17 17:04:27.280 INFO  [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-03-14_17 17:04:27.376 INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-03-14_17 17:04:27.376 INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2004 ms
+2019-03-14_17 17:04:27.808 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-14_17 17:04:27.809 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-03-14_17 17:04:27.813 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'metricsFilter' to: [/*]
+2019-03-14_17 17:04:27.814 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-14_17 17:04:27.814 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-14_17 17:04:27.814 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-14_17 17:04:27.814 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-14_17 17:04:27.814 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-03-14_17 17:04:27.814 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-14_17 17:04:27.814 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-03-14_17 17:04:27.852 INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2019-03-14_17 17:04:28.842 INFO  [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-03-14_17 17:04:29.450 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:04:29.461 INFO  [main] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-14_17 17:04:29.524 INFO  [main] org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2019-03-14_17 17:04:29.525 INFO  [main] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-03-14_17 17:04:29.526 INFO  [main] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2019-03-14_17 17:04:29.536 INFO  [main] org.hibernate.spatial.integration.SpatialService - HHH80000001: hibernate-spatial integration enabled : true
+2019-03-14_17 17:04:29.568 INFO  [main] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-03-14_17 17:04:29.665 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-14_17 17:04:29.855 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:04:30.892 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/addGrade],methods=[POST]}" onto public demik.springcloud.entity.commonbox.Result demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.addGrade(demik.springcloud.entity.domain.vo.GradeInfoVO)
+2019-03-14_17 17:04:30.893 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/deleteGrade],methods=[POST]}" onto public demik.springcloud.entity.commonbox.Result demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.deleteGrade(demik.springcloud.entity.domain.vo.GradeIdVO)
+2019-03-14_17 17:04:30.893 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/updateGrade],methods=[POST]}" onto public demik.springcloud.entity.commonbox.Result demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.updateGrade(demik.springcloud.entity.domain.vo.GradeInfoVO)
+2019-03-14_17 17:04:30.894 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/findAll],methods=[GET]}" onto public demik.springcloud.entity.commonbox.Result<java.util.List<demik.springcloud.entity.domain.vo.GradeInfoVO>> demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.findAllGrade()
+2019-03-14_17 17:04:30.894 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/findById],methods=[GET]}" onto public demik.springcloud.entity.commonbox.Result<demik.springcloud.entity.domain.vo.GradeInfoVO> demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.findGradeById(demik.springcloud.entity.domain.vo.GradeIdVO)
+2019-03-14_17 17:04:30.897 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-03-14_17 17:04:30.898 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-03-14_17 17:04:30.899 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-03-14_17 17:04:30.902 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-03-14_17 17:04:30.902 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-14_17 17:04:30.967 WARN  [main] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-14_17 17:04:30.967 INFO  [main] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-14_17 17:04:30.973 INFO  [main] com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@77a13162
+2019-03-14_17 17:04:31.776 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2019-03-14_17 17:04:31.777 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-03-14_17 17:04:31.777 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.778 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-03-14_17 17:04:31.778 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.778 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.779 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2019-03-14_17 17:04:31.779 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2019-03-14_17 17:04:31.780 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.780 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.781 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2019-03-14_17 17:04:31.781 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.782 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.782 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+2019-03-14_17 17:04:31.783 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2019-03-14_17 17:04:31.783 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2019-03-14_17 17:04:31.784 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-03-14_17 17:04:31.785 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/features || /features.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.785 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/hystrix.stream/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-03-14_17 17:04:31.785 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.786 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2019-03-14_17 17:04:31.787 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2019-03-14_17 17:04:31.787 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.787 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2019-03-14_17 17:04:31.788 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:31.788 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
+2019-03-14_17 17:04:31.788 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
+2019-03-14_17 17:04:31.788 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:04:32.025 INFO  [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-14_17 17:04:32.431 WARN  [main] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-14_17 17:04:32.431 INFO  [main] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-14_17 17:04:32.596 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@49a71302: startup date [Thu Mar 14 17:04:25 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4b2a01d4
+2019-03-14_17 17:04:32.702 INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-14_17 17:04:32.702 INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-14_17 17:04:32.766 INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-14_17 17:04:33.941 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-03-14_17 17:04:33.944 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2019-03-14_17 17:04:33.944 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-03-14_17 17:04:33.952 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+2019-03-14_17 17:04:33.956 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2019-03-14_17 17:04:33.956 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2019-03-14_17 17:04:33.957 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+2019-03-14_17 17:04:33.957 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
+2019-03-14_17 17:04:33.958 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+2019-03-14_17 17:04:33.960 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2019-03-14_17 17:04:33.971 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+2019-03-14_17 17:04:33.981 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
+2019-03-14_17 17:04:33.988 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2019-03-14_17 17:04:33.999 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=49a71302,type=ConfigurationPropertiesRebinder]
+2019-03-14_17 17:04:34.003 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2019-03-14_17 17:04:34.005 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+2019-03-14_17 17:04:34.007 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2019-03-14_17 17:04:34.007 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Registering beans for JMX exposure on startup
+2019-03-14_17 17:04:34.337 INFO  [main] org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 0
+2019-03-14_17 17:04:34.344 INFO  [main] org.springframework.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2019-03-14_17 17:04:34.376 INFO  [main] com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2019-03-14_17 17:04:34.567 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2019-03-14_17 17:04:34.567 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2019-03-14_17 17:04:34.661 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2019-03-14_17 17:04:34.661 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2019-03-14_17 17:04:34.846 INFO  [main] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2019-03-14_17 17:04:34.862 INFO  [main] com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2019-03-14_17 17:04:34.862 INFO  [main] com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2019-03-14_17 17:04:34.862 INFO  [main] com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2019-03-14_17 17:04:34.862 INFO  [main] com.netflix.discovery.DiscoveryClient - Application is null : false
+2019-03-14_17 17:04:34.862 INFO  [main] com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2019-03-14_17 17:04:34.863 INFO  [main] com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2019-03-14_17 17:04:34.863 INFO  [main] com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2019-03-14_17 17:04:34.974 INFO  [main] com.netflix.discovery.DiscoveryClient - The response status is 200
+2019-03-14_17 17:04:34.975 INFO  [main] com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2019-03-14_17 17:04:34.977 INFO  [main] com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-03-14_17 17:04:34.979 INFO  [main] com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1552554274979 with initial instances count: 1
+2019-03-14_17 17:04:35.027 INFO  [main] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Registering application student-management-system with eureka with status UP
+2019-03-14_17 17:04:35.027 INFO  [main] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1552554275027, current=UP, previous=STARTING]
+2019-03-14_17 17:04:35.029 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001: registering service...
+2019-03-14_17 17:04:35.034 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+2019-03-14_17 17:04:35.041 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'archaiusEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=archaiusEndpoint]
+2019-03-14_17 17:04:35.047 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'featuresEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=featuresEndpoint]
+2019-03-14_17 17:04:35.050 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2019-03-14_17 17:04:35.052 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2019-03-14_17 17:04:35.055 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2019-03-14_17 17:04:35.058 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2019-03-14_17 17:04:35.060 INFO  [http-nio-7002-exec-4] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status UP (replication=false)
+2019-03-14_17 17:04:35.061 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2019-03-14_17 17:04:35.061 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - registration status: 204
+2019-03-14_17 17:04:35.064 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+2019-03-14_17 17:04:35.069 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2019-03-14_17 17:04:35.072 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2019-03-14_17 17:04:35.074 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2019-03-14_17 17:04:35.076 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+2019-03-14_17 17:04:35.078 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2019-03-14_17 17:04:35.079 INFO  [main] org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2019-03-14_17 17:04:35.079 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-03-14_17 17:04:35.092 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-03-14_17 17:04:35.139 INFO  [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-03-14_17 17:04:35.483 INFO  [main] org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration$HystrixMetricsPollerConfiguration - Starting poller
+2019-03-14_17 17:04:35.505 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9001"]
+2019-03-14_17 17:04:35.516 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9001"]
+2019-03-14_17 17:04:35.542 INFO  [main] org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-03-14_17 17:04:35.560 INFO  [main] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 9001 (http)
+2019-03-14_17 17:04:35.561 INFO  [main] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration - Updating port to 9001
+2019-03-14_17 17:04:35.567 INFO  [main] demik.springcloud.studentmanagementsystem9001.StudentManagementSystem9001Application - Started StudentManagementSystem9001Application in 11.442 seconds (JVM running for 12.193)
+2019-03-14_17 17:04:35.577 INFO  [http-nio-7003-exec-3] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status UP (replication=true)
+2019-03-14_17 17:04:35.581 INFO  [http-nio-7001-exec-3] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status UP (replication=true)
+2019-03-14_17 17:04:35.709 INFO  [RMI TCP Connection(23)-127.0.0.1] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Fetching config from server at: http://localhost:8888
+2019-03-14_17 17:04:35.714 WARN  [RMI TCP Connection(23)-127.0.0.1] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/student-management-system/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2019-03-14_17 17:04:41.792 INFO  [http-nio-9001-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-14_17 17:04:41.793 INFO  [http-nio-9001-exec-1] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-14_17 17:04:41.820 INFO  [http-nio-9001-exec-1] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2019-03-14_17 17:05:09.127 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:05:10.576 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-03-14_17 17:05:12.287 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:05:17.538 ERROR [http-nio-9001-exec-8] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'grade_id' in 'class demik.springcloud.entity.domain.po.GradeInfoPO'] with root cause
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'grade_id' in 'class demik.springcloud.entity.domain.po.GradeInfoPO'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:419)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:164)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:79)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:93)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy176.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy118.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy124.updateGrade(Unknown Source)
+	at demik.springcloud.studentmanagementsystem9001.manager.GradeInfoManager.updateGrade(GradeInfoManager.java:52)
+	at demik.springcloud.studentmanagementsystem9001.manager.GradeInfoManager$$FastClassBySpringCGLIB$$be8f8538.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at demik.springcloud.studentmanagementsystem9001.manager.GradeInfoManager$$EnhancerBySpringCGLIB$$48a8fd7.updateGrade(<generated>)
+	at demik.springcloud.studentmanagementsystem9001.service.GradeInfoService.updateGrade(GradeInfoService.java:55)
+	at demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.updateGrade(GradeInfoController.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-14_17 17:06:09.131 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:06:10.577 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-03-14_17 17:06:12.290 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:06:45.850 ERROR [http-nio-9001-exec-10] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'grade_id' in 'class demik.springcloud.entity.domain.po.GradeInfoPO'] with root cause
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'grade_id' in 'class demik.springcloud.entity.domain.po.GradeInfoPO'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:419)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:164)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:79)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:93)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy176.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy118.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy124.updateGrade(Unknown Source)
+	at demik.springcloud.studentmanagementsystem9001.manager.GradeInfoManager.updateGrade(GradeInfoManager.java:52)
+	at demik.springcloud.studentmanagementsystem9001.manager.GradeInfoManager$$FastClassBySpringCGLIB$$be8f8538.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673)
+	at demik.springcloud.studentmanagementsystem9001.manager.GradeInfoManager$$EnhancerBySpringCGLIB$$48a8fd7.updateGrade(<generated>)
+	at demik.springcloud.studentmanagementsystem9001.service.GradeInfoService.updateGrade(GradeInfoService.java:55)
+	at demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.updateGrade(GradeInfoController.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-03-14_17 17:06:45.900 INFO  [Thread-28] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@49a71302: startup date [Thu Mar 14 17:04:25 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4b2a01d4
+2019-03-14_17 17:06:45.902 INFO  [Thread-28] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application student-management-system with eureka with status DOWN
+2019-03-14_17 17:06:45.903 WARN  [Thread-28] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1552554405903, current=DOWN, previous=UP]
+2019-03-14_17 17:06:45.903 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001: registering service...
+2019-03-14_17 17:06:45.904 INFO  [Thread-28] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-14_17 17:06:45.906 INFO  [Thread-28] com.netflix.discovery.DiscoveryClient - Unregistering ...
+2019-03-14_17 17:06:45.919 INFO  [http-nio-7002-exec-3] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=false)
+2019-03-14_17 17:06:45.920 INFO  [http-nio-7002-exec-2] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=false)
+2019-03-14_17 17:06:45.921 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - registration status: 204
+2019-03-14_17 17:06:45.922 INFO  [Thread-28] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - deregister  status: 200
+2019-03-14_17 17:06:45.926 INFO  [Thread-28] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-14_17 17:06:45.931 INFO  [Thread-28] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-03-14_17 17:06:45.933 INFO  [Thread-28] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-14_17 17:06:45.935 INFO  [Thread-28] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:06:45.936 INFO  [Thread-28] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:06:45.936 INFO  [Thread-28] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:06:45.936 INFO  [Thread-28] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:06:45.949 WARN  [Thread-28] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-14_17 17:06:45.949 INFO  [Thread-28] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-14_17 17:06:45.953 INFO  [Thread-28] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:06:45.959 INFO  [Thread-28] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-03-14_17 17:06:46.387 INFO  [http-nio-7001-exec-7] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=true)
+2019-03-14_17 17:06:46.388 INFO  [http-nio-7003-exec-7] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=true)
+2019-03-14_17 17:06:46.388 INFO  [http-nio-7001-exec-7] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=true)
+2019-03-14_17 17:06:46.389 INFO  [http-nio-7003-exec-7] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=true)
+2019-03-14_17 17:06:49.115 INFO  [main] org.springframework.context.annotation.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@8c11eee: startup date [Thu Mar 14 17:06:49 CST 2019]; root of context hierarchy
+2019-03-14_17 17:06:49.238 INFO  [background-preinit] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2019-03-14_17 17:06:49.369 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-14_17 17:06:49.423 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6733ddd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:06:49.760 INFO  [main] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Fetching config from server at: http://localhost:8888
+2019-03-14_17 17:06:49.829 WARN  [main] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/student-management-system/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2019-03-14_17 17:06:49.830 INFO  [main] demik.springcloud.studentmanagementsystem9001.StudentManagementSystem9001Application - No active profile set, falling back to default profiles: default
+2019-03-14_17 17:06:49.840 INFO  [main] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@57b75756: startup date [Thu Mar 14 17:06:49 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@8c11eee
+2019-03-14_17 17:06:50.946 INFO  [main] org.springframework.cloud.context.scope.GenericScope - BeanFactory id=ba64df38-2521-3a1e-bf4e-602598bda29e
+2019-03-14_17 17:06:50.980 INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-14_17 17:06:51.018 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validatorConfig' of type [demik.springcloud.studentmanagementsystem9001.config.ValidatorConfig$$EnhancerBySpringCGLIB$$c641b276] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:06:51.032 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'validator' of type [org.hibernate.validator.internal.engine.ValidatorImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:06:51.180 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4b19dada] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:06:51.348 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$7d46811b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:06:51.360 INFO  [main] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6733ddd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-14_17 17:06:51.703 INFO  [main] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 9001 (http)
+2019-03-14_17 17:06:51.711 INFO  [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-03-14_17 17:06:51.711 INFO  [main] org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-03-14_17 17:06:51.811 INFO  [localhost-startStop-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-03-14_17 17:06:51.811 INFO  [localhost-startStop-1] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1971 ms
+2019-03-14_17 17:06:52.216 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-14_17 17:06:52.218 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-03-14_17 17:06:52.221 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'metricsFilter' to: [/*]
+2019-03-14_17 17:06:52.221 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-14_17 17:06:52.221 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-14_17 17:06:52.222 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-14_17 17:06:52.222 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-14_17 17:06:52.222 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2019-03-14_17 17:06:52.222 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-14_17 17:06:52.222 INFO  [localhost-startStop-1] org.springframework.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'applicationContextIdFilter' to: [/*]
+2019-03-14_17 17:06:52.259 INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure - Init DruidDataSource
+2019-03-14_17 17:06:53.243 INFO  [main] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2019-03-14_17 17:06:53.812 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:06:53.822 INFO  [main] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-14_17 17:06:53.877 INFO  [main] org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2019-03-14_17 17:06:53.879 INFO  [main] org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-03-14_17 17:06:53.880 INFO  [main] org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2019-03-14_17 17:06:53.889 INFO  [main] org.hibernate.spatial.integration.SpatialService - HHH80000001: hibernate-spatial integration enabled : true
+2019-03-14_17 17:06:53.924 INFO  [main] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-03-14_17 17:06:54.021 INFO  [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-14_17 17:06:54.215 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:06:55.158 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/addGrade],methods=[POST]}" onto public demik.springcloud.entity.commonbox.Result demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.addGrade(demik.springcloud.entity.domain.vo.GradeInfoVO)
+2019-03-14_17 17:06:55.159 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/deleteGrade],methods=[POST]}" onto public demik.springcloud.entity.commonbox.Result demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.deleteGrade(demik.springcloud.entity.domain.vo.GradeIdVO)
+2019-03-14_17 17:06:55.159 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/updateGrade],methods=[POST]}" onto public demik.springcloud.entity.commonbox.Result demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.updateGrade(demik.springcloud.entity.domain.vo.GradeInfoVO)
+2019-03-14_17 17:06:55.159 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/findAll],methods=[GET]}" onto public demik.springcloud.entity.commonbox.Result<java.util.List<demik.springcloud.entity.domain.vo.GradeInfoVO>> demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.findAllGrade()
+2019-03-14_17 17:06:55.160 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/grade-info/findById],methods=[GET]}" onto public demik.springcloud.entity.commonbox.Result<demik.springcloud.entity.domain.vo.GradeInfoVO> demik.springcloud.studentmanagementsystem9001.controller.GradeInfoController.findGradeById(demik.springcloud.entity.domain.vo.GradeIdVO)
+2019-03-14_17 17:06:55.162 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2019-03-14_17 17:06:55.163 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2019-03-14_17 17:06:55.163 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2019-03-14_17 17:06:55.165 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-03-14_17 17:06:55.166 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-03-14_17 17:06:55.217 WARN  [main] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-14_17 17:06:55.217 INFO  [main] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-14_17 17:06:55.221 INFO  [main] com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4290fcd7
+2019-03-14_17 17:06:55.996 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2019-03-14_17 17:06:55.997 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2019-03-14_17 17:06:55.998 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2019-03-14_17 17:06:55.998 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2019-03-14_17 17:06:55.998 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2019-03-14_17 17:06:56.000 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+2019-03-14_17 17:06:56.000 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.001 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.001 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2019-03-14_17 17:06:56.002 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2019-03-14_17 17:06:56.002 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.003 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2019-03-14_17 17:06:56.003 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.004 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.004 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/features || /features.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.005 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.006 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2019-03-14_17 17:06:56.007 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2019-03-14_17 17:06:56.007 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.007 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
+2019-03-14_17 17:06:56.008 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
+2019-03-14_17 17:06:56.008 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/hystrix.stream/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-03-14_17 17:06:56.008 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2019-03-14_17 17:06:56.008 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.009 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.009 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2019-03-14_17 17:06:56.010 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.010 INFO  [main] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2019-03-14_17 17:06:56.247 INFO  [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-14_17 17:06:56.618 WARN  [main] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-14_17 17:06:56.618 INFO  [main] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-14_17 17:06:56.789 INFO  [main] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@57b75756: startup date [Thu Mar 14 17:06:49 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@8c11eee
+2019-03-14_17 17:06:56.903 INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-14_17 17:06:56.904 INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-14_17 17:06:56.982 INFO  [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-14_17 17:06:57.936 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2019-03-14_17 17:06:57.938 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'statFilter' has been autodetected for JMX exposure
+2019-03-14_17 17:06:57.938 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-03-14_17 17:06:57.946 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+2019-03-14_17 17:06:57.949 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2019-03-14_17 17:06:57.949 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2019-03-14_17 17:06:57.950 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+2019-03-14_17 17:06:57.950 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
+2019-03-14_17 17:06:57.951 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+2019-03-14_17 17:06:57.953 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2019-03-14_17 17:06:57.964 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+2019-03-14_17 17:06:57.983 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
+2019-03-14_17 17:06:57.988 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2019-03-14_17 17:06:57.998 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=57b75756,type=ConfigurationPropertiesRebinder]
+2019-03-14_17 17:06:58.002 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2019-03-14_17 17:06:58.003 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+2019-03-14_17 17:06:58.005 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2019-03-14_17 17:06:58.005 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Registering beans for JMX exposure on startup
+2019-03-14_17 17:06:58.325 INFO  [main] org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 0
+2019-03-14_17 17:06:58.334 INFO  [main] org.springframework.cloud.netflix.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2019-03-14_17 17:06:58.363 INFO  [main] com.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2019-03-14_17 17:06:58.532 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2019-03-14_17 17:06:58.532 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2019-03-14_17 17:06:58.622 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2019-03-14_17 17:06:58.622 INFO  [main] com.netflix.discovery.provider.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2019-03-14_17 17:06:58.808 INFO  [main] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2019-03-14_17 17:06:58.825 INFO  [main] com.netflix.discovery.DiscoveryClient - Disable delta property : false
+2019-03-14_17 17:06:58.825 INFO  [main] com.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2019-03-14_17 17:06:58.825 INFO  [main] com.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2019-03-14_17 17:06:58.825 INFO  [main] com.netflix.discovery.DiscoveryClient - Application is null : false
+2019-03-14_17 17:06:58.825 INFO  [main] com.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2019-03-14_17 17:06:58.825 INFO  [main] com.netflix.discovery.DiscoveryClient - Application version is -1: true
+2019-03-14_17 17:06:58.825 INFO  [main] com.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2019-03-14_17 17:06:58.932 INFO  [main] com.netflix.discovery.DiscoveryClient - The response status is 200
+2019-03-14_17 17:06:58.933 INFO  [main] com.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2019-03-14_17 17:06:58.935 INFO  [main] com.netflix.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-03-14_17 17:06:58.937 INFO  [main] com.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1552554418937 with initial instances count: 1
+2019-03-14_17 17:06:58.985 INFO  [main] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Registering application student-management-system with eureka with status UP
+2019-03-14_17 17:06:58.986 INFO  [main] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1552554418986, current=UP, previous=STARTING]
+2019-03-14_17 17:06:58.987 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001: registering service...
+2019-03-14_17 17:06:58.992 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+2019-03-14_17 17:06:58.999 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'archaiusEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=archaiusEndpoint]
+2019-03-14_17 17:06:59.007 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'featuresEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=featuresEndpoint]
+2019-03-14_17 17:06:59.009 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2019-03-14_17 17:06:59.011 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2019-03-14_17 17:06:59.013 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2019-03-14_17 17:06:59.017 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2019-03-14_17 17:06:59.018 INFO  [http-nio-7002-exec-9] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status UP (replication=false)
+2019-03-14_17 17:06:59.019 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - registration status: 204
+2019-03-14_17 17:06:59.019 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2019-03-14_17 17:06:59.022 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+2019-03-14_17 17:06:59.027 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2019-03-14_17 17:06:59.029 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2019-03-14_17 17:06:59.031 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2019-03-14_17 17:06:59.033 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+2019-03-14_17 17:06:59.035 INFO  [main] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2019-03-14_17 17:06:59.036 INFO  [main] org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2019-03-14_17 17:06:59.036 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-03-14_17 17:06:59.048 INFO  [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-03-14_17 17:06:59.091 INFO  [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-03-14_17 17:06:59.453 INFO  [main] org.springframework.cloud.netflix.hystrix.HystrixCircuitBreakerConfiguration$HystrixMetricsPollerConfiguration - Starting poller
+2019-03-14_17 17:06:59.472 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9001"]
+2019-03-14_17 17:06:59.481 INFO  [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9001"]
+2019-03-14_17 17:06:59.504 INFO  [main] org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2019-03-14_17 17:06:59.520 INFO  [main] org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer - Tomcat started on port(s): 9001 (http)
+2019-03-14_17 17:06:59.520 INFO  [main] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration - Updating port to 9001
+2019-03-14_17 17:06:59.524 INFO  [http-nio-7001-exec-8] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status UP (replication=true)
+2019-03-14_17 17:06:59.526 INFO  [main] demik.springcloud.studentmanagementsystem9001.StudentManagementSystem9001Application - Started StudentManagementSystem9001Application in 10.885 seconds (JVM running for 11.544)
+2019-03-14_17 17:06:59.531 INFO  [http-nio-7003-exec-8] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status UP (replication=true)
+2019-03-14_17 17:07:00.078 INFO  [RMI TCP Connection(4)-127.0.0.1] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Fetching config from server at: http://localhost:8888
+2019-03-14_17 17:07:00.080 WARN  [RMI TCP Connection(4)-127.0.0.1] org.springframework.cloud.config.client.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/student-management-system/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2019-03-14_17 17:07:09.135 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-03-14_17 17:07:10.578 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:07:12.292 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:08:09.136 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:08:10.582 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:08:12.293 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-03-14_17 17:09:09.138 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:09:10.583 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:09:12.295 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:10:09.143 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-03-14_17 17:10:10.587 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:10:12.299 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-03-14_17 17:11:09.145 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:11:10.591 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:11:12.301 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:11:58.831 INFO  [AsyncResolver-bootstrap-executor-0] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2019-03-14_17 17:12:09.147 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:12:10.594 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:12:12.304 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:13:09.151 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:13:10.598 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-03-14_17 17:13:12.307 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:14:09.157 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2019-03-14_17 17:14:10.602 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:14:12.311 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:15:09.159 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:15:10.605 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:15:12.314 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:16:08.423 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 3
+2019-03-14_17 17:16:09.161 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:16:09.934 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 3
+2019-03-14_17 17:16:10.606 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-03-14_17 17:16:11.644 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 3
+2019-03-14_17 17:16:12.315 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:16:58.836 INFO  [AsyncResolver-bootstrap-executor-0] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2019-03-14_17 17:17:09.166 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-03-14_17 17:17:10.609 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:17:12.318 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:18:09.169 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:18:10.612 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:18:12.322 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:19:09.171 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:19:10.615 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:19:12.326 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-03-14_17 17:20:09.173 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-03-14_17 17:20:10.617 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:20:12.328 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:21:09.176 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:21:10.620 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:21:12.333 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-03-14_17 17:21:58.840 INFO  [AsyncResolver-bootstrap-executor-0] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2019-03-14_17 17:22:09.177 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-03-14_17 17:22:10.625 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-03-14_17 17:22:12.336 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-03-14_17 17:22:17.928 INFO  [Thread-31] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b068087: startup date [Thu Mar 14 16:46:00 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@424e1977
+2019-03-14_17 17:22:17.950 INFO  [Thread-31] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-03-14_17 17:22:17.955 INFO  [Thread-31] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70ab2d48: startup date [Thu Mar 14 16:46:03 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31f9b85e
+2019-03-14_17 17:22:17.963 INFO  [Thread-31] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-14_17 17:22:17.964 INFO  [Thread-31] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-14_17 17:22:17.972 INFO  [Thread-31] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-03-14_17 17:22:17.982 INFO  [Thread-31] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-14_17 17:22:17.983 INFO  [Thread-31] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-14_17 17:22:18.003 INFO  [Thread-29] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70ab2d48: startup date [Thu Mar 14 16:46:05 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31f9b85e
+2019-03-14_17 17:22:18.029 INFO  [Thread-31] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-14_17 17:22:18.058 INFO  [Thread-29] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-03-14_17 17:22:18.073 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-14_17 17:22:18.074 INFO  [Thread-31] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-03-14_17 17:22:18.076 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-14_17 17:22:18.106 INFO  [Thread-28] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@57b75756: startup date [Thu Mar 14 17:06:49 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@8c11eee
+2019-03-14_17 17:22:18.123 INFO  [Thread-28] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application student-management-system with eureka with status DOWN
+2019-03-14_17 17:22:18.124 WARN  [Thread-28] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1552555338124, current=DOWN, previous=UP]
+2019-03-14_17 17:22:18.124 INFO  [Thread-31] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-03-14_17 17:22:18.125 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001: registering service...
+2019-03-14_17 17:22:18.128 INFO  [Thread-28] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-14_17 17:22:18.129 INFO  [Thread-28] com.netflix.discovery.DiscoveryClient - Unregistering ...
+2019-03-14_17 17:22:18.131 INFO  [Thread-31] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-14_17 17:22:18.154 INFO  [Thread-29] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-14_17 17:22:18.155 INFO  [http-nio-7002-exec-10] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=false)
+2019-03-14_17 17:22:18.158 INFO  [Thread-31] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:22:18.160 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - registration status: 204
+2019-03-14_17 17:22:18.162 INFO  [Thread-31] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:22:18.164 INFO  [Thread-31] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:22:18.165 INFO  [Thread-31] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:22:18.172 INFO  [http-nio-7002-exec-9] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=false)
+2019-03-14_17 17:22:18.175 INFO  [Thread-28] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - deregister  status: 200
+2019-03-14_17 17:22:18.185 INFO  [Thread-31] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-03-14_17 17:22:18.194 INFO  [Thread-28] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-14_17 17:22:18.205 INFO  [Thread-29] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-03-14_17 17:22:18.209 INFO  [Thread-31] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-03-14_17 17:22:18.225 INFO  [Thread-31] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:22:18.236 INFO  [Thread-31] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:22:18.239 INFO  [Thread-31] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:22:18.240 INFO  [Thread-31] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:22:18.240 INFO  [Thread-31] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:22:18.242 INFO  [Thread-28] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-03-14_17 17:22:18.249 INFO  [Thread-29] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-03-14_17 17:22:18.256 INFO  [Thread-28] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-14_17 17:22:18.274 INFO  [Thread-28] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:22:18.275 INFO  [Thread-28] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:22:18.277 INFO  [Thread-28] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:22:18.277 INFO  [Thread-28] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:22:18.283 INFO  [Thread-29] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:22:18.285 INFO  [Thread-29] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:22:18.287 INFO  [Thread-29] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-14_17 17:22:18.287 INFO  [Thread-29] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-14_17 17:22:18.291 INFO  [Thread-31] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:22:18.320 INFO  [Thread-31] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-03-14_17 17:22:18.330 INFO  [Thread-29] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:22:18.338 WARN  [Thread-28] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-14_17 17:22:18.339 INFO  [Thread-31] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-03-14_17 17:22:18.339 INFO  [Thread-28] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-14_17 17:22:18.356 INFO  [Thread-28] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-14_17 17:22:18.397 INFO  [Thread-28] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-03-14_17 17:22:18.414 INFO  [Thread-29] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

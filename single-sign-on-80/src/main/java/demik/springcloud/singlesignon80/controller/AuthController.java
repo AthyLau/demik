@@ -96,7 +96,7 @@ public class AuthController {
      */
     @PostMapping("/get_role")
     @RequiresAuthentication
-    @ApiOperation(value = "获取角色和地址", httpMethod = "POST")
+    @ApiOperation(value = "获取角色", httpMethod = "POST")
     public Result getRole() throws SuccessException {
         String token = SecurityUtils.getSubject().getPrincipal().toString();
         //从jwt中获取token
@@ -159,8 +159,8 @@ public class AuthController {
      * @return 结果集
      */
     @GetMapping("/require_role")
-    @RequiresRoles("超级管理员")
-    @ApiOperation(value = "必须具备admin角色才可以访问", httpMethod = "GET")
+    @RequiresRoles("Admin")
+    @ApiOperation(value = "必须具备Admin角色才可以访问", httpMethod = "GET")
     @RequiresAuthentication
     public Result requireRole() {
         return ResultGenerator.genNeutralResult(ResultCode.NOT_SMART_ENOUGH, "正在访问 require_role");
@@ -172,7 +172,7 @@ public class AuthController {
      * @return 结果集
      */
     @GetMapping("/require_permission")
-    @RequiresPermissions(logical = Logical.AND, value = {"permission:view", "permission:edit"})
+    @RequiresPermissions(logical = Logical.AND, value = {"type:check", "type:modify"})
     @ApiOperation(value = "必须具备几个权限才可以访问", httpMethod = "GET")
     @RequiresAuthentication
     public Result requirePermission() {

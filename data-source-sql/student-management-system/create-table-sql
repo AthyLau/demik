@@ -1,0 +1,103 @@
+CREATE SCHEMA student_cloud_001;
+CREATE SCHEMA student_cloud_002;
+CREATE SCHEMA student_cloud_003;
+每个数据库下都要执行如下建表语句，防止出现一个数据库挂掉导致整个服务宕机
+
+-- auto-generated definition
+CREATE TABLE aclass_info
+(
+  aclass_id          INT AUTO_INCREMENT
+  COMMENT '班级id'
+    PRIMARY KEY,
+  aclass_name        VARCHAR(20) NOT NULL
+  COMMENT '班级名称',
+  aclass_description VARCHAR(20) NOT NULL
+  COMMENT '班级介绍',
+  aclass_slogan      VARCHAR(20) NOT NULL
+  COMMENT '班级标语',
+  grade_id           INT         NOT NULL
+  COMMENT '所属年级id',
+  perfessional_id    INT         NOT NULL
+  COMMENT '所属的专业id',
+  CONSTRAINT aclass_aclass_id_uindex
+  UNIQUE (aclass_id)
+)
+  COMMENT '班级表';
+
+-- auto-generated definition
+CREATE TABLE grade_info
+(
+  grade_id          INT AUTO_INCREMENT
+  COMMENT '年级id'
+    PRIMARY KEY,
+  grade_name        VARCHAR(20) NOT NULL
+  COMMENT '年级介绍',
+  grade_description VARCHAR(20) NOT NULL
+  COMMENT '年级介绍',
+  grade_slogan      VARCHAR(20) NOT NULL
+  COMMENT '年级标语',
+  CONSTRAINT grade_info_grade_id_uindex
+  UNIQUE (grade_id)
+)
+  COMMENT '年级信息';
+
+-- auto-generated definition
+CREATE TABLE perfessional_info
+(
+  perfessional_id          INT AUTO_INCREMENT
+  COMMENT '专业id'
+    PRIMARY KEY,
+  perfessional_name        VARCHAR(20) NOT NULL
+  COMMENT '专业名字',
+  perfessional_description VARCHAR(20) NOT NULL
+  COMMENT '专业介绍',
+  perfessional_slogan      VARCHAR(20) NOT NULL
+  COMMENT '专业标语',
+  CONSTRAINT perfessional_info_perfessional_id_uindex
+  UNIQUE (perfessional_id)
+)
+  COMMENT '专业表';
+
+-- auto-generated definition
+CREATE TABLE student_case
+(
+  student_case_id          INT AUTO_INCREMENT
+  COMMENT '学生近况id'
+    PRIMARY KEY,
+  student_case_description VARCHAR(20) NOT NULL
+  COMMENT '学生近况',
+  CONSTRAINT student_case_student_case_id_uindex
+  UNIQUE (student_case_id)
+)
+  COMMENT '学生近况表';
+
+-- auto-generated definition
+CREATE TABLE student_info
+(
+  student_id       INT AUTO_INCREMENT
+  COMMENT '学生id'
+    PRIMARY KEY,
+  student_name     VARCHAR(20) NOT NULL
+  COMMENT '学生姓名',
+  student_number   VARCHAR(20) NOT NULL
+  COMMENT '学生学号',
+  student_sex      VARCHAR(20) NOT NULL
+  COMMENT '学生性别',
+  student_national VARCHAR(20) NOT NULL
+  COMMENT '学生民族',
+  student_phone    VARCHAR(20) NOT NULL
+  COMMENT '学生手机号',
+  student_id_card  VARCHAR(20) NOT NULL
+  COMMENT '学生身份证号',
+  student_address  VARCHAR(20) NOT NULL
+  COMMENT '学生家庭住址',
+  student_mail     VARCHAR(20) NOT NULL
+  COMMENT '学生邮箱',
+  student_case_id  INT         NOT NULL
+  COMMENT '学生近况id',
+  aclass_id        INT         NOT NULL
+  COMMENT '班级id',
+  CONSTRAINT student_info_student_id_uindex
+  UNIQUE (student_id)
+)
+  COMMENT '学生信息表';
