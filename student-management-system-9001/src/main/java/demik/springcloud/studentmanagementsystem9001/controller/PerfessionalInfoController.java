@@ -29,11 +29,11 @@ public class PerfessionalInfoController {
     private PerfessionalInfoService perfessionalInfoService;
 
     /**
-     * 添加一个专业
+     * 添加一个专业       11
      * @param perfessionalInfoVO
      * @return
      */
-    @ApiOperation(value = "添加一个专业", httpMethod = "POST")
+    @ApiOperation(value = "添加一个专业11", httpMethod = "POST")
     @PostMapping("/addPerfessionalInfo")
     public Result addPerfessionalInfo(@RequestBody PerfessionalInfoVO perfessionalInfoVO){
         if(perfessionalInfoService.addPerfessionalInfo(perfessionalInfoVO)){
@@ -42,11 +42,11 @@ public class PerfessionalInfoController {
         return ResultGenerator.genFailResult("添加专业失败");
     }
     /**
-     * 删除一个专业
+     * 删除一个专业       12
      * @param perfessionalInfoVO
      * @return
      */
-    @ApiOperation(value = "删除一个专业", httpMethod = "POST")
+    @ApiOperation(value = "删除一个专业12", httpMethod = "POST")
     @PostMapping("/deletePerfessionalInfo")
     public Result deletePerfessionalInfo(@RequestBody PerfessionalIdVO perfessionalInfoVO){
         try {
@@ -59,11 +59,11 @@ public class PerfessionalInfoController {
         }
     }
     /**
-     * 更新一个专业
+     * 更新一个专业       13
      * @param perfessionalInfoVO
      * @return
      */
-    @ApiOperation(value = "更新一个专业", httpMethod = "POST")
+    @ApiOperation(value = "更新一个专业13", httpMethod = "POST")
     @PostMapping("/updatePerfessionalInfo")
     public Result updatePerfessionalInfo(@RequestBody PerfessionalInfoVO perfessionalInfoVO){
         if(perfessionalInfoService.updatePerfessionalInfo(perfessionalInfoVO)){
@@ -72,10 +72,10 @@ public class PerfessionalInfoController {
         return ResultGenerator.genFailResult("更新专业失败");
     }
     /**
-     * 查询所有专业
+     * 查询所有专业       14
      * @return
      */
-    @ApiOperation(value = "查询所有专业", httpMethod = "GET")
+    @ApiOperation(value = "查询所有专业14", httpMethod = "GET")
     @GetMapping("/findAllPerfessionalInfo")
     public Result findAllPerfessionalInfo(){
         List<PerfessionalInfoVO> list = perfessionalInfoService.findAllPerfessionalInfo();
@@ -85,10 +85,10 @@ public class PerfessionalInfoController {
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
     /**
-     * 查询单个专业
+     * 查询单个专业       15
      * @return
      */
-    @ApiOperation(value = "查询单个专业", httpMethod = "POST")
+    @ApiOperation(value = "查询单个专业15", httpMethod = "POST")
     @PostMapping("/findPerfessionalInfoById")
     public Result findPerfessionalInfoById(@RequestBody PerfessionalIdVO perfessionalIdVO){
         PerfessionalInfoVO perfessionalInfoVO = perfessionalInfoService.findPerfessionalInfoById(perfessionalIdVO.getPerfessionalId());

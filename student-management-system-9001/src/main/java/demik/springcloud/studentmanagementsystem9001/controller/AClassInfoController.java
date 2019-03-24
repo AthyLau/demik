@@ -43,11 +43,11 @@ public class AClassInfoController {
     @Autowired
     private StudentInfoService studentInfoService;
     /**
-     * 添加一个班级
+     * 添加一个班级       1
      * @param aClassInfoVO
      * @return
      */
-    @ApiOperation(value = "添加一个班级", httpMethod = "POST")
+    @ApiOperation(value = "添加一个班级1", httpMethod = "POST")
     @PostMapping("/addAClass")
     public Result addAClass(@RequestBody AClassInfoVO aClassInfoVO){
         if(!(gradeInfoService.findGradeById(aClassInfoVO.getAclassId())!=null||perfessionalInfoService.findPerfessionalInfoById(aClassInfoVO.getPerfessionalId())!=null)){
@@ -60,11 +60,11 @@ public class AClassInfoController {
     }
 
     /**
-     * 删除一个班级
+     * 删除一个班级       2
      * @param aClassIdVO
      * @return
      */
-    @ApiOperation(value = "删除一个班级", httpMethod = "POST")
+    @ApiOperation(value = "删除一个班级2", httpMethod = "POST")
     @PostMapping("/deleteAClass")
     public Result deleteAClass(@RequestBody AClassIdVO aClassIdVO){
         try{
@@ -78,11 +78,11 @@ public class AClassInfoController {
     }
 
     /**
-     * 更新一个班级
+     * 更新一个班级       3
      * @param aClassInfoVO
      * @return
      */
-    @ApiOperation(value = "更新一个班级", httpMethod = "POST")
+    @ApiOperation(value = "更新一个班级3", httpMethod = "POST")
     @PostMapping("/updateAClass")
     public Result updateAClass(@RequestBody AClassInfoVO aClassInfoVO){
         if(!(gradeInfoService.findGradeById(aClassInfoVO.getAclassId())!=null||perfessionalInfoService.findPerfessionalInfoById(aClassInfoVO.getPerfessionalId())!=null)){
@@ -94,10 +94,10 @@ public class AClassInfoController {
         return ResultGenerator.genFailResult("更新班级失败");
     }
     /**
-     * 查询所有班级
+     * 查询所有班级       4
      * @return
      */
-    @ApiOperation(value = "查询所有班级", httpMethod = "GET")
+    @ApiOperation(value = "查询所有班级4", httpMethod = "GET")
     @GetMapping("/findAllAClass")
     public Result findAllAClass(){
         List<AClassInfoDTO> dtos = aClassInfoService.findAllAClass();
@@ -107,10 +107,10 @@ public class AClassInfoController {
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
     /**
-     * 查询单个班级
+     * 查询单个班级       5
      * @return
      */
-    @ApiOperation(value = "查询单个班级", httpMethod = "POST")
+    @ApiOperation(value = "查询单个班级5", httpMethod = "POST")
     @PostMapping("/findAClassById")
     public Result findAClassById(@RequestBody AClassIdVO aClassIdVO){
         AClassInfoDTO dto = aClassInfoService.findAClassById(aClassIdVO.getAclassId());

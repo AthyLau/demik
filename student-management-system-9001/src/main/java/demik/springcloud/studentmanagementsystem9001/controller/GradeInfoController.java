@@ -31,11 +31,11 @@ public class GradeInfoController {
     @Autowired
     private GradeInfoService gradeInfoService;
     /**
-     * 添加一个
+     * 添加一个     6
      * @param gradeInfoVO
      * @return
      */
-    @ApiOperation(value = "添加", httpMethod = "POST")
+    @ApiOperation(value = "添加6", httpMethod = "POST")
     @PostMapping("/addGrade")
     public Result addGrade(@RequestBody GradeInfoVO gradeInfoVO){
         GradeInfoDTO gradeInfoDTO = new GradeInfoDTO();
@@ -47,11 +47,11 @@ public class GradeInfoController {
     }
 
     /**
-     * 删除一个
+     * 删除一个     7
      * @param gradeIdVO
      * @return
      */
-    @ApiOperation(value = "删除", httpMethod = "POST")
+    @ApiOperation(value = "删除7", httpMethod = "POST")
     @PostMapping("/deleteGrade")
     public Result deleteGrade(@RequestBody GradeIdVO gradeIdVO){
         try {
@@ -65,10 +65,10 @@ public class GradeInfoController {
     }
 
     /**
-     * 更新一个信息
+     * 更新一个信息       8
      * @return
      */
-    @ApiOperation(value = "更新", httpMethod = "POST")
+    @ApiOperation(value = "更新8", httpMethod = "POST")
     @PostMapping("/updateGrade")
     public Result updateGrade(@RequestBody GradeInfoVO gradeInfoVO){
         GradeInfoDTO gradeInfoDTO = new GradeInfoDTO();
@@ -83,10 +83,10 @@ public class GradeInfoController {
     }
 
     /**
-     * 查询所有的信息
+     * 查询所有的信息      9
      * @return
      */
-    @ApiOperation(value = "查找所有", httpMethod = "GET")
+    @ApiOperation(value = "查找所有9", httpMethod = "GET")
     @GetMapping("/findAllGrade")
     public Result<List<GradeInfoVO>> findAllGrade(){
         List<GradeInfoVO> vos = Lists.newArrayList();
@@ -103,11 +103,11 @@ public class GradeInfoController {
     }
 
     /**
-     * 根据id查询信息
+     * 根据id查询信息     10
      * @param gradeIdVO
      * @return
      */
-    @ApiOperation(value = "查找一个", httpMethod = "POST")
+    @ApiOperation(value = "查找一个10", httpMethod = "POST")
     @PostMapping("/findGradeById")
     public Result<GradeInfoVO> findGradeById(@RequestBody GradeIdVO gradeIdVO){
         GradeInfoDTO gradeInfoDTO = gradeInfoService.findGradeById(gradeIdVO.getGradeId());

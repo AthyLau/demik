@@ -9,19 +9,19 @@ package demik.springcloud.entity.domain.vo;
  */
 public class GradeInfoVO {
     /**
-     * 班级id
+     * 年级id
      */
     private Integer gradeId;
     /**
-     * 班级姓名
+     * 年级姓名
      */
     private String gradeName;
     /**
-     * 班级描述
+     * 年级描述
      */
     private String gradeDescription;
     /**
-     * 班级标语
+     * 年级标语
      */
     private String gradeSlogan;
 

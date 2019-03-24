@@ -33,11 +33,11 @@ public class StudentInfoController {
     @Autowired
     private AClassInfoService aClassInfoService;
     /**
-     * 添加一个学生
+     * 添加一个学生       16
      * @param studentInfoVO
      * @return
      */
-    @ApiOperation(value = "添加一个学生", httpMethod = "POST")
+    @ApiOperation(value = "添加一个学生16", httpMethod = "POST")
     @PostMapping("/addStudent")
     public Result addStudent(@RequestBody StudentInfoVO studentInfoVO){
         //todo 每添加一个学生都要把这个学生添加到user表里 学号作为账号身份证后六位作为密码
@@ -54,11 +54,11 @@ public class StudentInfoController {
     }
 
     /**
-     * 删除一个学生
+     * 删除一个学生       17
      * @param studentIdVO
      * @return
      */
-    @ApiOperation(value = "删除一个学生", httpMethod = "POST")
+    @ApiOperation(value = "删除一个学生17", httpMethod = "POST")
     @PostMapping("/deleteStudent")
     public Result deleteStudent(@RequestBody StudentIdVO studentIdVO){
         if(studentInfoService.deleteStudent(studentIdVO.getStudentId())){
@@ -68,10 +68,10 @@ public class StudentInfoController {
     }
 
     /**
-     * 更新一个学生信息
+     * 更新一个学生信息     18
      * @return
      */
-    @ApiOperation(value = "更新一个学生", httpMethod = "POST")
+    @ApiOperation(value = "更新一个学生18", httpMethod = "POST")
     @PostMapping("/updateStudent")
     public Result updateStudent(@RequestBody StudentInfoVO studentInfoVO){
         if(studentInfoService.updateStudent(studentInfoVO)){
@@ -81,10 +81,10 @@ public class StudentInfoController {
     }
 
     /**
-     * 查询所有学生的信息
+     * 查询所有学生的信息        19
      * @return
      */
-    @ApiOperation(value = "查询所有学生的信息", httpMethod = "GET")
+    @ApiOperation(value = "查询所有学生的信息19", httpMethod = "GET")
     @GetMapping("/findAllStudent")
     public Result<List<StudentInfoDTO>> findAllStudent(){
         List<StudentInfoDTO> dtos = studentInfoService.findAllStudent();
@@ -95,11 +95,11 @@ public class StudentInfoController {
     }
 
     /**
-     * 根据学生id查询学生信息
+     * 根据学生id查询学生信息     20
      * @param studentIdVO
      * @return
      */
-    @ApiOperation(value = "根据学生id查询学生信息", httpMethod = "POST")
+    @ApiOperation(value = "根据学生id查询学生信息20", httpMethod = "POST")
     @PostMapping("/findStudentById")
     public Result<StudentInfoDTO> findStudentById(@RequestBody StudentIdVO studentIdVO){
         StudentInfoDTO studentInfoDTO = studentInfoService.findStudentById(studentIdVO.getStudentId());
@@ -110,10 +110,10 @@ public class StudentInfoController {
     }
 
     /**
-     * 查询学生近况
+     * 查询学生近况       21
      * @return
      */
-    @ApiOperation(value = "查询学生近况", httpMethod = "POST")
+    @ApiOperation(value = "查询学生近况21", httpMethod = "POST")
     @PostMapping("/findAllStudentCase")
     public Result<List<StudentCasePO>> findAllStudentCase(){
         List<StudentCasePO> studentCasePOS = studentInfoService.findAllStudentCase();
