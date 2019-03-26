@@ -72,4 +72,20 @@ public interface PaperInfoMapper {
      */
     @Select("select paper_id from paper_info where paper_name = #{paperName}")
     List<Integer> findPaperInfoByName(String paperName);
+
+    /**
+     * 根据id查询论文信息
+     * @param id
+     * @return
+     */
+    @Select("SELECT p.paper_id,p.paper_name,t.paper_type_name from paper_info as p,paper_type as t where p.paper_type_id = t.paper_type_id and p.paper_id = #{id};")
+    PaperInfoVO findPaperInfoById(Integer id);
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    @Select("select paper_type_id,paper_type_name from paper_type where paper_type_id = #{id}")
+    PaperTypePO findPaperTypeById(Integer id);
 }

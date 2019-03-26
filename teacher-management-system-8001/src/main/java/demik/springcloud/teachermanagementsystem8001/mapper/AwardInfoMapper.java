@@ -53,7 +53,7 @@ public interface AwardInfoMapper {
      * @param awardInfoPO
      * @return
      */
-    @Insert("INSERT into award_info(award_id,award_game_id,teacher_id,award_level_id,award_time) VALUES(#{awardId},#{awardgame},#{teacherId},#{awardLevelId},#{awardTime})")
+    @Insert("INSERT into award_info(award_game_id,teacher_id,award_level_id,award_time) VALUES(#{awardGameId},#{teacherId},#{awardLevelId},#{awardTime})")
     boolean addAwardInfo(AwardInfoPO awardInfoPO);
 
     /**
@@ -72,4 +72,20 @@ public interface AwardInfoMapper {
      */
     @Select("SELECT award_game_id,award_game_name from award_game where award_game_name = #{name}")
     List<AwardGameVO> findAwardGameByName(String name);
+
+    /**
+     * 查询单个比赛
+     * @param id
+     * @return
+     */
+    @Select("SELECT award_game_id,award_game_name from award_game where award_game_id = #{id}")
+    AwardGameVO findAwardGameById(Integer id);
+
+    /**
+     * 根据id查询获奖级别
+     * @param awardLevelId
+     * @return
+     */
+    @Select("SELECT award_level_id,award_level_name from award_level where award_level_id = #{awardLevelId}")
+    AwardLevelVO getAwardLevelById(Integer awardLevelId);
 }

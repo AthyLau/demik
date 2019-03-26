@@ -7,6 +7,7 @@ import demik.springcloud.entity.commonbox.ResultGenerator;
 import demik.springcloud.entity.domain.dto.TeacherWorkDTO;
 import demik.springcloud.entity.domain.po.WorkInfoPO;
 import demik.springcloud.entity.domain.po.WorkPO;
+import demik.springcloud.entity.domain.vo.WorkIdVO;
 import demik.springcloud.teachermanagementsystem8001.service.WorkInfoService;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
@@ -36,7 +37,7 @@ public class WorkInfoController {
      * @return
      */
     @ApiOperation(value = "查询所有的教师作品信息", httpMethod = "POST")
-    @PostMapping("/findAllWorkInfo")
+    @PostMapping("/findAllTeacherWorkInfo")
     public Result findAllWorkInfo(){
         List<WorkInfoPO> vos = workInfoService.findAllWorkInfo();
         if(vos!=null&&vos.size()>0){
@@ -57,7 +58,19 @@ public class WorkInfoController {
         }
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
-
+    /**
+     * 根据id查询作品
+     * @return
+     */
+    @ApiOperation(value = "根据id查询作品", httpMethod = "POST")
+    @PostMapping("/findWorkById")
+    public Result findWorkById(@RequestBody WorkIdVO workIdVO){
+        WorkPO vos = workInfoService.findWorkById(workIdVO.getWorkid());
+        if(vos!=null){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
     /**
      * 添加一个作品
      * @param teacherWorkDTO

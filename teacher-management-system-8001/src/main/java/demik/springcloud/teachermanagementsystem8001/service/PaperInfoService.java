@@ -83,4 +83,22 @@ public class PaperInfoService {
     public Integer findPaperInfoByName(String paperName) {
         return paperInfoManager.findPaperInfoByName(paperName);
     }
+
+    /**
+     * 根据id查询论文信息
+     * @param id
+     * @return
+     */
+    public PaperInfoVO findPaperInfoById(Integer id) {
+        return paperInfoManager.findPaperInfoById(id);
+    }
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    public PaperTypePO findPaperTypeById(Integer id) {
+        return paperInfoManager.findPaperTypeById(id);
+    }
 }

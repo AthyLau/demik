@@ -62,8 +62,8 @@ public class VisitSchoolInfoController {
      * 根据id查询学校
      * @return
      */
-    @ApiOperation(value = "查询所有的访学信息", httpMethod = "POST")
-    @PostMapping("/findAllSchoolInfoById")
+    @ApiOperation(value = "根据id查询学校", httpMethod = "POST")
+    @PostMapping("/findSchoolInfoById")
     public Result findAllSchoolInfoById(@RequestBody SchoolIdVO schoolIdVO){
         SchoolPO po = visitSchoolInfoService.findAllSchoolInfoById(schoolIdVO.getSchoolId());
         if(po!=null){

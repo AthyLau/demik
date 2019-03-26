@@ -2,6 +2,7 @@ package demik.springcloud.teachermanagementsystem8001.manager;
 
 import demik.springcloud.entity.domain.dto.TeacherInfoDTO;
 import demik.springcloud.entity.domain.po.TeacherInfoPO;
+import demik.springcloud.entity.domain.vo.TeacherIdVO;
 import demik.springcloud.teachermanagementsystem8001.mapper.TeacherInfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -44,5 +45,14 @@ public class TeacherInfoManager {
      */
     public boolean deleteTeacherInfo(Integer teacherId) {
         return teacherInfoMapper.deleteTeacherInfo(teacherId);
+    }
+
+    /**
+     * 根绝id查询教师信息
+     * @param teacherId
+     * @return
+     */
+    public TeacherIdVO findTeacherInfoById(Integer teacherId) {
+        return teacherInfoMapper.findTeacherInfoById(teacherId);
     }
 }

@@ -4,10 +4,7 @@ import demik.springcloud.entity.commonbox.Result;
 import demik.springcloud.entity.commonbox.ResultCode;
 import demik.springcloud.entity.commonbox.ResultGenerator;
 import demik.springcloud.entity.domain.po.AwardInfoPO;
-import demik.springcloud.entity.domain.vo.AwardGameVO;
-import demik.springcloud.entity.domain.vo.AwardInfoIdVO;
-import demik.springcloud.entity.domain.vo.AwardInfoVO;
-import demik.springcloud.entity.domain.vo.AwardLevelVO;
+import demik.springcloud.entity.domain.vo.*;
 import demik.springcloud.teachermanagementsystem8001.service.AwardInfoService;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
@@ -47,7 +44,32 @@ public class AwardInfoController {
         }
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
-
+    /**
+     * 根据id查询比赛
+     * @return
+     */
+    @ApiOperation(value = "根据id查询比赛", httpMethod = "POST")
+    @PostMapping("/findAwardGameById")
+    public Result<AwardGameVO> findAwardGameById(@RequestBody AwardIdVO awardIdVO){
+        AwardGameVO vos = awardInfoService.findAwardGameById(awardIdVO.getId());
+        if(vos!=null){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据id查询比赛
+     * @return
+     */
+    @ApiOperation(value = "根据id查询比赛等级", httpMethod = "POST")
+    @PostMapping("/findAwardLevelById")
+    public Result<AwardLevelVO> findAwardLevelById(@RequestBody AwardIdVO awardIdVO){
+        AwardLevelVO vos = awardInfoService.getAwardLevelById(awardIdVO.getId());
+        if(vos!=null){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
     /**
      * 查询所有的奖项级别
      * @return
@@ -99,16 +121,13 @@ public class AwardInfoController {
             return ResultGenerator.genSuccessResult(ResultCode.HTTP_MESSAGE_NOT_READABLE);
             //下拉框
         }else if(awardInfoPO.getType()==1){
-            List<AwardGameVO> vos = awardInfoService.findAllAwardGame();
-            Integer len = vos.size();
-            vos.forEach(x->{
-                if(x.getAwardGameId()==awardInfoPO.getAwardGameId()){
-                    vos.remove(x);
-                }
-            });
             //没有这个比赛
-            if(vos.size()==len){
-                return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+            if(awardInfoService.findAwardGameById(awardInfoPO.getAwardGameId())==null){
+                return ResultGenerator.genSuccessResult("没有这个比赛");
+            }
+            //没有这个奖项等级
+            if(awardInfoService.getAwardLevelById(awardInfoPO.getAwardLevelId())==null){
+                return ResultGenerator.genSuccessResult("没有这个获奖等级");
             }
             //手动输入
         }else if(awardInfoPO.getType()==2){
@@ -133,6 +152,8 @@ public class AwardInfoController {
             }else {
                 return ResultGenerator.genFailResult("想添加的比赛已经存在");
             }
+        }else{
+            return ResultGenerator.genSuccessResult(ResultCode.HTTP_MESSAGE_NOT_READABLE);
         }
         //插入获奖信息
         if(awardInfoService.addAwardInfo(awardInfoPO)){

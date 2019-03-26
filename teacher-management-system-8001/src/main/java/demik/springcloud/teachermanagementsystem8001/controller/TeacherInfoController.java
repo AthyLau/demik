@@ -105,4 +105,17 @@ public class TeacherInfoController {
         }
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
+    /**
+     * 根据id查找教师
+     * @param teacherIdVO
+     * @return
+     */
+    @ApiOperation(value = "根据id查找教师", httpMethod = "POST")
+    @PostMapping("/findTeacherInfoById")
+    public Result findTeacherInfoById(@RequestBody TeacherIdVO teacherIdVO){
+        if(null!=teacherInfoService.findTeacherInfoById(teacherIdVO.getTeacherId())){
+            return ResultGenerator.genSuccessResult();
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
 }

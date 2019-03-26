@@ -2,6 +2,7 @@ package demik.springcloud.teachermanagementsystem8001.mapper;
 
 import demik.springcloud.entity.domain.dto.TeacherInfoDTO;
 import demik.springcloud.entity.domain.po.TeacherInfoPO;
+import demik.springcloud.entity.domain.vo.TeacherIdVO;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -47,4 +48,12 @@ public interface TeacherInfoMapper {
      */
     @Delete("delete from teacher_info where teacher_id = #{teacherId}")
     boolean deleteTeacherInfo(Integer teacherId);
+
+    /**
+     * 根绝id查询教师信息
+     * @param teacherId
+     * @return
+     */
+    @Select("select teacher_id from teacher_info where teacher_id = #{teacherId}")
+    TeacherIdVO findTeacherInfoById(Integer teacherId);
 }

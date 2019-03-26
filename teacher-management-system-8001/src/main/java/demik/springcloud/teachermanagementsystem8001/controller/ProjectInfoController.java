@@ -52,7 +52,7 @@ public class ProjectInfoController {
      * @return
      */
     @ApiOperation(value = "查询所有的教师项目信息", httpMethod = "POST")
-    @PostMapping("/findAllProjectinfo")
+    @PostMapping("/findAllTeacherProjectinfo")
     public Result findAllProjectTeacherinfo(){
         List<TeacherProjectPO> vos = projectInfoService.findAllProjectTeacherinfo();
         if(vos!=null&&vos.size()>0){

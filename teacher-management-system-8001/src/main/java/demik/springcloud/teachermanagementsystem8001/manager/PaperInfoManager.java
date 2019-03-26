@@ -85,4 +85,22 @@ public class PaperInfoManager {
         }
         return null;
     }
+
+    /**
+     * 根据id查询论文信息
+     * @param id
+     * @return
+     */
+    public PaperInfoVO findPaperInfoById(Integer id) {
+        return paperInfoMapper.findPaperInfoById(id);
+    }
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    public PaperTypePO findPaperTypeById(Integer id) {
+        return paperInfoMapper.findPaperTypeById(id);
+    }
 }

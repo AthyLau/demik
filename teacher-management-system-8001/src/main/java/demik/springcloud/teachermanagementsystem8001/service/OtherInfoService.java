@@ -44,4 +44,31 @@ public class OtherInfoService {
     public List<BookPO> findAllBook() {
         return otherInfoManager.findAllBook();
     }
+
+    /**
+     * 根据id查询单个教育背景
+     * @param id
+     * @return
+     */
+    public EducationBackgroudVO findEducationBackgroudById(Integer id) {
+        return otherInfoManager.findEducationBackgroudById(id);
+    }
+
+    /**
+     * 根据id查询职称
+     * @param id
+     * @return
+     */
+    public DeptVO findDeptById(Integer id) {
+        return otherInfoManager.findDeptById(id);
+    }
+
+    /**
+     * 根据id查询教材
+     * @param id
+     * @return
+     */
+    public BookPO findBookById(Integer id) {
+        return otherInfoManager.findBookById(id);
+    }
 }

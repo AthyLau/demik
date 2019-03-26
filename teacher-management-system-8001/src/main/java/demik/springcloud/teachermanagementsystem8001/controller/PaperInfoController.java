@@ -6,6 +6,7 @@ import demik.springcloud.entity.commonbox.ResultGenerator;
 import demik.springcloud.entity.domain.dto.PublishedPaperInfoDTO;
 import demik.springcloud.entity.domain.po.PaperPublishedPO;
 import demik.springcloud.entity.domain.po.PaperTypePO;
+import demik.springcloud.entity.domain.vo.PaperIdVO;
 import demik.springcloud.entity.domain.vo.PaperInfoVO;
 import demik.springcloud.entity.domain.vo.PaperPublishedIdVO;
 import demik.springcloud.entity.domain.vo.PaperOriginInfoVO;
@@ -49,6 +50,19 @@ public class PaperInfoController {
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
     /**
+     * 根据id查询论文信息
+     * @return
+     */
+    @ApiOperation(value = "根据id查询论文信息", httpMethod = "POST")
+    @PostMapping("/findPaperInfoById")
+    public Result findPaperInfoById(@RequestBody PaperIdVO paperIdVO){
+        PaperInfoVO vos = paperInfoService.findPaperInfoById(paperIdVO.getId());
+        if(vos!=null){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
      * 查询所有的论文类型
      * @return
      */
@@ -58,6 +72,19 @@ public class PaperInfoController {
         List<PaperTypePO> pos = paperInfoService.findAllPaperType();
         if(pos!=null&&pos.size()>0){
             return ResultGenerator.genSuccessResult(pos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据id查询论文类型信息
+     * @return
+     */
+    @ApiOperation(value = "根据id查询论文类型信息", httpMethod = "POST")
+    @PostMapping("/findPaperTypeById")
+    public Result findPaperTypeById(@RequestBody PaperIdVO paperIdVO){
+        PaperTypePO vos = paperInfoService.findPaperTypeById(paperIdVO.getId());
+        if(vos!=null){
+            return ResultGenerator.genSuccessResult(vos);
         }
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }

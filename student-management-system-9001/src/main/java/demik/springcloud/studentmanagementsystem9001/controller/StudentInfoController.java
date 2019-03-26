@@ -42,10 +42,10 @@ public class StudentInfoController {
     public Result addStudent(@RequestBody StudentInfoVO studentInfoVO){
         //todo 每添加一个学生都要把这个学生添加到user表里 学号作为账号身份证后六位作为密码
         if(studentInfoService.findStudentCaseById(studentInfoVO.getStudentCaseId())==null){
-            return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+            return ResultGenerator.genFailResult("学生的近况不存在");
         }
         if(aClassInfoService.findAClassById(studentInfoVO.getAclassId())==null){
-            return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+            return ResultGenerator.genFailResult("班级信息不存在");
         }
         if(studentInfoService.addStudent(studentInfoVO)){
             return ResultGenerator.genSuccessResult();
@@ -74,6 +74,12 @@ public class StudentInfoController {
     @ApiOperation(value = "更新一个学生18", httpMethod = "POST")
     @PostMapping("/updateStudent")
     public Result updateStudent(@RequestBody StudentInfoVO studentInfoVO){
+        if(studentInfoService.findStudentCaseById(studentInfoVO.getStudentCaseId())==null){
+            return ResultGenerator.genFailResult("学生的近况不存在");
+        }
+        if(aClassInfoService.findAClassById(studentInfoVO.getAclassId())==null){
+            return ResultGenerator.genFailResult("班级信息不存在");
+        }
         if(studentInfoService.updateStudent(studentInfoVO)){
             return ResultGenerator.genSuccessResult();
         }

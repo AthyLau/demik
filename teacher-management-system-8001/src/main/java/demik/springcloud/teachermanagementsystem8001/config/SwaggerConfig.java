@@ -47,8 +47,8 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
 
         return new ApiInfoBuilder()
-                .title("student-management-system")
-                .description("学生管理系统服务端接口1")
+                .title("teacher-management-system")
+                .description("教师管理系统服务端接口")
                 .version("1.0-SNAPSHOT")
                 .build();
     }

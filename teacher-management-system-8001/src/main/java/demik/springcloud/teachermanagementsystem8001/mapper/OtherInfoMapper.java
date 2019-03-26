@@ -37,4 +37,28 @@ public interface OtherInfoMapper {
      */
     @Select("select book_id,book_name from book_info")
     List<BookPO> findAllBook();
+
+    /**
+     * 根据id查询单个教育背景
+     * @param id
+     * @return
+     */
+    @Select("SELECT education_backgroud_id,education_backgroud_name from education_backgroud where education_backgroud_id = #{id}")
+    EducationBackgroudVO findEducationBackgroudById(Integer id);
+
+    /**
+     * 根据id查询职称
+     * @param id
+     * @return
+     */
+    @Select("SELECT dept_id,dept_name from dept_info where dept_id = #{deptId};")
+    DeptVO findDeptById(Integer id);
+
+    /**
+     * 根据id查询教材
+     * @param id
+     * @return
+     */
+    @Select("select book_id,book_name from book_info where book_id = #{id}")
+    BookPO findBookById(Integer id);
 }

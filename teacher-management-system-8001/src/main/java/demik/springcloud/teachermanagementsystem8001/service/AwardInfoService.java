@@ -28,7 +28,12 @@ public class AwardInfoService {
     public List<AwardGameVO> findAllAwardGame() {
         return awardInfoManager.findAllAwardGame();
     }
-
+    /**
+     * 查询单个比赛
+     */
+    public AwardGameVO findAwardGameById(Integer id) {
+        return awardInfoManager.findAwardGameById(id);
+    }
     /**
      * 查询所有的奖级别
      * @return
@@ -80,5 +85,14 @@ public class AwardInfoService {
      */
     public boolean addAwardGame(AwardGameVO awardGameVO) {
         return awardInfoManager.addAwardGame(awardGameVO);
+    }
+
+    /**
+     * 根据id查询获奖级别
+     * @param awardLevelId
+     * @return
+     */
+    public AwardLevelVO getAwardLevelById(Integer awardLevelId) {
+        return awardInfoManager.getAwardLevelById(awardLevelId);
     }
 }

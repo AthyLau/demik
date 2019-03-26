@@ -82,4 +82,22 @@ public class AwardInfoManager {
     public List<AwardGameVO> findAwardGameByName(String name) {
         return awardInfoMapper.findAwardGameByName(name);
     }
+
+    /**
+     * 查询单个比赛
+     * @param id
+     * @return
+     */
+    public AwardGameVO findAwardGameById(Integer id) {
+        return awardInfoMapper.findAwardGameById(id);
+    }
+
+    /**
+     * 根据id查询获奖级别
+     * @param awardLevelId
+     * @return
+     */
+    public AwardLevelVO getAwardLevelById(Integer awardLevelId) {
+        return awardInfoMapper.getAwardLevelById(awardLevelId);
+    }
 }
