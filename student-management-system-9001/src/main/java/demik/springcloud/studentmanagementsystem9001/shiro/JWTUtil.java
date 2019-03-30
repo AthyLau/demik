@@ -1,4 +1,4 @@
-package demik.springcloud.singlesignon80.shiro;
+package demik.springcloud.studentmanagementsystem9001.shiro;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;

@@ -80,6 +80,9 @@ public class MyRealm extends AuthorizingRealm {
         System.out.println("===================进行用户登陆校验========================");
         String token = (String) auth.getCredentials();
         System.out.println("getCredentials：" + auth.getCredentials().toString() + '\n' + "getPrincipal：" + auth.getPrincipal().toString());
+        if(token.equals("Basic Og==")){
+            throw new AuthenticationException("token invalid");
+        }
         // 解密获得username，用于和数据库进行对比
         String username = JWTUtil.getUsername(token);
         //token不存在

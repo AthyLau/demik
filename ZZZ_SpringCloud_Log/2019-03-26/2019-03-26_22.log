@@ -1,0 +1,118 @@
+2019-03-26_22 22:42:57.253 INFO  [Thread-32] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70ab2d48: startup date [Tue Mar 26 17:31:42 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31f9b85e
+2019-03-26_22 22:42:57.268 INFO  [Thread-31] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70ab2d48: startup date [Tue Mar 26 17:31:45 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31f9b85e
+2019-03-26_22 22:42:57.312 INFO  [Thread-32] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-03-26_22 22:42:57.313 INFO  [Thread-31] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-03-26_22 22:42:57.325 INFO  [Thread-29] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70ab2d48: startup date [Tue Mar 26 17:31:48 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31f9b85e
+2019-03-26_22 22:42:57.365 INFO  [Thread-31] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-26_22 22:42:57.367 INFO  [Thread-32] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-26_22 22:42:57.369 INFO  [Thread-31] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-26_22 22:42:57.372 INFO  [Thread-32] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-26_22 22:42:57.441 INFO  [Thread-29] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-03-26_22 22:42:57.485 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-26_22 22:42:57.487 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-26_22 22:42:57.515 INFO  [Thread-32] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-26_22 22:42:57.538 INFO  [Thread-30] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2e11485: startup date [Tue Mar 26 17:48:12 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@524d6d96
+2019-03-26_22 22:42:57.571 INFO  [Thread-29] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-26_22 22:42:57.604 INFO  [Thread-31] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-26_22 22:42:57.607 INFO  [Thread-32] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-03-26_22 22:42:57.661 INFO  [Thread-30] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application single-sign-on with eureka with status DOWN
+2019-03-26_22 22:42:57.665 WARN  [Thread-30] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1553611377665, current=DOWN, previous=UP]
+2019-03-26_22 22:42:57.686 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_SINGLE-SIGN-ON/single-sign-on-80: registering service...
+2019-03-26_22 22:42:57.694 INFO  [Thread-29] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-03-26_22 22:42:57.684 INFO  [Thread-32] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-03-26_22 22:42:57.713 INFO  [Thread-31] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-03-26_22 22:42:57.728 INFO  [Thread-30] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-26_22 22:42:57.751 INFO  [Thread-30] com.netflix.discovery.DiscoveryClient - Unregistering ...
+2019-03-26_22 22:42:57.733 INFO  [Thread-29] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4af0df05: startup date [Tue Mar 26 17:33:44 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@445b295b
+2019-03-26_22 22:42:57.770 INFO  [Thread-32] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-26_22 22:42:57.722 INFO  [Thread-40] com.netflix.loadbalancer.PollingServerListUpdater - Shutting down the Executor Pool for PollingServerListUpdater
+2019-03-26_22 22:42:57.775 INFO  [Thread-32] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-26_22 22:42:57.777 INFO  [Thread-32] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-26_22 22:42:57.778 INFO  [Thread-32] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-26_22 22:42:57.784 INFO  [Thread-29] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-03-26_22 22:42:57.789 INFO  [Thread-31] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-03-26_22 22:42:57.820 INFO  [Thread-31] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-26_22 22:42:57.822 INFO  [Thread-31] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-26_22 22:42:57.824 INFO  [Thread-29] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-26_22 22:42:57.825 INFO  [Thread-31] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-26_22 22:42:57.826 INFO  [Thread-31] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-26_22 22:42:57.827 INFO  [Thread-29] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-26_22 22:42:57.828 INFO  [http-nio-7002-exec-5] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance SINGLE-SIGN-ON/single-sign-on-80 with status DOWN (replication=false)
+2019-03-26_22 22:42:57.830 INFO  [Thread-29] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-26_22 22:42:57.831 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_SINGLE-SIGN-ON/single-sign-on-80 - registration status: 204
+2019-03-26_22 22:42:57.831 INFO  [Thread-29] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-26_22 22:42:57.838 INFO  [http-nio-7002-exec-8] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance SINGLE-SIGN-ON/single-sign-on-80 (replication=false)
+2019-03-26_22 22:42:57.840 INFO  [Thread-30] com.netflix.discovery.DiscoveryClient - DiscoveryClient_SINGLE-SIGN-ON/single-sign-on-80 - deregister  status: 200
+2019-03-26_22 22:42:57.845 INFO  [Thread-29] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application ZUUL-GATEWAY with eureka with status DOWN
+2019-03-26_22 22:42:57.848 WARN  [Thread-29] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1553611377848, current=DOWN, previous=UP]
+2019-03-26_22 22:42:57.850 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_ZUUL-GATEWAY/zuul-gateway-8080: registering service...
+2019-03-26_22 22:42:57.850 INFO  [Thread-32] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-26_22 22:42:57.862 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-03-26_22 22:42:57.867 INFO  [Thread-30] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-26_22 22:42:57.872 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Unregistering ...
+2019-03-26_22 22:42:57.874 INFO  [Thread-31] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-26_22 22:42:57.886 INFO  [http-nio-7002-exec-2] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance ZUUL-GATEWAY/zuul-gateway-8080 with status DOWN (replication=false)
+2019-03-26_22 22:42:57.887 INFO  [Thread-29] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-26_22 22:42:57.887 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_ZUUL-GATEWAY/zuul-gateway-8080 - registration status: 204
+2019-03-26_22 22:42:57.909 INFO  [http-nio-7002-exec-6] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance ZUUL-GATEWAY/zuul-gateway-8080 (replication=false)
+2019-03-26_22 22:42:57.911 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - DiscoveryClient_ZUUL-GATEWAY/zuul-gateway-8080 - deregister  status: 200
+2019-03-26_22 22:42:57.916 INFO  [Thread-31] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-03-26_22 22:42:57.961 INFO  [Thread-32] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-03-26_22 22:42:57.984 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-03-26_22 22:42:57.991 INFO  [Thread-30] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-03-26_22 22:42:58.015 INFO  [Thread-29] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-03-26_22 22:42:58.015 INFO  [Thread-30] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-26_22 22:42:58.081 INFO  [Thread-30] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-26_22 22:42:58.089 INFO  [Thread-30] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-26_22 22:42:58.092 INFO  [Thread-30] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-26_22 22:42:58.095 INFO  [Thread-30] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-26_22 22:42:58.120 INFO  [Thread-29] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-03-26_22 22:42:58.135 INFO  [Thread-29] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-03-26_22 22:42:58.138 INFO  [Thread-29] org.springframework.cloud.netflix.zuul.ZuulFilterInitializer - Stopping filter initializer
+2019-03-26_22 22:42:58.150 INFO  [Thread-29] org.springframework.context.annotation.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@76c4b018: startup date [Tue Mar 26 17:34:34 CST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4af0df05
+2019-03-26_22 22:42:58.153 INFO  [Thread-29] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application ZUUL-GATEWAY with eureka with status DOWN
+2019-03-26_22 22:42:58.169 INFO  [Thread-29] com.netflix.util.concurrent.ShutdownEnabledTimer - Shutdown hook removed for: NFLoadBalancer-PingTimer-single-sign-on
+2019-03-26_22 22:42:58.181 WARN  [Thread-30] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-03-26_22 22:42:58.181 INFO  [Thread-30] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-03-26_22 22:42:58.184 INFO  [Thread-29] com.netflix.util.concurrent.ShutdownEnabledTimer - Exception caught (might be ok if at shutdown)
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
+	at java.lang.Runtime.removeShutdownHook(Runtime.java:239)
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:613)
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:864)
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:277)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:364)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:287)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1006)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:958)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:76)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1006)
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929)
+2019-03-26_22 22:42:58.198 INFO  [Thread-30] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-26_22 22:42:58.200 INFO  [Thread-29] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-26_22 22:42:58.202 INFO  [Thread-29] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-03-26_22 22:42:58.204 INFO  [Thread-29] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-03-26_22 22:42:58.204 INFO  [Thread-29] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-03-26_22 22:42:58.223 INFO  [Thread-30] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-03-26_22 22:42:58.251 INFO  [Thread-29] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-26_22 22:42:58.297 INFO  [Thread-29] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

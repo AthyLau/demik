@@ -1,16 +1,19 @@
 package demik.springcloud.singlesignon80.controller;
 
+import demik.springcloud.entity.domain.vo.UserNameVO;
+import demik.springcloud.singlesignon80.service.AuthService;
+import net.sf.json.JSONObject;
 import demik.springcloud.entity.commonbox.Result;
 import demik.springcloud.entity.commonbox.ResultCode;
 import demik.springcloud.entity.commonbox.ResultGenerator;
-import demik.springcloud.entity.domain.dto.LoginDTO;
-import demik.springcloud.entity.domain.dto.RoleNameDTO;
-import demik.springcloud.entity.domain.dto.TokenDTO;
-import demik.springcloud.entity.domain.dto.UserDTO;
+import demik.springcloud.entity.domain.doo.ServerInfoDO;
+import demik.springcloud.entity.domain.dto.*;
+import demik.springcloud.entity.domain.po.UserPO;
 import demik.springcloud.entity.domain.vo.UserDetailInfoVO;
 import demik.springcloud.entity.exception.SuccessException;
-import demik.springcloud.singlesignon80.service.AuthService;
+import demik.springcloud.singlesignon80.shiro.ClientIp;
 import demik.springcloud.singlesignon80.shiro.JWTUtil;
+import demik.springcloud.singlesignon80.shiro.ServerIP;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.SecurityUtils;
@@ -25,6 +28,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Function:
@@ -45,14 +52,80 @@ public class AuthController {
      */
     @Autowired
     private AuthService authService;
+    @ApiOperation(value = "校验用户是否存在", httpMethod = "POST")
+    @PostMapping("/server_in/is_name_exisit")
+    public Result isNameExists(@RequestBody UserNameVO userNameVO){
+        System.out.println("校验用户是否存在");
+        return ResultGenerator.genSuccessResult(authService.getUserIdByUserName(userNameVO.getUserName()));
+    }
+
+    @ApiOperation(value = "校验用户是否上锁", httpMethod = "POST")
+    @PostMapping("/get_locked")
+    @RequiresAuthentication
+    public Result getLockedByName(@RequestBody UserNameVO userNameVO){
+        return ResultGenerator.genSuccessResult(authService.getLockedByName(userNameVO.getUserName()));
+    }
+    /**
+     * 获取临时token
+     *
+     * @return
+     */
+    @ApiOperation(value = "获取临时token", httpMethod = "POST")
+    @PostMapping("/temporary_token")
+    public Result getTemporaryToken() {
+        //获取客户端的ip
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        String ip = ClientIp.getIpAddr(request);
+        if(authService.getUserIdByUserName(ip)==null){
+            //数据库中没有该IP地址所以返回没有权限
+            return ResultGenerator.genSuccessResult(ResultCode.NOT_AUTH);
+        }
+        //根据客户端ip生成一个临时token
+        TokenDTO tokenDTO = new TokenDTO(JWTUtil.temporarySign(ip, ip));
+        //获取本机的信息
+        ServerInfoDO serverInfoDO = ServerIP.getServerIp();
+        //开启zuul
+        ClientSSODTO clientSSODTO = new ClientSSODTO(tokenDTO,"http://"+serverInfoDO.getIp()+":8080/demik/sms/user/login");
+        //不开启zuul
+        //ClientSSODTO clientSSODTO = new ClientSSODTO(tokenDTO,"http://"+serverInfoDO.getIp()+":8081/user/login");
+        LoginDTO loginDTO = new LoginDTO("template","template");
+        clientSSODTO.setRequestType("POST");
+        JSONObject object = JSONObject.fromObject(loginDTO);
+        String json = object.toString();
+        clientSSODTO.setJsonTemplate(json);
+        return ResultGenerator.genSuccessResult(clientSSODTO);
+    }
 
     /**
      * 登陆校验
      *
      * @return
      */
-    @ApiOperation(value = "登录校验", httpMethod = "POST")
+    @ApiOperation(value = "其他系统登陆时的登录校验", httpMethod = "POST")
     @PostMapping("/login")
+    @RequiresAuthentication
+    public Result otherLogin(@RequestBody @Validated LoginDTO loginDTO) {
+        //获取用户信息
+        UserDTO userBean = authService.checkUserInfo(loginDTO.getUserName());
+        System.out.println(loginDTO);
+        if (userBean == null) {
+            throw new UnauthorizedException("用户名有误！");
+        }
+        if (userBean.getUserPassword().equals(loginDTO.getUserPassword())) {
+            return ResultGenerator.genSuccessResult(new TokenDTO(JWTUtil.sign(loginDTO.getUserName(), loginDTO.getUserPassword())));
+        } else {
+            //别捕获这个异常，这个异常有一个具体捕获地点
+            //一定要这么传，别把这流程改了
+            throw new UnauthorizedException("密码有误！");
+        }
+    }
+    /**
+     * 登陆校验
+     *
+     * @return
+     */
+    @ApiOperation(value = "自己系统内登陆时的登录校验", httpMethod = "POST")
+    @PostMapping("/server_in/login")
     public Result login(@RequestBody @Validated LoginDTO loginDTO) {
         //获取用户信息
         UserDTO userBean = authService.checkUserInfo(loginDTO.getUserName());
@@ -88,9 +161,27 @@ public class AuthController {
 
         return ResultGenerator.genSuccessResult(new TokenDTO(JWTUtil.sign(userDetailInfoVO.getUserPO().getUserName(), userDetailInfoVO.getUserPO().getUserPassword())));
     }
-
     /**
-     * 获取角色和地址
+     * 获取用户信息及其角色权限信息
+     *
+     * @return
+     */
+    @PostMapping("/get_user_info")
+    @RequiresAuthentication
+    @ApiOperation(value = "获取用户信息及其角色权限信息", httpMethod = "POST")
+    public Result getUserInfo() throws SuccessException {
+        String token = SecurityUtils.getSubject().getPrincipal().toString();
+        //从jwt中获取token
+        String username = JWTUtil.getUsername(token);
+        if (username == null) {
+            return ResultGenerator.genNeutralResult(ResultCode.TOKEN_ERROR, "token失效或token为假！");
+        }
+        // 获取用户信息
+        UserDetailInfoVO userDetailInfoVO = authService.getUserDetailInfo(token);
+        return ResultGenerator.genSuccessResult(userDetailInfoVO);
+    }
+    /**
+     * 获取角色
      *
      * @return
      */

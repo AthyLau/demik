@@ -1,11 +1,12 @@
 package demik.springcloud.singlesignon80.manager;
 
-
+import com.google.common.collect.Lists;
 import demik.springcloud.entity.domain.po.PermissionPO;
 import demik.springcloud.entity.domain.po.RolePO;
 import demik.springcloud.entity.domain.po.UserPO;
-import demik.springcloud.singlesignon80.mapper.AuthMapper;
+import demik.springcloud.singlesignon80.mapper.AuthenticationMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class AuthManager {
      * 鉴权映射库
      */
     @Autowired
-    private AuthMapper authMapper;
+    private AuthenticationMapper authMapper;
 
 
     /**
@@ -34,6 +35,7 @@ public class AuthManager {
      * @return
      */
     public String getUsernameById(Integer userId) {
+
         return authMapper.getUsernameById(userId);
     }
 
@@ -60,14 +62,17 @@ public class AuthManager {
     }
 
     /**
-     * 根据用户名，获取用户id
+     * 获取ip的id
      *
      * @param userName 用户名
      * @return 用户id
      */
-    public Integer getUserIdByUserName(String userName) {
+    public Boolean getUserIdByUserName(String userName) {
         System.out.println("AuthService_UserIdByUserName-->没有执行缓存");
-        return authMapper.getUserIdByUserName(userName);
+        if (authMapper.getUserIdByUserName(userName)==null){
+            return false;
+        }
+        return true;
     }
 
 
@@ -79,7 +84,11 @@ public class AuthManager {
      */
     public List<String> getPermissionNameByUserName(List<String> roleNames) {
         System.out.println("AuthService_PermissionNameByUserName-->没有执行缓存");
-        return authMapper.getPermissionNameByUserName(roleNames);
+        List<String> list = Lists.newArrayList();
+        roleNames.forEach(x->{
+            list.add(authMapper.getPermissionNameByUserName(x));
+        });
+        return list;
     }
 
 
@@ -138,5 +147,23 @@ public class AuthManager {
     public List<Integer> getRoleToPermissionByRoleId(List<Integer> roleId) {
         System.out.println("AuthService_RoleToPermissionByRoleId-->没有执行缓存");
         return authMapper.getRoleToPermissionByRoleId(roleId);
+    }
+
+    /**
+     *插入一条用户信息
+     * @param userPO
+     * @return
+     */
+    public boolean addUserInfo(UserPO userPO) {
+        return authMapper.addUserInfo(userPO);
+    }
+
+    /**
+     * 获取用户是否上锁
+     * @param name
+     * @return
+     */
+    public boolean getLockedByName(String name) {
+        return authMapper.getLockedByName(name);
     }
 }

@@ -1,8 +1,10 @@
 package demik.springcloud.singlesignon80.service;
 
+
 import com.google.common.collect.Lists;
 import demik.springcloud.entity.domain.dto.RoleAndPermission;
 import demik.springcloud.entity.domain.dto.UserDTO;
+import demik.springcloud.entity.domain.dto.UserInfoDTO;
 import demik.springcloud.entity.domain.po.PermissionPO;
 import demik.springcloud.entity.domain.po.RolePO;
 import demik.springcloud.entity.domain.po.UserPO;
@@ -17,16 +19,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
- * Function:
+ * Function: 鉴权服务类 (一级)
  *
- * @author liubing
- * Date: 2019/3/7 上午10:42
+ * @author miluo
+ * Date: 2018/9/6 下午4:25
  * @since JDK 1.8
  */
-
 @Service
 public class AuthService {
     /**
@@ -34,7 +36,6 @@ public class AuthService {
      */
     @Autowired
     private AuthManager authManager;
-
 
     /**
      * 从数据库中获取用户信息
@@ -148,12 +149,12 @@ public class AuthService {
     }
 
     /**
-     * 根据用户名，获取用户id
+     * 获取ip的id
      *
      * @param userName 用户名
      * @return 用户id
      */
-    public Integer getUserIdByUserName(String userName){
+    public Boolean getUserIdByUserName(String userName){
         return authManager.getUserIdByUserName(userName);
     }
 
@@ -176,5 +177,23 @@ public class AuthService {
             throw new UnauthorizedException("用户名错误");
         }
         return userInfoPO;
+    }
+
+    /**
+     * 插入一条用户信息
+     * @param userPO
+     * @return
+     */
+    public boolean addUserInfo(UserPO userPO) {
+        if(userPO.getUserName().contains(".")){
+            return false;
+        }
+        return authManager.addUserInfo(userPO);
+    }
+    /**
+     * 获取用户是否上锁
+     */
+    public boolean getLockedByName(String name){
+        return authManager.getLockedByName(name);
     }
 }

@@ -1,24 +1,24 @@
 package demik.springcloud.singlesignon80.mapper;
+
 import demik.springcloud.entity.domain.po.PermissionPO;
 import demik.springcloud.entity.domain.po.RolePO;
 import demik.springcloud.entity.domain.po.UserPO;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
- * Function:
+ * Function:鉴权映射库
  *
- * @author liubing
- * Date: 2019/3/7 上午10:42
+ * @author miluo
+ * Date: 2018/10/25 4:36 PM
  * @since JDK 1.8
  */
 
 @Mapper
-public interface AuthMapper {
+@Repository
+public interface AuthenticationMapper {
 
 
 //    /**
@@ -32,12 +32,12 @@ public interface AuthMapper {
 
 
     /**
-     * 根据用户名，获取用户id
+     * 获取ip的id
      *
      * @param userName 用户名
      * @return 用户id
      */
-    @Select("SELECT id FROM users WHERE user_name=#{userName}")
+    @Select("SELECT user_id FROM users WHERE user_name=#{userName}")
     Integer getUserIdByUserName(@Param("userName") String userName);
 
 
@@ -46,7 +46,7 @@ public interface AuthMapper {
      *
      * @return
      */
-    @Select("SELECT * FROM users")
+    @Select("SELECT * FROM users ")
     List<UserPO> getUserInfoAll();
 
     /**
@@ -87,17 +87,17 @@ public interface AuthMapper {
      * @param roleNames
      * @return
      */
-//    @Select("SELECT permission_name FROM role_to_permission_info left join role_info using(role_id) left join permission_info using(permission_id) WHERE role_name = #{roleName};")
-    @Select({
-            "<script>",
-            "SELECT permission_name FROM roles_permissions left join roles using(role_id) left join permissions using(permission_id) ",
-            "where role_name in ",
-            "<foreach collection='roleNames' item='roleName' open='(' separator=',' close=')'>",
-            "#{roleName}",
-            "</foreach>",
-            "</script>"
-    })
-    List<String> getPermissionNameByUserName(@Param("roleNames") List<String> roleNames);
+    @Select("SELECT permission_name FROM roles_permissions left join roles using(role_id) left join permissions using(permission_id) WHERE role_name = #{roleName};")
+//    @Select({
+//            "<script>",
+//            "SELECT permission_name FROM roles_permissions left join roles using(role_id) left join permissions using(permission_id) ",
+//            "where and role_name in ",
+//            "<foreach collection='roleNames' item='roleName' open='(' separator=',' close=')'>",
+//            "#{roleName}",
+//            "</foreach>",
+//            "</script>"
+//    })
+    String getPermissionNameByUserName(@Param("roleName")String roleNames);
 
 
 
@@ -107,7 +107,7 @@ public interface AuthMapper {
      * @param userName
      * @return
      */
-    @Select("SELECT user_id, user_name, locked, user_sex, user_password, user_phone, user_mail, create_time,update_time FROM users WHERE user_name = #{userName} ")
+    @Select("SELECT user_id, user_name, locked, user_sex, user_password, user_phone, user_mail, create_time,update_time FROM users WHERE user_name = #{userName}")
     UserPO getUserInfoByUserName(@Param("userName") String userName);
 
     /**
@@ -116,7 +116,7 @@ public interface AuthMapper {
      * @param roleId 角色id
      * @return 角色集合
      */
-    @Select("SELECT * FROM role WHERE role_id IN " +
+    @Select("SELECT * FROM role WHERE locked = false and role_id IN " +
             "<foreach collection=\"roleIds\" index = \"index\" item = \"id\" open= \"(\" separator=\",\" close=\")\"> " +
             "#{id} \n" +
             "</foreach>")
@@ -219,6 +219,22 @@ public interface AuthMapper {
     @Select("SELECT user_name FROM users WHERE user_id=#{userId}")
     String getUsernameById(Integer userId);
 
+    /**
+     * 插入一条用户信息
+     * @param userPO
+     * @return
+     */
+    @Insert("INSERT INTO users(user_name, user_sex, user_phone, user_mail, user_password, locked) Values(#{userName},#{userSex},#{userPhone},#{userMail},#{userPassword},#{locked})")
+    boolean addUserInfo(UserPO userPO);
+
+    /**
+     * 获取用户是否上锁
+     * @param name
+     * @return
+     */
+    @Select("select locked from users where user_name = #{name}")
+    boolean getLockedByName(String name);
+
 
     //添加角色信息
 
@@ -229,5 +245,6 @@ public interface AuthMapper {
     //根据角色id映射权限 role_to_permission_info表
 
     //根据用户映射角色  user_role_info
+
 
 }

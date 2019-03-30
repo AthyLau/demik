@@ -1,9 +1,10 @@
-package demik.springcloud.singlesignon80.shiro;
+package demik.springcloud.studentmanagementsystem9001.shiro;
 
-import demik.springcloud.singlesignon80.controller.AuthController;
+import demik.springcloud.studentmanagementsystem9001.service.URLPermissionService;
 import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -22,8 +23,8 @@ import java.io.IOException;
  */
 public class JWTFilter extends BasicHttpAuthenticationFilter {
 
-    private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
-
+    @Autowired
+    private URLPermissionService urlPermissionService;
     /**
      * 检测header里面是否包含Authorization字段即可
      *
@@ -64,9 +65,12 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
             return false;
         }
         String name = JWTUtil.getUsername(authorization);
-        // 提交给realm进行登入，如果错误他会抛出异常并被捕获
-        getSubject(request, response).login(token);
-        // 如果没有抛出异常则代表登入成功，返回true
+//        urlPermissionService.getPermissionByURL(name);
+////        // 提交给realm进行登入，如果错误他会抛出异常并被捕获
+//        getSubject(request, response).login(token);
+////         如果没有抛出异常则代表登入成功，返回true
+        //接下来校验用户与token是否正确
+
         return true;
     }
 
@@ -81,10 +85,9 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
      */
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
-        String url = "http://127.0.0.1:8081/error/error_get";
+//        String url = "http://127.0.0.1:8081/error/error_get";
         System.out.println("===================执行全局拦截========================");
         if (isLoginAttempt(request, response)) {
-            System.out.println("jwt:包含了token字段");
             try {
                 executeLogin(request, response);
             } catch (Exception e) {
@@ -129,7 +132,7 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
             HttpServletResponse httpServletResponse = (HttpServletResponse) resp;
             httpServletResponse.sendRedirect("/401");
         } catch (IOException e) {
-            logger.error(e.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 }

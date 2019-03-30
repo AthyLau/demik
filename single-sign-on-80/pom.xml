@@ -20,6 +20,13 @@
 	</properties>
 
 	<dependencies>
+		<!--json-->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
 		<!--actuator-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -149,9 +156,9 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>demik.springcloud</groupId>
-			<artifactId>entity</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>com.vaadin.external.google</groupId>
+			<artifactId>android-json</artifactId>
+			<version>RELEASE</version>
 		</dependency>
 	</dependencies>
 

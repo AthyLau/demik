@@ -1,4 +1,4 @@
-package demik.springcloud.zuulgateway8080;
+package demik.springcloud.zuulgateway8080.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -23,7 +23,7 @@ import java.util.Arrays;
  */
 @Configuration
 @EnableSwagger2
-public class SwaggerConfig {
+public class ZuulSwaggerConfig {
 
     @Value("${swagger.enabled}")
     private Boolean enabledSwagger;

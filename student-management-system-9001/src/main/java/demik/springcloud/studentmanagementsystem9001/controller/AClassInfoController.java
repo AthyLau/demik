@@ -14,6 +14,7 @@ import demik.springcloud.studentmanagementsystem9001.service.StudentInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -64,6 +65,7 @@ public class AClassInfoController {
      * @param aClassIdVO
      * @return
      */
+    @RequiresAuthentication
     @ApiOperation(value = "删除一个班级2", httpMethod = "POST")
     @PostMapping("/deleteAClass")
     public Result deleteAClass(@RequestBody AClassIdVO aClassIdVO){
