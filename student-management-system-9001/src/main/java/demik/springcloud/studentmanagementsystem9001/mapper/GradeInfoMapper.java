@@ -55,4 +55,11 @@ public interface GradeInfoMapper {
     @Select("select grade_id,grade_name,grade_description,grade_slogan from grade_info where grade_id = #{id}")
     GradeInfoPO findGradeById(Integer id);
 
+    /**
+     * 根据年级名称查询信息
+     * @param gradeName
+     * @return
+     */
+    @Select("select grade_id,grade_name,grade_description,grade_slogan from grade_info where grade_name = #{gradeName}")
+    GradeInfoPO findGradeByGradeName(String gradeName);
 }

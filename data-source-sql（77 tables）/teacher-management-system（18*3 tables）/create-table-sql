@@ -1,0 +1,262 @@
+CREATE SCHEMA teacher_cloud_001;
+CREATE SCHEMA teacher_cloud_002;
+CREATE SCHEMA teacher_cloud_003;
+每个数据库下都要执行如下建表语句，防止出现一个数据库挂掉导致整个服务宕机
+
+-- auto-generated definition
+CREATE TABLE award_game
+(
+  award_game_id   INT AUTO_INCREMENT
+  COMMENT '获奖比赛id'
+    PRIMARY KEY,
+  award_game_name VARCHAR(20) NOT NULL
+  COMMENT '获奖比赛名字',
+  CONSTRAINT award_game_award_game_id_uindex
+  UNIQUE (award_game_id)
+)
+  COMMENT '获奖比赛表';
+-- auto-generated definition
+CREATE TABLE award_info
+(
+  award_id       INT AUTO_INCREMENT
+  COMMENT '获奖信息的id'
+    PRIMARY KEY,
+  teacher_id     INT                                 NOT NULL
+  COMMENT '获奖老师的id',
+  award_game_id  INT                                 NOT NULL
+  COMMENT '比赛的id',
+  award_level_id INT                                 NOT NULL
+  COMMENT '获奖级别的id',
+  award_time     TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+  COMMENT '获奖时间',
+  CONSTRAINT award_info_award_id_uindex
+  UNIQUE (award_id)
+)
+  COMMENT '获奖信息表';
+-- auto-generated definition
+CREATE TABLE award_level
+(
+  award_level_id   INT AUTO_INCREMENT
+  COMMENT '获奖级别id'
+    PRIMARY KEY,
+  award_level_name VARCHAR(20) NOT NULL
+  COMMENT '级别名字',
+  CONSTRAINT award_level_award_level_id_uindex
+  UNIQUE (award_level_id)
+)
+  COMMENT '获奖级别表';
+-- auto-generated definition
+CREATE TABLE book_info
+(
+  book_id   INT AUTO_INCREMENT
+  COMMENT '教材id'
+    PRIMARY KEY,
+  book_name VARCHAR(20) NOT NULL
+  COMMENT '教材名字',
+  CONSTRAINT book_info_book_id_uindex
+  UNIQUE (book_id)
+)
+  COMMENT '教材表';
+-- auto-generated definition
+CREATE TABLE dept_info
+(
+  dept_id   INT AUTO_INCREMENT
+  COMMENT '职位id'
+    PRIMARY KEY,
+  dept_name VARCHAR(20) NOT NULL
+  COMMENT '职位名字',
+  CONSTRAINT dept_info_dept_id_uindex
+  UNIQUE (dept_id)
+)
+  COMMENT '职称表';
+-- auto-generated definition
+CREATE TABLE education_backgroud
+(
+  education_backgroud_id   INT AUTO_INCREMENT
+  COMMENT '学历id'
+    PRIMARY KEY,
+  education_backgroud_name VARCHAR(20) NOT NULL
+  COMMENT '学历名字',
+  CONSTRAINT education_backgroud_education_backgroud_id_uindex
+  UNIQUE (education_backgroud_id)
+)
+  COMMENT '学历表';
+-- auto-generated definition
+CREATE TABLE office_info
+(
+  office_id      INT AUTO_INCREMENT
+  COMMENT '教研室id'
+    PRIMARY KEY,
+  office_name    VARCHAR(20) NOT NULL
+  COMMENT '教研室名称',
+  office_address VARCHAR(20) NOT NULL
+  COMMENT '教研室地址',
+  office_phone   VARCHAR(20) NOT NULL
+  COMMENT '教研室电话',
+  CONSTRAINT office_info_office_id_uindex
+  UNIQUE (office_id)
+)
+  COMMENT '教研室表';
+-- auto-generated definition
+CREATE TABLE paper_info
+(
+  paper_id      INT AUTO_INCREMENT
+  COMMENT '论文id'
+    PRIMARY KEY,
+  paper_name    VARCHAR(20) NOT NULL
+  COMMENT '论文名称',
+  paper_type_id INT         NOT NULL
+  COMMENT '论文类型id',
+  CONSTRAINT paper_info_paper_id_uindex
+  UNIQUE (paper_id)
+)
+  COMMENT '论文信息表';
+-- auto-generated definition
+CREATE TABLE paper_type
+(
+  paper_type_id   INT         NOT NULL
+  COMMENT '论文类型id',
+  paper_type_name VARCHAR(20) NOT NULL
+  COMMENT '论文类型名字'
+)
+  COMMENT '论文类型';
+-- auto-generated definition
+CREATE TABLE project_info
+(
+  project_id    INT AUTO_INCREMENT
+  COMMENT '项目id'
+    PRIMARY KEY,
+  project_name  VARCHAR(20) NOT NULL
+  COMMENT '项目名字',
+  project_value INT         NOT NULL
+  COMMENT '项目估价',
+  CONSTRAINT project_info_project_id_uindex
+  UNIQUE (project_id)
+)
+  COMMENT '项目表';
+-- auto-generated definition
+CREATE TABLE published_paper_info
+(
+  id             INT AUTO_INCREMENT
+    PRIMARY KEY,
+  paper_id       INT                                 NOT NULL
+  COMMENT '论文id',
+  teacher_id     INT                                 NOT NULL
+  COMMENT '论文名字',
+  published_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+  COMMENT '发布时间',
+  CONSTRAINT published_paper_info_id_uindex
+  UNIQUE (id)
+)
+  COMMENT '发布论文信息表';
+-- auto-generated definition
+CREATE TABLE school_info
+(
+  school_id   INT AUTO_INCREMENT
+  COMMENT '学校id'
+    PRIMARY KEY,
+  school_name VARCHAR(20) NOT NULL
+  COMMENT '学校名字',
+  CONSTRAINT school_info_school_id_uindex
+  UNIQUE (school_id)
+)
+  COMMENT '学校信息表';
+-- auto-generated definition
+CREATE TABLE teacher_info
+(
+  teacher_id             INT AUTO_INCREMENT
+  COMMENT '教师id'
+    PRIMARY KEY,
+  teacher_name           VARCHAR(20)                         NOT NULL
+  COMMENT '教师名字',
+  teacher_id_card        VARCHAR(20)                         NOT NULL
+  COMMENT '教师身份证号',
+  teacher_number         VARCHAR(20)                         NOT NULL
+  COMMENT '教师编号',
+  teacher_phone          VARCHAR(20)                         NOT NULL
+  COMMENT '教师电话',
+  teacher_entrance_time  TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+  COMMENT '教师入学时间',
+  office_id              INT                                 NOT NULL
+  COMMENT '教研室id',
+  education_backgroud_id INT                                 NOT NULL
+  COMMENT '学历id',
+  school_id              INT                                 NOT NULL
+  COMMENT '毕业学校id',
+  dept_id                INT                                 NOT NULL
+  COMMENT '职位id',
+  book_id                INT                                 NOT NULL
+  COMMENT '教材id',
+  CONSTRAINT teacher_info_teacher_id_uindex
+  UNIQUE (teacher_id)
+)
+  COMMENT '教师表';
+-- auto-generated definition
+CREATE TABLE teacher_project
+(
+  id         INT AUTO_INCREMENT
+  COMMENT 'id'
+    PRIMARY KEY,
+  teacher_id INT NOT NULL
+  COMMENT '教师id',
+  project_id INT NOT NULL
+  COMMENT '项目id',
+  CONSTRAINT teacher_project_id_uindex
+  UNIQUE (id)
+)
+  COMMENT '教师项目对应表';
+-- auto-generated definition
+CREATE TABLE teacher_work
+(
+  id         INT AUTO_INCREMENT
+  COMMENT 'id'
+    PRIMARY KEY,
+  work_id    INT NOT NULL
+  COMMENT '专著id',
+  teacher_id INT NOT NULL
+  COMMENT '教师id',
+  CONSTRAINT teacher_works_id_uindex
+  UNIQUE (id)
+)
+  COMMENT '教师与出版专著对应表';
+-- auto-generated definition
+CREATE TABLE urls_permissions
+(
+  id              INT AUTO_INCREMENT
+    PRIMARY KEY,
+  url             VARCHAR(30) NOT NULL
+  COMMENT '接口的路径',
+  permission_name VARCHAR(20) NOT NULL
+  COMMENT '权限的名字',
+  CONSTRAINT urls_permissions_id_uindex
+  UNIQUE (id)
+)
+  COMMENT '接口对应权限表';
+-- auto-generated definition
+CREATE TABLE visit_school
+(
+  id         INT AUTO_INCREMENT
+  COMMENT '访学id'
+    PRIMARY KEY,
+  teacher_id INT                                 NOT NULL
+  COMMENT '教师id',
+  school_id  INT                                 NOT NULL
+  COMMENT '学校id',
+  visit_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+  COMMENT '访学时间',
+  CONSTRAINT visit_school_id_uindex
+  UNIQUE (id)
+)
+  COMMENT '访学信息表';
+-- auto-generated definition
+CREATE TABLE work_info
+(
+  work_id   INT AUTO_INCREMENT
+  COMMENT '作品id'
+    PRIMARY KEY,
+  work_name VARCHAR(20) NOT NULL
+  COMMENT '作品名字',
+  CONSTRAINT work_info_work_id_uindex
+  UNIQUE (work_id)
+)
+  COMMENT '出版专著表';

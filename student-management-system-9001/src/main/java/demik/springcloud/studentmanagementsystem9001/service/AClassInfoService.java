@@ -121,4 +121,20 @@ public class AClassInfoService {
     public List<AClassInfoVO> findAClassInfoByGId(Integer gId){
         return aClassInfoManager.findAClassInfoByGId(gId);
     }
+
+    public AClassInfoDTO findAClassByClassName(String aClassName) {
+        AClassInfoDTO dto = new AClassInfoDTO();
+        AClassInfoVO avo = aClassInfoManager.findAClassByClassName(aClassName);
+        if(avo==null){
+            return null;
+        }
+        PerfessionalInfoVO pvo = perfessionalInfoManager.findPerfessionalInfoById(avo.getPerfessionalId());
+        GradeInfoDO gdo = gradeInfoManager.findGradeById(avo.getGradeId());
+        GradeInfoVO gvo = new GradeInfoVO();
+        BeanUtils.copyProperties(gdo,gvo);
+        dto.setaClassInfoVO(avo);
+        dto.setGradeInfoVO(gvo);
+        dto.setPerfessionalInfoVO(pvo);
+        return dto;
+    }
 }

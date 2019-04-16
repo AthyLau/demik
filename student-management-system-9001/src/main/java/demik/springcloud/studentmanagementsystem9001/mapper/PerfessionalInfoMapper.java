@@ -51,4 +51,12 @@ public interface PerfessionalInfoMapper {
      */
     @Select("SELECT perfessional_id,perfessional_name,perfessional_description,perfessional_slogan from perfessional_info where perfessional_id = #{perfessionalId}")
     PerfessionalInfoVO findPerfessionalInfoById(Integer perfessionalId);
+
+    /**
+     * 根据名称查询专业
+     * @param perfessionalName
+     * @return
+     */
+    @Select("SELECT perfessional_id,perfessional_name,perfessional_description,perfessional_slogan from perfessional_info where perfessional_name = #{perfessionalName}")
+    PerfessionalInfoVO findPerfessionalInfoByName(String perfessionalName);
 }

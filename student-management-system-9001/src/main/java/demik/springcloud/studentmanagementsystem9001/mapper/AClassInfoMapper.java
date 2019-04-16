@@ -1,5 +1,6 @@
 package demik.springcloud.studentmanagementsystem9001.mapper;
 
+import demik.springcloud.entity.domain.dto.AClassInfoDTO;
 import demik.springcloud.entity.domain.vo.AClassInfoVO;
 import org.apache.ibatis.annotations.*;
 
@@ -63,4 +64,12 @@ public interface AClassInfoMapper {
      */
     @Select("SELECT aclass_id,aclass_name,aclass_description,aclass_slogan,grade_id,perfessional_id from aclass_info where perfessional_id = #{pId}")
     List<AClassInfoVO> findAClassInfoByPId(Integer pId);
+
+    /**
+     *
+     * @param aClassName
+     * @return
+     */
+    @Select("SELECT aclass_id,aclass_name,aclass_description,aclass_slogan,grade_id,perfessional_id from aclass_info where aclass_name = #{aClassName}")
+    AClassInfoVO findAClassByClassName(String aClassName);
 }

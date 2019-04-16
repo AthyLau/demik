@@ -3,6 +3,7 @@ package demik.springcloud.teachermanagementsystem8001.controller;
 import demik.springcloud.entity.commonbox.Result;
 import demik.springcloud.entity.commonbox.ResultCode;
 import demik.springcloud.entity.commonbox.ResultGenerator;
+import demik.springcloud.entity.domain.dto.OfficeNameDTO;
 import demik.springcloud.entity.domain.vo.OfficeIdVO;
 import demik.springcloud.entity.domain.vo.OfficeInfoVO;
 import demik.springcloud.teachermanagementsystem8001.service.OfficeInfoService;
@@ -38,6 +39,9 @@ public class OfficeInfoController {
     @ApiOperation(value = "添加一个教研室", httpMethod = "POST")
     @PostMapping("/addOfficeInfo")
     public Result addOfficeInfo(@RequestBody OfficeInfoVO officeInfoVO){
+        if(officeInfoService.findOfficeInfoByOfficeName(officeInfoVO.getOfficeName())!=null){
+            return ResultGenerator.genFailResult("教研室已经存在");
+        }
         if(officeInfoService.addOfficeInfo(officeInfoVO)){
             return ResultGenerator.genSuccessResult();
         }
@@ -98,5 +102,17 @@ public class OfficeInfoController {
         }
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
-
+    /**
+     * 根据名称查询教研室
+     * @return
+     */
+    @ApiOperation(value = "根据名称查询教研室", httpMethod = "POST")
+    @PostMapping("/findOfficeInfoByOfficeName")
+    public Result<OfficeInfoVO> findOfficeInfoByOfficeName(@RequestBody OfficeNameDTO officeNameDTO){
+        OfficeInfoVO vo = officeInfoService.findOfficeInfoByOfficeName(officeNameDTO.getOfficeName());
+        if(vo!=null){
+            return ResultGenerator.genSuccessResult(vo);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
 }

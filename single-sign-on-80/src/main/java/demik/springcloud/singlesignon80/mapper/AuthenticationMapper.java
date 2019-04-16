@@ -3,6 +3,7 @@ package demik.springcloud.singlesignon80.mapper;
 import demik.springcloud.entity.domain.po.PermissionPO;
 import demik.springcloud.entity.domain.po.RolePO;
 import demik.springcloud.entity.domain.po.UserPO;
+import demik.springcloud.entity.domain.po.UsersRolesPO;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
@@ -224,6 +225,7 @@ public interface AuthenticationMapper {
      * @param userPO
      * @return
      */
+    @Options(useGeneratedKeys=true, keyProperty="userId", keyColumn="user_id")
     @Insert("INSERT INTO users(user_name, user_sex, user_phone, user_mail, user_password, locked) Values(#{userName},#{userSex},#{userPhone},#{userMail},#{userPassword},#{locked})")
     boolean addUserInfo(UserPO userPO);
 
@@ -234,6 +236,14 @@ public interface AuthenticationMapper {
      */
     @Select("select locked from users where user_name = #{name}")
     boolean getLockedByName(String name);
+
+    /**
+     * 插入一条学生用户角色
+     * @param usersRolesPO
+     * @return
+     */
+    @Insert("insert into users_roles(user_id,role_id) values(#{userId},#{roleId})")
+    Boolean addUserRoles(UsersRolesPO usersRolesPO);
 
 
     //添加角色信息

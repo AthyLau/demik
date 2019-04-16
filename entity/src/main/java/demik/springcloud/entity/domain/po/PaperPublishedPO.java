@@ -23,7 +23,7 @@ public class PaperPublishedPO {
     /**
      * 教师id
      */
-    private String teacherId;
+    private Integer teacherId;
 
     /**
      * 类型
@@ -32,7 +32,7 @@ public class PaperPublishedPO {
     public PaperPublishedPO() {
     }
 
-    public PaperPublishedPO(Integer paperId, String paperName, Integer paperTypeId, String teacherId, Integer type) {
+    public PaperPublishedPO(Integer paperId, String paperName, Integer paperTypeId, Integer teacherId, Integer type) {
         this.paperId = paperId;
         this.paperName = paperName;
         this.paperTypeId = paperTypeId;
@@ -75,11 +75,11 @@ public class PaperPublishedPO {
         this.paperTypeId = paperTypeId;
     }
 
-    public String getTeacherId() {
+    public Integer getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(String teacherId) {
+    public void setTeacherId(Integer teacherId) {
         this.teacherId = teacherId;
     }
 

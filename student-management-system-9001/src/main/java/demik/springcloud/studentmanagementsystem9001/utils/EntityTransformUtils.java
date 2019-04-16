@@ -19,6 +19,9 @@ public class EntityTransformUtils {
     }
 
     public static void main(String[] args){
+        String uri = "/demik/ssso/user/add";
+        String[] uris = uri.split("/");
+        System.out.println(uris[uris.length-1]);
 //        String str = new String();
 ////        String className = str.getClass().toString();
 ////        int lastIndexOf = className.lastIndexOf(".");
@@ -26,7 +29,7 @@ public class EntityTransformUtils {
 ////        System.out.println(className);
 ////        System.out.println(myStr);
 ////        getDTOfromVO(str);
-        String str = new String();
-        Class T = str.getClass();
+//        String str = new String();
+//        Class T = str.getClass();
     }
 }

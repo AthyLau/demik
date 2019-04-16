@@ -2,9 +2,9 @@ package demik.springcloud.singlesignon80.service;
 
 
 import com.google.common.collect.Lists;
-import demik.springcloud.entity.domain.dto.RoleAndPermission;
-import demik.springcloud.entity.domain.dto.UserDTO;
-import demik.springcloud.entity.domain.dto.UserInfoDTO;
+import com.google.common.collect.Maps;
+import demik.springcloud.entity.commonbox.ResultCode;
+import demik.springcloud.entity.domain.dto.*;
 import demik.springcloud.entity.domain.po.PermissionPO;
 import demik.springcloud.entity.domain.po.RolePO;
 import demik.springcloud.entity.domain.po.UserPO;
@@ -17,10 +17,14 @@ import org.apache.shiro.authz.UnauthenticatedException;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Function: 鉴权服务类 (一级)
@@ -196,4 +200,46 @@ public class AuthService {
     public boolean getLockedByName(String name){
         return authManager.getLockedByName(name);
     }
+
+    /**
+     * excel学生用户批量添加到数据库
+     * @param dtos
+     * @return
+     */
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, timeout = 3600)
+    public Map<Integer,String> addStudentUser(List<StudentExcelDTO> dtos) {
+        Map<Integer,String> map = Maps.newHashMap();
+        dtos.forEach(x->{
+            int xh = x.getId()+10;
+            try{
+                if(!authManager.addStudentUserInfo(authManager.getUserPO(x))){
+                    throw new RuntimeException();
+                }
+            }catch (Exception e){
+                map.put(xh,xh+"行用户数据有错误");
+            }
+        });
+        return map;
+    }
+    /**
+     * excel学生用户批量添加到数据库
+     * @param dtos
+     * @return
+     */
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, timeout = 3600)
+    public Map<Integer,String> addTeacherUser(List<TeacherExcelDTO> dtos) {
+        Map<Integer,String> map = Maps.newHashMap();
+        dtos.forEach(x->{
+            int xh = x.getId()+10;
+            try{
+                if(!authManager.addTeacherUserInfo(authManager.getUserPO(x))){
+                    throw new RuntimeException();
+                }
+            }catch (Exception e){
+                map.put(xh,xh+"行用户数据有错误");
+            }
+        });
+        return map;
+    }
+
 }

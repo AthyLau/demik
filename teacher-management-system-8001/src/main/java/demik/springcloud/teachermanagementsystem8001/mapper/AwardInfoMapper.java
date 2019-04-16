@@ -88,4 +88,31 @@ public interface AwardInfoMapper {
      */
     @Select("SELECT award_level_id,award_level_name from award_level where award_level_id = #{awardLevelId}")
     AwardLevelVO getAwardLevelById(Integer awardLevelId);
+
+    /**
+     * 根据id查询教师获奖信息
+     * @param id
+     * @return
+     */
+    @Select("SELECT a.award_id,t.teacher_name,g.award_game_name,l.award_level_name,a.award_time from award_info as a,award_game as g,award_level as l,teacher_info as t " +
+            " where a.teacher_id = t.teacher_id and a.award_game_id = g.award_game_id and a.award_level_id = l.award_level_id and a.award_id = #{id};")
+    AwardInfoVO findAwardInfoById(Integer id);
+
+    /**
+     * 根据教师名称查询教师获奖信息
+     * @param teacherName
+     * @return
+     */
+    @Select("SELECT a.award_id,t.teacher_name,g.award_game_name,l.award_level_name,a.award_time from award_info as a,award_game as g,award_level as l,teacher_info as t " +
+            " where a.teacher_id = t.teacher_id and a.award_game_id = g.award_game_id and a.award_level_id = l.award_level_id and t.teacher_name = #{teacherName};")
+    List<AwardInfoVO> findAwardInfoByTeacherName(String teacherName);
+
+    /**
+     * 根据比赛名称查询教师获奖信息
+     * @param gameName
+     * @return
+     */
+    @Select("SELECT a.award_id,t.teacher_name,g.award_game_name,l.award_level_name,a.award_time from award_info as a,award_game as g,award_level as l,teacher_info as t " +
+            " where a.teacher_id = t.teacher_id and a.award_game_id = g.award_game_id and a.award_level_id = l.award_level_id and g.award_game_name = #{gameName};")
+    List<AwardInfoVO> findAwardInfoByGameName(String gameName);
 }

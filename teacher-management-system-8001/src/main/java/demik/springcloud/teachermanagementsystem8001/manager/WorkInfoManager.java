@@ -71,4 +71,40 @@ public class WorkInfoManager {
     public boolean addWork(WorkPO workPO) {
         return workInfoMapper.addWork(workPO);
     }
+
+    /**
+     * 根据id查询教师作品信息
+     * @param id
+     * @return
+     */
+    public WorkInfoPO findTeacherWorkInfoById(Integer id) {
+        return workInfoMapper.findTeacherWorkInfoById(id);
+    }
+
+    /**
+     * 根据id删除教师作品信息
+     * @param id
+     * @return
+     */
+    public boolean deleteTeacherWorkInfoById(Integer id) {
+        return workInfoMapper.deleteTeacherWorkInfoById(id);
+    }
+
+    /**
+     * 根据教师名字查询教师作品信息
+     * @param teacherName
+     * @return
+     */
+    public List<WorkInfoPO> findTeacherWorkInfoByTeacherName(String teacherName) {
+        return workInfoMapper.findTeacherWorkInfoByTeacherName(teacherName);
+    }
+
+    /**
+     * 根据作品名字查询教师作品信息
+     * @param workName
+     * @return
+     */
+    public List<WorkInfoPO> findTeacherWorkInfoByWorkName(String workName) {
+        return workInfoMapper.findTeacherWorkInfoByWorkName(workName);
+    }
 }

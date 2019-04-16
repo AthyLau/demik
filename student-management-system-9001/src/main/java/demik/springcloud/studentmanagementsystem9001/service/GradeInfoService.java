@@ -99,4 +99,19 @@ public class GradeInfoService {
         BeanUtils.copyProperties(gradeInfoDO,gradeInfoDTO);
         return gradeInfoDTO;
     }
+
+    /**
+     * 根据年级名称查询信息
+     * @param gradeName
+     * @return
+     */
+    public GradeInfoDTO findGradeByGradeName(String gradeName) {
+        GradeInfoDO gradeInfoDO = gradeInfoManager.findGradeByGradeName(gradeName);
+        if(gradeInfoDO==null){
+            return null;
+        }
+        GradeInfoDTO gradeInfoDTO = new GradeInfoDTO();
+        BeanUtils.copyProperties(gradeInfoDO,gradeInfoDTO);
+        return gradeInfoDTO;
+    }
 }

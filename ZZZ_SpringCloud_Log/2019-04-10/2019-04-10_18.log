@@ -1,0 +1,87 @@
+2019-04-10_18 18:00:25.264 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-10_18 18:00:27.216 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-10_18 18:00:28.424 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:01:25.267 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-10_18 18:01:27.219 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:01:28.425 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:02:25.269 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:02:27.220 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:02:28.426 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-04-10_18 18:03:25.273 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-04-10_18 18:03:27.221 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:03:28.426 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2019-04-10_18 18:04:25.276 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-10_18 18:04:27.224 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:04:28.428 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:05:25.279 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:05:27.225 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:05:28.429 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-04-10_18 18:06:25.282 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:06:27.230 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-04-10_18 18:06:28.431 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:07:25.282 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-04-10_18 18:07:27.233 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-10_18 18:07:28.430 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-04-10_18 18:08:25.284 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:08:27.235 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:08:28.431 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-04-10_18 18:09:25.287 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-10_18 18:09:27.235 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-04-10_18 18:09:28.434 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:10:24.308 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 1
+2019-04-10_18 18:10:25.290 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:10:26.407 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 1
+2019-04-10_18 18:10:27.238 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:10:27.293 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 1
+2019-04-10_18 18:10:28.436 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:11:25.293 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-10_18 18:11:27.242 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-10_18 18:11:28.437 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:12:25.295 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:12:27.243 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:12:28.438 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-04-10_18 18:13:25.299 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-10_18 18:13:27.245 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-10_18 18:13:28.442 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-04-10_18 18:14:25.299 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-04-10_18 18:14:27.247 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:14:28.444 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-10_18 18:14:58.096 INFO  [Thread-37] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70ab2d48: startup date [Wed Apr 10 15:37:27 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31f9b85e
+2019-04-10_18 18:14:58.133 INFO  [Thread-36] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70ab2d48: startup date [Wed Apr 10 15:37:30 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31f9b85e
+2019-04-10_18 18:14:58.192 INFO  [Thread-37] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-04-10_18 18:14:58.244 INFO  [Thread-37] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-04-10_18 18:14:58.248 INFO  [Thread-37] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-04-10_18 18:14:58.303 INFO  [Thread-36] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-04-10_18 18:14:58.369 INFO  [Thread-36] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-04-10_18 18:14:58.382 INFO  [Thread-36] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-04-10_18 18:14:58.397 INFO  [Thread-34] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70ab2d48: startup date [Wed Apr 10 15:37:32 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31f9b85e
+2019-04-10_18 18:14:58.541 INFO  [Thread-37] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-04-10_18 18:14:58.549 INFO  [Thread-34] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-04-10_18 18:14:58.557 INFO  [Thread-36] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-04-10_18 18:14:58.560 INFO  [Thread-34] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-04-10_18 18:14:58.562 INFO  [Thread-34] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-04-10_18 18:14:58.572 INFO  [Thread-37] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-04-10_18 18:14:58.588 INFO  [Thread-36] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-04-10_18 18:14:58.608 INFO  [Thread-37] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-04-10_18 18:14:58.622 INFO  [Thread-36] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-04-10_18 18:14:58.625 INFO  [Thread-37] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-10_18 18:14:58.627 INFO  [Thread-37] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-04-10_18 18:14:58.629 INFO  [Thread-37] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-10_18 18:14:58.630 INFO  [Thread-37] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-04-10_18 18:14:58.635 INFO  [Thread-36] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-10_18 18:14:58.635 INFO  [Thread-36] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-04-10_18 18:14:58.635 INFO  [Thread-34] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-04-10_18 18:14:58.638 INFO  [Thread-36] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-10_18 18:14:58.639 INFO  [Thread-36] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-04-10_18 18:14:58.672 INFO  [Thread-37] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-10_18 18:14:58.675 INFO  [Thread-34] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-04-10_18 18:14:58.680 INFO  [Thread-36] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-10_18 18:14:58.725 INFO  [Thread-34] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-04-10_18 18:14:58.741 INFO  [Thread-37] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-10_18 18:14:58.747 INFO  [Thread-34] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-10_18 18:14:58.750 INFO  [Thread-34] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-04-10_18 18:14:58.750 INFO  [Thread-36] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-10_18 18:14:58.751 INFO  [Thread-34] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-10_18 18:14:58.751 INFO  [Thread-34] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-04-10_18 18:14:58.825 INFO  [Thread-34] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-10_18 18:14:58.886 INFO  [Thread-34] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

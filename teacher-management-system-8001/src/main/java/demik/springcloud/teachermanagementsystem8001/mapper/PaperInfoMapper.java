@@ -66,7 +66,7 @@ public interface PaperInfoMapper {
     boolean addPublishedPaperInfo(PaperPublishedPO paperPublishedPO);
 
     /**
-     * 根据名字查询论文发布信息
+     * 根据名字查询论文发布信息id
      * @param paperName
      * @return
      */
@@ -88,4 +88,31 @@ public interface PaperInfoMapper {
      */
     @Select("select paper_type_id,paper_type_name from paper_type where paper_type_id = #{id}")
     PaperTypePO findPaperTypeById(Integer id);
+
+    /**
+     * 根据id查询教师发布论文信息
+     * @param id
+     * @return
+     */
+    @Select("SELECT pp.id,te.teacher_name,p.paper_name,t.paper_type_name,pp.published_time from published_paper_info as pp,paper_info as p,paper_type as t,teacher_info as te " +
+            "where pp.paper_id = p.paper_id and p.paper_type_id = t.paper_type_id and te.teacher_id = pp.teacher_id and pp.id = #{id};")
+    PublishedPaperInfoDTO findPublishedPaperInfoById(Integer id);
+
+    /**
+     * 根据教师名称查询教师发布论文信息
+     * @param teacherName
+     * @return
+     */
+    @Select("SELECT pp.id,te.teacher_name,p.paper_name,t.paper_type_name,pp.published_time from published_paper_info as pp,paper_info as p,paper_type as t,teacher_info as te " +
+            "where pp.paper_id = p.paper_id and p.paper_type_id = t.paper_type_id and te.teacher_id = pp.teacher_id and te.teacher_name = #{teacherName};")
+    List<PublishedPaperInfoDTO> findPublishedPaperInfoByTeacherName(String teacherName);
+
+    /**
+     * 根据论文名称查询教师发布论文信息
+     * @param paperName
+     * @return
+     */
+    @Select("SELECT pp.id,te.teacher_name,p.paper_name,t.paper_type_name,pp.published_time from published_paper_info as pp,paper_info as p,paper_type as t,teacher_info as te " +
+            "where pp.paper_id = p.paper_id and p.paper_type_id = t.paper_type_id and te.teacher_id = pp.teacher_id and p.paper_name = #{paperName};")
+    List<PublishedPaperInfoDTO> findPublishedPaperInfoByPaperName(String paperName);
 }

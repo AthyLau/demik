@@ -72,4 +72,22 @@ public class ProjectInfoManager {
     public List<ProjectInfoPO> findProjectByName(String name) {
         return projectInfoMapper.findProjectByName(name);
     }
+
+    /**
+     * 根据教师名称查询教师项目信息
+     * @param teacherName
+     * @return
+     */
+    public List<TeacherProjectPO> findTeacherProjectinfoByTeacherName(String teacherName) {
+        return projectInfoMapper.findTeacherProjectinfoByTeacherName(teacherName);
+    }
+
+    /**
+     * 根据项目名称查询教师项目信息
+     * @param projectName
+     * @return
+     */
+    public List<TeacherProjectPO> findTeacherProjectinfoByProjectName(String projectName) {
+        return projectInfoMapper.findTeacherProjectinfoByProjectName(projectName);
+    }
 }

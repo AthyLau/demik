@@ -1,5 +1,7 @@
 package demik.springcloud.studentmanagementsystem9001.mapper;
 
+import demik.springcloud.entity.domain.dto.StudentExcelDTO;
+import demik.springcloud.entity.domain.dto.StudentInfoDTO;
 import demik.springcloud.entity.domain.po.StudentCasePO;
 import demik.springcloud.entity.domain.po.StudentInfoPO;
 import demik.springcloud.entity.domain.vo.StudentInfoVO;
@@ -73,4 +75,29 @@ public interface StudentInfoMapper {
      */
     @Delete("DELETE from student_info where aclass_id = #{id}")
     boolean deleteStudentByAClassId(Integer id);
+
+    /**
+     * 根据学生的身份证号查询学生
+     * @param idCardNum
+     * @return
+     */
+    @Select("SELECT i.student_id,i.student_name,i.student_number,i.student_sex,i.student_national,i.student_phone,i.student_id_card,i.student_address,i.student_mail,c.student_case_description,i.aclass_id from student_info as i left join student_case as c on i.student_case_id = c.student_case_id where i.student_id_card = #{idCardNum}")
+    StudentInfoPO findStudentByIdCardNumber(String idCardNum);
+
+    /**
+     * 根据学生的名字查询多个学生
+     * @param studentName
+     * @return
+     */
+    @Select("SELECT i.student_name,i.student_number,i.student_sex,i.student_national,i.student_phone,i.student_id_card,i.student_address,i.student_mail,c.student_case_description,i.aclass_id from student_info as i left join student_case as c on i.student_case_id = c.student_case_id where i.student_name = #{studentName}")
+    List<StudentInfoPO> findStudentByStudentName(String studentName);
+
+    /**
+     * 根据班级的id查询学生
+     * @param aclassId
+     * @return
+     */
+    @Select("SELECT i.student_name,i.student_number,i.student_sex,i.student_national,i.student_phone,i.student_id_card,i.student_address,i.student_mail,c.student_case_description,i.aclass_id from student_info as i left join student_case as c on i.student_case_id = c.student_case_id where i.aclass_id = #{aclassId}")
+    List<StudentInfoPO> findStudentByClassId(Integer aclassId);
+
 }

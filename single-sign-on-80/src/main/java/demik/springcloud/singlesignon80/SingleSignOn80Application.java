@@ -10,6 +10,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 //本服务启动以后会注册到eureka注册中心
 @EnableDiscoveryClient
 @SpringBootApplication
+//支持熔断机制
+@EnableCircuitBreaker
 public class SingleSignOn80Application {
 
 	public static void main(String[] args) {

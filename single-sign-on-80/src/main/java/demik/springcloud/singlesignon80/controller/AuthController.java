@@ -32,6 +32,8 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Function:
@@ -52,6 +54,40 @@ public class AuthController {
      */
     @Autowired
     private AuthService authService;
+
+    /**
+     * excel批量添加学生用户
+     * @param dtos
+     * @return
+     */
+    @PostMapping("/server_in/add_student_user")
+    @ApiOperation(value = "excel批量添加学生用户", httpMethod = "POST")
+    public Result addStudentUser(@RequestBody List<StudentExcelDTO> dtos){
+        Map<Integer,String> map = authService.addStudentUser(dtos);
+        if(map.size()!=0){
+            return ResultGenerator.genSuccessResult(map);
+        }
+        return ResultGenerator.genSuccessResult();
+    }
+    /**
+     * excel批量添加教师用户
+     * @param dtos
+     * @return
+     */
+    @PostMapping("/server_in/add_teacher_user")
+    @ApiOperation(value = "excel批量添加教师用户", httpMethod = "POST")
+    public Result addTeacherUser(@RequestBody List<TeacherExcelDTO> dtos){
+        Map<Integer,String> map = authService.addTeacherUser(dtos);
+        if(map.size()!=0){
+            return ResultGenerator.genSuccessResult(map);
+        }
+        return ResultGenerator.genSuccessResult();
+    }
+    /**
+     * 校验用户是否存在
+     * @param userNameVO
+     * @return
+     */
     @ApiOperation(value = "校验用户是否存在", httpMethod = "POST")
     @PostMapping("/server_in/is_name_exisit")
     public Result isNameExists(@RequestBody UserNameVO userNameVO){
@@ -96,6 +132,20 @@ public class AuthController {
         return ResultGenerator.genSuccessResult(clientSSODTO);
     }
 
+    /**
+     * demik微服务项目内的微服务的用户校验
+     * @param userNameVO
+     * @return
+     */
+    @ApiOperation(value = "demik微服务项目内的微服务的用户校验", httpMethod = "POST")
+    @PostMapping("/server_in/check_user_info")
+    public Result<UserDTO> checkUserInfo(@RequestBody UserNameVO userNameVO){
+        UserDTO userDTO = authService.checkUserInfo(userNameVO.getUserName());
+        if(userDTO==null){
+            return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+        }
+        return ResultGenerator.genSuccessResult(userDTO);
+    }
     /**
      * 登陆校验
      *
@@ -270,4 +320,5 @@ public class AuthController {
         return ResultGenerator.genNeutralResult(ResultCode.NOT_SMART_ENOUGH,
                 "您正在访问权限需要编辑，查看");
     }
+
 }

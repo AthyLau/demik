@@ -5,6 +5,7 @@ import demik.springcloud.entity.commonbox.Result;
 import demik.springcloud.entity.commonbox.ResultCode;
 import demik.springcloud.entity.commonbox.ResultGenerator;
 import demik.springcloud.entity.domain.dto.AClassInfoDTO;
+import demik.springcloud.entity.domain.dto.AClassNameDTO;
 import demik.springcloud.entity.domain.vo.AClassIdVO;
 import demik.springcloud.entity.domain.vo.AClassInfoVO;
 import demik.springcloud.studentmanagementsystem9001.service.AClassInfoService;
@@ -32,7 +33,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("aclass-info")
+@RequestMapping("/aclass-info")
 @ApiModel(description = "班级管理模块")
 public class AClassInfoController {
     @Autowired
@@ -53,6 +54,9 @@ public class AClassInfoController {
     public Result addAClass(@RequestBody AClassInfoVO aClassInfoVO){
         if(!(gradeInfoService.findGradeById(aClassInfoVO.getAclassId())!=null||perfessionalInfoService.findPerfessionalInfoById(aClassInfoVO.getPerfessionalId())!=null)){
             return ResultGenerator.genFailResult("年级或者专业不存在");
+        }
+        if(aClassInfoService.findAClassByClassName(aClassInfoVO.getAclassName())!=null){
+            return ResultGenerator.genFailResult("班级已经存在");
         }
         if(aClassInfoService.addAClass(aClassInfoVO)){
             return ResultGenerator.genSuccessResult();
@@ -109,13 +113,26 @@ public class AClassInfoController {
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
     /**
-     * 查询单个班级       5
+     * 根据id查询单个班级       5
      * @return
      */
-    @ApiOperation(value = "查询单个班级5", httpMethod = "POST")
+    @ApiOperation(value = "根据id查询单个班级", httpMethod = "POST")
     @PostMapping("/findAClassById")
     public Result findAClassById(@RequestBody AClassIdVO aClassIdVO){
         AClassInfoDTO dto = aClassInfoService.findAClassById(aClassIdVO.getAclassId());
+        if(dto!=null){
+            return ResultGenerator.genSuccessResult(dto);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据名称查询单个班级       5
+     * @return
+     */
+    @ApiOperation(value = "根据名称查询单个班级", httpMethod = "POST")
+    @PostMapping("/findAClassByClassName")
+    public Result findAClassByClassName(@RequestBody AClassNameDTO aClassNameDTO){
+        AClassInfoDTO dto = aClassInfoService.findAClassByClassName(aClassNameDTO.getAClassName());
         if(dto!=null){
             return ResultGenerator.genSuccessResult(dto);
         }

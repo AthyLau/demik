@@ -19,6 +19,8 @@ public class AwardInfoPO {
      */
     private Integer teacherId;
     /**
+     *
+     * award_game_id = awardGameId
      * 获奖比赛的id 可以是null
      */
     private Integer awardGameId;

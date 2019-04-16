@@ -52,7 +52,33 @@ public class TeacherInfoManager {
      * @param teacherId
      * @return
      */
-    public TeacherIdVO findTeacherInfoById(Integer teacherId) {
+    public TeacherInfoPO findTeacherInfoById(Integer teacherId) {
         return teacherInfoMapper.findTeacherInfoById(teacherId);
+    }
+
+    /**
+     * 根据教师的名字查询教师
+     * @param teacherName
+     * @return
+     */
+    public List<TeacherInfoPO> findTeacherInfoByTeacherName(String teacherName) {
+        return teacherInfoMapper.findTeacherInfoByTeacherName(teacherName);
+    }
+    /**
+     * 根据教师的身份证查询教师
+     * @param idCard
+     * @return
+     */
+    public TeacherInfoPO findTeacherInfoByTeacherIdCard(String idCard) {
+        return teacherInfoMapper.findTeacherInfoByTeacherIdCard(idCard);
+    }
+
+    /**
+     * 根据教研室id查找教师
+     * @param officeId
+     * @return
+     */
+    public List<TeacherInfoPO> findTeacherInfoByOfficeId(Integer officeId) {
+        return teacherInfoMapper.findTeacherInfoByOfficeId(officeId);
     }
 }

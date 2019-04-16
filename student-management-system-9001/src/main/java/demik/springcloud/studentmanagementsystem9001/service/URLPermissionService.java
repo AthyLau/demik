@@ -21,7 +21,7 @@ public class URLPermissionService {
      * @param url
      * @return
      */
-    public Integer getPermissionByURL(String url){
+    public String getPermissionByURL(String url){
         return urlPermissionManager.getPermissionByURL(url);
     }
 }

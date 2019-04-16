@@ -39,7 +39,7 @@ public class TeacherInfoPO {
     /**
      * 办公室id
      */
-    private Integer officeName;
+    private String officeName;
     /**
      * 学历id
      */
@@ -47,7 +47,7 @@ public class TeacherInfoPO {
     /**
      * 学历id
      */
-    private Integer educationBackgroudName;
+    private String educationBackgroudName;
     /**
      * 毕业学校id
      */
@@ -55,7 +55,7 @@ public class TeacherInfoPO {
     /**
      * 毕业学校id
      */
-    private Integer schoolName;
+    private String schoolName;
     /**
      * 职位id
      */
@@ -63,7 +63,7 @@ public class TeacherInfoPO {
     /**
      * 职位id
      */
-    private Integer deptName;
+    private String deptName;
     /**
      * 教材id
      */
@@ -71,12 +71,12 @@ public class TeacherInfoPO {
     /**
      * 教材id
      */
-    private Integer bookName;
+    private String bookName;
 
     public TeacherInfoPO() {
     }
 
-    public TeacherInfoPO(Integer teacherId, String teacherName, String teacherIdCard, String teacherNumber, String teacherPhone, String teacherEntranceTime, Integer officeId, Integer officeName, Integer educationBackgroudId, Integer educationBackgroudName, Integer schoolId, Integer schoolName, Integer deptId, Integer deptName, Integer bookId, Integer bookName) {
+    public TeacherInfoPO(Integer teacherId, String teacherName, String teacherIdCard, String teacherNumber, String teacherPhone, String teacherEntranceTime, Integer officeId, String officeName, Integer educationBackgroudId, String educationBackgroudName, Integer schoolId, String schoolName, Integer deptId, String deptName, Integer bookId, String bookName) {
         this.teacherId = teacherId;
         this.teacherName = teacherName;
         this.teacherIdCard = teacherIdCard;
@@ -173,11 +173,11 @@ public class TeacherInfoPO {
         this.officeId = officeId;
     }
 
-    public Integer getOfficeName() {
+    public String getOfficeName() {
         return officeName;
     }
 
-    public void setOfficeName(Integer officeName) {
+    public void setOfficeName(String officeName) {
         this.officeName = officeName;
     }
 
@@ -189,11 +189,11 @@ public class TeacherInfoPO {
         this.educationBackgroudId = educationBackgroudId;
     }
 
-    public Integer getEducationBackgroudName() {
+    public String getEducationBackgroudName() {
         return educationBackgroudName;
     }
 
-    public void setEducationBackgroudName(Integer educationBackgroudName) {
+    public void setEducationBackgroudName(String educationBackgroudName) {
         this.educationBackgroudName = educationBackgroudName;
     }
 
@@ -205,11 +205,11 @@ public class TeacherInfoPO {
         this.schoolId = schoolId;
     }
 
-    public Integer getSchoolName() {
+    public String getSchoolName() {
         return schoolName;
     }
 
-    public void setSchoolName(Integer schoolName) {
+    public void setSchoolName(String schoolName) {
         this.schoolName = schoolName;
     }
 
@@ -221,11 +221,11 @@ public class TeacherInfoPO {
         this.deptId = deptId;
     }
 
-    public Integer getDeptName() {
+    public String getDeptName() {
         return deptName;
     }
 
-    public void setDeptName(Integer deptName) {
+    public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
 
@@ -237,11 +237,11 @@ public class TeacherInfoPO {
         this.bookId = bookId;
     }
 
-    public Integer getBookName() {
+    public String getBookName() {
         return bookName;
     }
 
-    public void setBookName(Integer bookName) {
+    public void setBookName(String bookName) {
         this.bookName = bookName;
     }
 }

@@ -3,6 +3,7 @@ package demik.springcloud.studentmanagementsystem9001.controller;
 import demik.springcloud.entity.commonbox.Result;
 import demik.springcloud.entity.commonbox.ResultCode;
 import demik.springcloud.entity.commonbox.ResultGenerator;
+import demik.springcloud.entity.domain.dto.PerfessionalNameDTO;
 import demik.springcloud.entity.domain.vo.PerfessionalIdVO;
 import demik.springcloud.entity.domain.vo.PerfessionalInfoVO;
 import demik.springcloud.studentmanagementsystem9001.service.PerfessionalInfoService;
@@ -21,7 +22,7 @@ import java.util.List;
  * @since JDK 1.8
  */
 @RestController
-@RequestMapping("perfessional-info")
+@RequestMapping("/perfessional-info")
 @ApiModel(description = "专业管理模块")
 public class PerfessionalInfoController {
 
@@ -36,6 +37,9 @@ public class PerfessionalInfoController {
     @ApiOperation(value = "添加一个专业11", httpMethod = "POST")
     @PostMapping("/addPerfessionalInfo")
     public Result addPerfessionalInfo(@RequestBody PerfessionalInfoVO perfessionalInfoVO){
+        if(perfessionalInfoService.findPerfessionalInfoByName(perfessionalInfoVO.getPerfessionalName())!=null){
+            return ResultGenerator.genFailResult("专业已经存在");
+        }
         if(perfessionalInfoService.addPerfessionalInfo(perfessionalInfoVO)){
             return ResultGenerator.genSuccessResult();
         }
@@ -92,6 +96,19 @@ public class PerfessionalInfoController {
     @PostMapping("/findPerfessionalInfoById")
     public Result findPerfessionalInfoById(@RequestBody PerfessionalIdVO perfessionalIdVO){
         PerfessionalInfoVO perfessionalInfoVO = perfessionalInfoService.findPerfessionalInfoById(perfessionalIdVO.getPerfessionalId());
+        if(perfessionalInfoVO!=null){
+            return ResultGenerator.genSuccessResult(perfessionalInfoVO);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据名称查询专业
+     * @return
+     */
+    @ApiOperation(value = "根据名称查询专业", httpMethod = "POST")
+    @PostMapping("/findPerfessionalInfoByName")
+    public Result findPerfessionalInfoByName(@RequestBody PerfessionalNameDTO perfessionalNameDTO){
+        PerfessionalInfoVO perfessionalInfoVO = perfessionalInfoService.findPerfessionalInfoByName(perfessionalNameDTO.getPerfessionalName());
         if(perfessionalInfoVO!=null){
             return ResultGenerator.genSuccessResult(perfessionalInfoVO);
         }

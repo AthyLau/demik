@@ -1,5 +1,6 @@
 package demik.springcloud.studentmanagementsystem9001.manager;
 
+import demik.springcloud.entity.domain.dto.AClassInfoDTO;
 import demik.springcloud.entity.domain.vo.AClassInfoVO;
 import demik.springcloud.studentmanagementsystem9001.mapper.AClassInfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,5 +74,9 @@ public class AClassInfoManager {
      */
     public List<AClassInfoVO> findAClassInfoByGId(Integer gId) {
         return aClassInfoMapper.findAClassInfoByGId(gId);
+    }
+
+    public AClassInfoVO findAClassByClassName(String aClassName) {
+        return aClassInfoMapper.findAClassByClassName(aClassName);
     }
 }

@@ -3,12 +3,15 @@ package demik.springcloud.teachermanagementsystem8001.controller;
 import demik.springcloud.entity.commonbox.Result;
 import demik.springcloud.entity.commonbox.ResultCode;
 import demik.springcloud.entity.commonbox.ResultGenerator;
+import demik.springcloud.entity.domain.dto.ProjectNameDTO;
+import demik.springcloud.entity.domain.dto.TeacherNameDTO;
 import demik.springcloud.entity.domain.po.ProjectInfoPO;
 import demik.springcloud.entity.domain.po.TeacherProjectPO;
 import demik.springcloud.entity.domain.po.WorkInfoPO;
 import demik.springcloud.entity.domain.vo.ProjectIdVO;
 import demik.springcloud.entity.domain.vo.TeacherProjectVO;
 import demik.springcloud.teachermanagementsystem8001.service.ProjectInfoService;
+import demik.springcloud.teachermanagementsystem8001.service.TeacherInfoService;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +36,8 @@ public class ProjectInfoController {
 
     @Autowired
     private ProjectInfoService projectInfoService;
-
+    @Autowired
+    private TeacherInfoService teacherInfoService;
     /**
      * 查询所有的项目信息
      * @return
@@ -61,6 +65,32 @@ public class ProjectInfoController {
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
     /**
+     * 根据教师名称查询教师项目信息
+     * @return
+     */
+    @ApiOperation(value = "根据教师名称查询教师项目信息", httpMethod = "POST")
+    @PostMapping("/findTeacherProjectinfoByTeacherName")
+    public Result findTeacherProjectinfoByTeacherName(@RequestBody TeacherNameDTO teacherNameDTO){
+        List<TeacherProjectPO> vos = projectInfoService.findTeacherProjectinfoByTeacherName(teacherNameDTO.getTeacherName());
+        if(vos!=null&&vos.size()>0){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据项目名称查询教师项目信息
+     * @return
+     */
+    @ApiOperation(value = "根据项目名称查询教师项目信息", httpMethod = "POST")
+    @PostMapping("/findTeacherProjectinfoByProjectName")
+    public Result findTeacherProjectinfoByProjectName(@RequestBody ProjectNameDTO projectNameDTO){
+        List<TeacherProjectPO> vos = projectInfoService.findTeacherProjectinfoByProjectName(projectNameDTO.getProjectName());
+        if(vos!=null&&vos.size()>0){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
      * 根据id查询项目
      * @return
      */
@@ -82,16 +112,19 @@ public class ProjectInfoController {
     @ApiOperation(value = "添加一条教师项目信息", httpMethod = "POST")
     @PostMapping("/addProjectInfo")
     public Result addTeacherProjectInfo(@RequestBody TeacherProjectVO teacherProjectVO){
+        if(teacherInfoService.findTeacherInfoById(teacherProjectVO.getTeacherId())==null){
+            return ResultGenerator.genSuccessResult("没有该教师");
+        }
         if(teacherProjectVO.getType()==null){
-            return ResultGenerator.genSuccessResult(ResultCode.HTTP_MESSAGE_NOT_READABLE);
+            return ResultGenerator.genSuccessResult("type不能为空");
         }else if(teacherProjectVO.getType()==1){
             ProjectInfoPO projectInfoPO = projectInfoService.findProjectInfoById(teacherProjectVO.getProjectId());
             if(projectInfoPO==null){
-                return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+                return ResultGenerator.genSuccessResult("没有该项目");
             }
-        }else{
-            if(teacherProjectVO.getProjectName()==null){
-                return ResultGenerator.genSuccessResult(ResultCode.HTTP_MESSAGE_NOT_READABLE);
+        }else if(teacherProjectVO.getType()==2){
+            if(teacherProjectVO.getProjectName()==null||teacherProjectVO.getProjectName().trim().equals("")){
+                return ResultGenerator.genSuccessResult("项目名字不能为空");
             }
             Integer i = projectInfoService.findProjectByName(teacherProjectVO.getProjectName());
             if(i==null){
@@ -108,6 +141,8 @@ public class ProjectInfoController {
             }else {
                 ResultGenerator.genFailResult("想要添加的项目已经存在");
             }
+        }else {
+            return ResultGenerator.genSuccessResult("Type传入数据错误");
         }
         if(projectInfoService.addTeacherProjectInfo(teacherProjectVO)){
             return ResultGenerator.genSuccessResult();

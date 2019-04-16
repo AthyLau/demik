@@ -63,4 +63,39 @@ public class VisitSchoolInfoManager {
     public boolean addSchoolInfo(SchoolPO po) {
         return visitSchoolInfoMapper.addSchoolInfo(po);
     }
+
+    /**
+     * 根据id查询访学信息
+     * @param id
+     * @return
+     */
+    public VisitSchoolPO findVisitSchoolInfoById(Integer id) {
+        return visitSchoolInfoMapper.findVisitSchoolInfoById(id);
+    }
+
+    /**
+     * 根据id删除访学信息
+     * @param id
+     * @return
+     */
+    public boolean deleteVisitSchoolInfoById(Integer id) {
+        return visitSchoolInfoMapper.deleteVisitSchoolInfoById(id);
+    }
+
+    /**
+     * 根据教师姓名查询访学信息
+     * @param teacherName
+     * @return
+     */
+    public List<VisitSchoolPO> findVisitSchoolInfoByTeacherName(String teacherName) {
+        return visitSchoolInfoMapper.findVisitSchoolInfoByTeacherName(teacherName);
+    }
+
+    public List<VisitSchoolPO> findVisitSchoolInfoBySchoolName(String schoolName) {
+        return visitSchoolInfoMapper.findVisitSchoolInfoBySchoolName(schoolName);
+    }
+
+    public SchoolPO findSchoolInfoByName(String name) {
+        return visitSchoolInfoMapper.findSchoolInfoByName(name);
+    }
 }

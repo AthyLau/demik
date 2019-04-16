@@ -18,6 +18,6 @@ public interface URLPermissionsMapper {
      * @param url
      * @return
      */
-    @Select("select permission_id from urls_permissions where url = #{url}")
-    Integer getPermissionByURL(String url);
+    @Select("select permission_name from urls_permissions where url = #{url}")
+    String getPermissionByURL(String url);
 }

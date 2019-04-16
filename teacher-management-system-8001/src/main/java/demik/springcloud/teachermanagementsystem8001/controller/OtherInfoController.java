@@ -77,7 +77,7 @@ public class OtherInfoController {
      * @return
      */
     @ApiOperation(value = "根据id查询职称", httpMethod = "POST")
-    @PostMapping("/findAllDept")
+    @PostMapping("/findDeptById")
     public Result findDeptById(@RequestBody OtherIdVO otherIdVO){
         DeptVO vos = otherInfoService.findDeptById(otherIdVO.getId());
         if(vos!=null){

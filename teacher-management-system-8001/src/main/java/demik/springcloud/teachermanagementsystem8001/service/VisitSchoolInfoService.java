@@ -20,7 +20,12 @@ import java.util.List;
 public class VisitSchoolInfoService {
     @Autowired
     private VisitSchoolInfoManager visitSchoolInfoManager;
-
+    /**
+     * 根据名字查询学校信息
+     */
+    public SchoolPO findSchoolInfoByName(String name) {
+        return visitSchoolInfoManager.findSchoolInfoByName(name);
+    }
     /**
      * 查询所有的学校信息
      * @return
@@ -62,5 +67,36 @@ public class VisitSchoolInfoService {
      */
     public boolean addSchoolInfo(SchoolPO po) {
         return visitSchoolInfoManager.addSchoolInfo(po);
+    }
+
+    /**
+     * 根据id查询访学信息
+     * @param id
+     * @return
+     */
+    public VisitSchoolPO findVisitSchoolInfoById(Integer id) {
+        return visitSchoolInfoManager.findVisitSchoolInfoById(id);
+    }
+
+    /**
+     * 根据id删除访学信息
+     * @param id
+     * @return
+     */
+    public boolean deleteVisitSchoolInfoById(Integer id) {
+        return visitSchoolInfoManager.deleteVisitSchoolInfoById(id);
+    }
+
+    /**
+     * 根据教师姓名查询访学信息
+     * @param teacherName
+     * @return
+     */
+    public List<VisitSchoolPO> findVisitSchoolInfoByTeacherName(String teacherName) {
+        return visitSchoolInfoManager.findVisitSchoolInfoByTeacherName(teacherName);
+    }
+
+    public List<VisitSchoolPO> findVisitSchoolInfoBySchoolName(String schoolName) {
+        return visitSchoolInfoManager.findVisitSchoolInfoBySchoolName(schoolName);
     }
 }

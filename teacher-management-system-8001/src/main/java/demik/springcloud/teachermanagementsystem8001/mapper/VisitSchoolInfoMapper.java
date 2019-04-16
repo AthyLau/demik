@@ -3,10 +3,7 @@ package demik.springcloud.teachermanagementsystem8001.mapper;
 import demik.springcloud.entity.domain.dto.VisitSchoolDTO;
 import demik.springcloud.entity.domain.po.SchoolPO;
 import demik.springcloud.entity.domain.po.VisitSchoolPO;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -58,4 +55,41 @@ public interface VisitSchoolInfoMapper {
     @Options(useGeneratedKeys=true, keyProperty="schoolId", keyColumn="school_id")
     @Insert("insert into school_info(school_name) values(#{schoolName})")
     boolean addSchoolInfo(SchoolPO po);
+
+    /**
+     * 根据id查询访学信息
+     * @param id
+     * @return
+     */
+    @Select("select s.school_id,vs.id,vs.visit_time,t.teacher_id,t.teacher_name,s.school_name from visit_school as vs,school_info as s, " +
+            "teacher_info as t where t.teacher_id = vs.teacher_id and vs.school_id = s.school_id and vs.id = #{id};")
+    VisitSchoolPO findVisitSchoolInfoById(Integer id);
+
+    /**
+     * 根据id删除访学信息
+     * @param id
+     * @return
+     */
+    @Delete("delete from visit_school where id = #{id}")
+    boolean deleteVisitSchoolInfoById(Integer id);
+
+    /**
+     * 根据教师姓名查询访学信息
+     * @param teacherName
+     * @return
+     */
+    @Select("select s.school_id,vs.id,vs.visit_time,t.teacher_id,t.teacher_name,s.school_name from visit_school as vs,school_info as s, " +
+            "teacher_info as t where t.teacher_id = vs.teacher_id and vs.school_id = s.school_id and t.teacher_name = #{teacherName};")
+    List<VisitSchoolPO> findVisitSchoolInfoByTeacherName(String teacherName);
+    @Select("select s.school_id,vs.id,vs.visit_time,t.teacher_id,t.teacher_name,s.school_name from visit_school as vs,school_info as s, " +
+            "teacher_info as t where t.teacher_id = vs.teacher_id and vs.school_id = s.school_id and s.school_name = #{schoolName};")
+    List<VisitSchoolPO> findVisitSchoolInfoBySchoolName(String schoolName);
+
+    /**
+     *
+     * @param name
+     * @return
+     */
+    @Select("SELECT school_id,school_name from school_info where school_name = #{name} ")
+    SchoolPO findSchoolInfoByName(String name);
 }

@@ -20,7 +20,7 @@ public interface OfficeInfoMapper {
      * @param
      * @return
      */
-    @Insert("Insert into office_info(office_name,office_address,office_phone) VALUES(#{officeId},#{officeName},#{officeAddress},#{officePhone})")
+    @Insert("Insert into office_info(office_name,office_address,office_phone) VALUES(#{officeName},#{officeAddress},#{officePhone})")
     boolean addOfficeInfo(OfficeInfoVO officeInfoVO);
 
     /**
@@ -36,7 +36,7 @@ public interface OfficeInfoMapper {
      * @param officeInfoVO
      * @return
      */
-    @Update("update office_info set office_name = #{officeName},set office_address = #{officeAddress},set office_phone = #{officePhone} where office_id = #{officeId}")
+    @Update("update office_info set office_name = #{officeName},office_address = #{officeAddress},office_phone = #{officePhone} where office_id = #{officeId}")
     boolean updateOfficeInfo(OfficeInfoVO officeInfoVO);
 
     /**
@@ -53,4 +53,12 @@ public interface OfficeInfoMapper {
      */
     @Select("select office_id,office_name,office_address,office_phone from office_info where office_id = #{officeId}")
     OfficeInfoVO findOfficeInfoById(Integer officeId);
+
+    /**
+     * 根据名称查询教研室
+     * @param officeName
+     * @return
+     */
+    @Select("select office_id,office_name,office_address,office_phone from office_info where office_name = #{officeName}")
+    OfficeInfoVO findOfficeInfoByOfficeName(String officeName);
 }

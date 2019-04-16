@@ -4,10 +4,14 @@ import com.google.common.collect.Lists;
 import demik.springcloud.entity.commonbox.Result;
 import demik.springcloud.entity.commonbox.ResultCode;
 import demik.springcloud.entity.commonbox.ResultGenerator;
+import demik.springcloud.entity.domain.dto.TeacherNameDTO;
 import demik.springcloud.entity.domain.dto.TeacherWorkDTO;
+import demik.springcloud.entity.domain.dto.WorkNameDTO;
 import demik.springcloud.entity.domain.po.WorkInfoPO;
 import demik.springcloud.entity.domain.po.WorkPO;
+import demik.springcloud.entity.domain.vo.TeacherWorkIdVO;
 import demik.springcloud.entity.domain.vo.WorkIdVO;
+import demik.springcloud.teachermanagementsystem8001.service.TeacherInfoService;
 import demik.springcloud.teachermanagementsystem8001.service.WorkInfoService;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
@@ -32,6 +36,8 @@ import java.util.List;
 public class WorkInfoController {
     @Autowired
     private WorkInfoService workInfoService;
+    @Autowired
+    private TeacherInfoService teacherInfoService;
     /**
      * 查询所有的教师作品信息
      * @return
@@ -44,6 +50,57 @@ public class WorkInfoController {
             return ResultGenerator.genSuccessResult(vos);
         }
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据id查询教师作品信息
+     * @return
+     */
+    @ApiOperation(value = "根据id查询教师作品信息", httpMethod = "POST")
+    @PostMapping("/findTeacherWorkInfoById")
+    public Result findTeacherWorkInfoById(@RequestBody TeacherWorkIdVO teacherWorkIdVO){
+        WorkInfoPO vos = workInfoService.findTeacherWorkInfoById(teacherWorkIdVO.getId());
+        if(vos!=null){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据教师名字查询教师作品信息
+     * @return
+     */
+    @ApiOperation(value = "根据教师名字查询教师作品信息", httpMethod = "POST")
+    @PostMapping("/findTeacherWorkInfoByTeacherName")
+    public Result findTeacherWorkInfoByTeacherName(@RequestBody TeacherNameDTO teacherNameDTO){
+        List<WorkInfoPO> vos = workInfoService.findTeacherWorkInfoByTeacherName(teacherNameDTO.getTeacherName());
+        if(vos!=null){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据作品名字查询教师作品信息
+     * @return
+     */
+    @ApiOperation(value = "根据作品名字查询教师作品信息", httpMethod = "POST")
+    @PostMapping("/findTeacherWorkInfoByWorkName")
+    public Result findTeacherWorkInfoByWorkName(@RequestBody WorkNameDTO workNameDTO){
+        List<WorkInfoPO> vos = workInfoService.findTeacherWorkInfoByWorkName(workNameDTO.getWorkName());
+        if(vos!=null){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据id删除教师作品信息
+     * @return
+     */
+    @ApiOperation(value = "根据id删除教师作品信息", httpMethod = "POST")
+    @PostMapping("/deleteTeacherWorkInfoById")
+    public Result deleteTeacherWorkInfoById(@RequestBody TeacherWorkIdVO teacherWorkIdVO){
+        if(workInfoService.deleteTeacherWorkInfoById(teacherWorkIdVO.getId())){
+            return ResultGenerator.genSuccessResult();
+        }
+        return ResultGenerator.genSuccessResult("删除教师作品信息失败");
     }
     /**
      * 查询所有的作品
@@ -79,13 +136,19 @@ public class WorkInfoController {
     @ApiOperation(value = "添加一个作品", httpMethod = "POST")
     @PostMapping("/addTeacherWork")
     public Result addTeacherWork(@RequestBody TeacherWorkDTO teacherWorkDTO){
+        if(teacherInfoService.findTeacherInfoById(teacherWorkDTO.getTeacherId())==null){
+            return ResultGenerator.genSuccessResult("教师信息不存在");
+        }
         if(teacherWorkDTO.getType()==null){
-            return ResultGenerator.genSuccessResult(ResultCode.HTTP_MESSAGE_NOT_READABLE);
+            return ResultGenerator.genSuccessResult("type不能为空");
         }else if(teacherWorkDTO.getType()==1){
             if(workInfoService.findWorkById(teacherWorkDTO.getWorkId())==null){
                 return ResultGenerator.genFailResult("该作品不存在");
             }
         }else if (teacherWorkDTO.getType()==2){
+            if(teacherWorkDTO.getWorkName()==null||teacherWorkDTO.getWorkName().trim().equals("")){
+                return ResultGenerator.genFailResult("作品名字不能为空");
+            }
             List<WorkPO> vos = workInfoService.findAllWork();
             Integer len = vos.size();
             vos.forEach(x->{
@@ -106,6 +169,8 @@ public class WorkInfoController {
             }else {
                 return ResultGenerator.genFailResult("想要添加的作品已经存在");
             }
+        }else {
+            return ResultGenerator.genSuccessResult("Type传入数据错误");
         }
         if(workInfoService.addTeacherWork(teacherWorkDTO)){
             return ResultGenerator.genSuccessResult();

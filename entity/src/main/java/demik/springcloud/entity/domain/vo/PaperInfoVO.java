@@ -19,12 +19,12 @@ public class PaperInfoVO {
     /**
      * 论文类型
      */
-    private Integer paperTypeName;
+    private String paperTypeName;
 
     public PaperInfoVO() {
     }
 
-    public PaperInfoVO(Integer paperId, String paperName, Integer paperTypeName) {
+    public PaperInfoVO(Integer paperId, String paperName, String paperTypeName) {
         this.paperId = paperId;
         this.paperName = paperName;
         this.paperTypeName = paperTypeName;
@@ -55,11 +55,11 @@ public class PaperInfoVO {
         this.paperName = paperName;
     }
 
-    public Integer getPaperTypeName() {
+    public String getPaperTypeName() {
         return paperTypeName;
     }
 
-    public void setPaperTypeName(Integer paperTypeName) {
+    public void setPaperTypeName(String paperTypeName) {
         this.paperTypeName = paperTypeName;
     }
 }

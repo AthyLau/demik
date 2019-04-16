@@ -1,9 +1,12 @@
 package demik.springcloud.singlesignon80.manager;
 
 import com.google.common.collect.Lists;
+import demik.springcloud.entity.domain.dto.StudentExcelDTO;
+import demik.springcloud.entity.domain.dto.TeacherExcelDTO;
 import demik.springcloud.entity.domain.po.PermissionPO;
 import demik.springcloud.entity.domain.po.RolePO;
 import demik.springcloud.entity.domain.po.UserPO;
+import demik.springcloud.entity.domain.po.UsersRolesPO;
 import demik.springcloud.singlesignon80.mapper.AuthenticationMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -150,12 +153,25 @@ public class AuthManager {
     }
 
     /**
-     *插入一条用户信息
+     * 插入用户信息
      * @param userPO
      * @return
      */
-    public boolean addUserInfo(UserPO userPO) {
+    public boolean addUserInfo(UserPO userPO){
         return authMapper.addUserInfo(userPO);
+    }
+    /**
+     *插入一条学生excel来的用户信息
+     * @param userPO
+     * @return
+     */
+    public boolean addStudentUserInfo(UserPO userPO) throws Exception{
+        Boolean flag = authMapper.addUserInfo(userPO);
+        if(userPO.getUserId()==null){
+            throw new Exception();
+        }
+        flag &= authMapper.addUserRoles(new UsersRolesPO(userPO.getUserId(),4));
+        return flag;
     }
 
     /**
@@ -165,5 +181,41 @@ public class AuthManager {
      */
     public boolean getLockedByName(String name) {
         return authMapper.getLockedByName(name);
+    }
+
+    /**
+     * StudentExcelDTO对象转为userpo对象
+     * @param x
+     * @return
+     */
+    public UserPO getUserPO(StudentExcelDTO x) {
+//        user_name, user_sex, user_phone, user_mail, user_password, locked
+        UserPO userPO = new UserPO();
+        userPO.setUserName(x.getUserName());
+        userPO.setUserSex(x.getStudentSex());
+        userPO.setUserPhone(x.getStudentPhone());
+        userPO.setUserMail(x.getStudentMail());
+        userPO.setUserPassword(x.getPassword());
+        userPO.setLocked(x.getLocked());
+        return userPO;
+    }
+    public UserPO getUserPO(TeacherExcelDTO x) {
+//        user_name, user_sex, user_phone, user_mail, user_password, locked
+        UserPO userPO = new UserPO();
+        userPO.setUserName(x.getUserName());
+        userPO.setUserSex(x.getTeacherSex());
+        userPO.setUserPhone(x.getTeacherPhone());
+        userPO.setUserMail(x.getTeacherMail());
+        userPO.setUserPassword(x.getPassword());
+        userPO.setLocked(x.getLocked());
+        return userPO;
+    }
+    public boolean addTeacherUserInfo(UserPO userPO) throws Exception{
+        Boolean flag = authMapper.addUserInfo(userPO);
+        if(userPO.getUserId()==null){
+            throw new Exception();
+        }
+        flag &= authMapper.addUserRoles(new UsersRolesPO(userPO.getUserId(),4));
+        return flag;
     }
 }

@@ -1,5 +1,7 @@
 package demik.springcloud.entity.domain.dto;
 
+import java.util.Date;
+
 /**
  * Function:
  *
@@ -27,7 +29,7 @@ public class TeacherInfoDTO {
     /**
      * 教师入学时间
      */
-    private String teacherEntranceTime;
+    private Date teacherEntranceTime;
     /**
      * 办公室id
      */
@@ -52,7 +54,7 @@ public class TeacherInfoDTO {
     public TeacherInfoDTO() {
     }
 
-    public TeacherInfoDTO(String teacherName, String teacherIdCard, String teacherNumber, String teacherPhone, String teacherEntranceTime, Integer officeId, Integer educationBackgroudId, Integer schoolId, Integer deptId, Integer bookId) {
+    public TeacherInfoDTO(String teacherName, String teacherIdCard, String teacherNumber, String teacherPhone, Date teacherEntranceTime, Integer officeId, Integer educationBackgroudId, Integer schoolId, Integer deptId, Integer bookId) {
         this.teacherName = teacherName;
         this.teacherIdCard = teacherIdCard;
         this.teacherNumber = teacherNumber;
@@ -113,11 +115,11 @@ public class TeacherInfoDTO {
         this.teacherPhone = teacherPhone;
     }
 
-    public String getTeacherEntranceTime() {
+    public Date getTeacherEntranceTime() {
         return teacherEntranceTime;
     }
 
-    public void setTeacherEntranceTime(String teacherEntranceTime) {
+    public void setTeacherEntranceTime(Date teacherEntranceTime) {
         this.teacherEntranceTime = teacherEntranceTime;
     }
 

@@ -1,13 +1,19 @@
 package demik.springcloud.studentmanagementsystem9001.manager;
 
+import demik.springcloud.entity.domain.dto.StudentExcelDTO;
+import demik.springcloud.entity.domain.dto.StudentInfoDTO;
 import demik.springcloud.entity.domain.po.StudentCasePO;
 import demik.springcloud.entity.domain.po.StudentInfoPO;
 import demik.springcloud.entity.domain.vo.StudentInfoVO;
 import demik.springcloud.studentmanagementsystem9001.mapper.StudentInfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Function:
@@ -85,4 +91,33 @@ public class StudentInfoManager {
     public boolean deleteStudentByAClassId(Integer id) {
         return studentInfoMapper.deleteStudentByAClassId(id);
     }
+
+    /**
+     * 根据学生的身份证号查询学生
+     * @param idCardNum
+     * @return
+     */
+    public StudentInfoPO findStudentByIdCardNumber(String idCardNum) {
+        return studentInfoMapper.findStudentByIdCardNumber(idCardNum);
+    }
+
+    /**
+     * 根据学生的名字查询多个学生
+     * @param studentName
+     * @return
+     */
+    public List<StudentInfoPO> findStudentByStudentName(String studentName) {
+        return studentInfoMapper.findStudentByStudentName(studentName);
+    }
+
+    /**
+     * 根据班级的id查询学生
+     * @param aclassId
+     * @return
+     */
+    public List<StudentInfoPO> findStudentByClassId(Integer aclassId) {
+        return studentInfoMapper.findStudentByClassId(aclassId);
+    }
+
+
 }

@@ -90,11 +90,10 @@
 
 		<!--其他模块-->
 		<dependency>
-			<groupId>lcxy.springcloud</groupId>
-			<artifactId>micor-service-entity</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<groupId>demik.springcloud</groupId>
+			<artifactId>entity</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
 		<!-- PageHelper -->
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
@@ -115,8 +114,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<classifier>exec</classifier>
+					<fork>true</fork>
+					<mainClass>demik.springcloud.eureka7001.Eureka7001Application</mainClass>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

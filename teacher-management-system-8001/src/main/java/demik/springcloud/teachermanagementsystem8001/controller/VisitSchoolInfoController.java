@@ -3,11 +3,15 @@ package demik.springcloud.teachermanagementsystem8001.controller;
 import demik.springcloud.entity.commonbox.Result;
 import demik.springcloud.entity.commonbox.ResultCode;
 import demik.springcloud.entity.commonbox.ResultGenerator;
+import demik.springcloud.entity.domain.dto.SchoolNameDTO;
+import demik.springcloud.entity.domain.dto.TeacherNameDTO;
 import demik.springcloud.entity.domain.dto.VisitSchoolDTO;
 import demik.springcloud.entity.domain.po.ProjectInfoPO;
 import demik.springcloud.entity.domain.po.SchoolPO;
 import demik.springcloud.entity.domain.po.VisitSchoolPO;
 import demik.springcloud.entity.domain.vo.SchoolIdVO;
+import demik.springcloud.entity.domain.vo.VisitSchoolIdVO;
+import demik.springcloud.teachermanagementsystem8001.service.TeacherInfoService;
 import demik.springcloud.teachermanagementsystem8001.service.VisitSchoolInfoService;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
@@ -32,6 +36,8 @@ import java.util.List;
 public class VisitSchoolInfoController {
     @Autowired
     private VisitSchoolInfoService visitSchoolInfoService;
+    @Autowired
+    private TeacherInfoService teacherInfoService;
     /**
      * 查询所有的学校信息
      * @return
@@ -59,6 +65,57 @@ public class VisitSchoolInfoController {
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
     /**
+     * 根据id查询访学信息
+     * @return
+     */
+    @ApiOperation(value = "根据id查询访学信息", httpMethod = "POST")
+    @PostMapping("/findVisitSchoolInfoById")
+    public Result findVisitSchoolInfoById(@RequestBody VisitSchoolIdVO visitSchoolIdVO){
+        VisitSchoolPO vos = visitSchoolInfoService.findVisitSchoolInfoById(visitSchoolIdVO.getId());
+        if(vos!=null){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据教师姓名查询访学信息
+     * @return
+     */
+    @ApiOperation(value = "根据教师姓名查询访学信息", httpMethod = "POST")
+    @PostMapping("/findVisitSchoolInfoByTeacherName")
+    public Result findVisitSchoolInfoByTeacherName(@RequestBody TeacherNameDTO teacherNameDTO){
+        List<VisitSchoolPO> vos = visitSchoolInfoService.findVisitSchoolInfoByTeacherName(teacherNameDTO.getTeacherName());
+        if(vos!=null&&vos.size()>0){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据学校名查询访学信息
+     * @return
+     */
+    @ApiOperation(value = "根据学校名查询访学信息", httpMethod = "POST")
+    @PostMapping("/findVisitSchoolInfoBySchoolName")
+    public Result findVisitSchoolInfoBySchoolName(@RequestBody SchoolNameDTO schoolNameDTO){
+        List<VisitSchoolPO> vos = visitSchoolInfoService.findVisitSchoolInfoBySchoolName(schoolNameDTO.getSchoolName());
+        if(vos!=null&&vos.size()>0){
+            return ResultGenerator.genSuccessResult(vos);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
+    /**
+     * 根据id删除访学信息
+     * @return
+     */
+    @ApiOperation(value = "根据id删除访学信息", httpMethod = "POST")
+    @PostMapping("/deleteVisitSchoolInfoById")
+    public Result deleteVisitSchoolInfoById(@RequestBody VisitSchoolIdVO visitSchoolIdVO){
+        if(visitSchoolInfoService.deleteVisitSchoolInfoById(visitSchoolIdVO.getId())){
+            return ResultGenerator.genSuccessResult();
+        }
+        return ResultGenerator.genSuccessResult("删除访学信息失败");
+    }
+    /**
      * 根据id查询学校
      * @return
      */
@@ -78,14 +135,20 @@ public class VisitSchoolInfoController {
     @ApiOperation(value = "添加一条教师访学信息", httpMethod = "POST")
     @PostMapping("/addVisitSchoolInfo")
     public Result addVisitSchoolInfo(@RequestBody VisitSchoolDTO visitSchoolDTO){
+        if(teacherInfoService.findTeacherInfoById(visitSchoolDTO.getTeacherId())==null){
+            return ResultGenerator.genFailResult("教师不存在");
+        }
         if(visitSchoolDTO.getType()==null){
             ResultGenerator.genSuccessResult(ResultCode.HTTP_MESSAGE_NOT_READABLE);
         }else if(visitSchoolDTO.getType()==1){
             SchoolPO schoolPO = visitSchoolInfoService.findAllSchoolInfoById(visitSchoolDTO.getSchoolId());
             if(null==schoolPO){
-               return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+               return ResultGenerator.genFailResult("学校不存在");
             }
         }else if(visitSchoolDTO.getType()==2){
+            if(visitSchoolDTO.getSchoolName()==null||visitSchoolDTO.getSchoolName().trim().equals("")){
+                return ResultGenerator.genFailResult("学校名字不能为空");
+            }
             List<SchoolPO> schoolPOS = visitSchoolInfoService.findAllSchoolInfo();
             Integer len = schoolPOS.size();
             schoolPOS.forEach(x->{
@@ -106,6 +169,8 @@ public class VisitSchoolInfoController {
             }else{
                 return ResultGenerator.genFailResult("想要添加的学校已经存在");
             }
+        }else {
+            return ResultGenerator.genSuccessResult("Type传入数据错误");
         }
         if(!visitSchoolInfoService.addVisitSchoolInfo(visitSchoolDTO)){
             return ResultGenerator.genFailResult("添加一条教师访学信息失败");

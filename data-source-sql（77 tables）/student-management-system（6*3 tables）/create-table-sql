@@ -101,3 +101,17 @@ CREATE TABLE student_info
   UNIQUE (student_id)
 )
   COMMENT '学生信息表';
+-- auto-generated definition
+CREATE TABLE urls_permissions
+(
+  id              INT AUTO_INCREMENT
+  COMMENT 'id'
+    PRIMARY KEY,
+  url             VARCHAR(50) NOT NULL
+  COMMENT '接口的url',
+  permission_name VARCHAR(20) NOT NULL
+  COMMENT '权限',
+  CONSTRAINT urls_permissions_id_uindex
+  UNIQUE (id)
+)
+  COMMENT '接口对应权限表';

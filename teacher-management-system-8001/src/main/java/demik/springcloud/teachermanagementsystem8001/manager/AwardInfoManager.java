@@ -100,4 +100,31 @@ public class AwardInfoManager {
     public AwardLevelVO getAwardLevelById(Integer awardLevelId) {
         return awardInfoMapper.getAwardLevelById(awardLevelId);
     }
+
+    /**
+     * 根据id查询教师获奖信息
+     * @param id
+     * @return
+     */
+    public AwardInfoVO findAwardInfoById(Integer id) {
+        return awardInfoMapper.findAwardInfoById(id);
+    }
+
+    /**
+     * 根据教师名称查询教师获奖信息
+     * @param teacherName
+     * @return
+     */
+    public List<AwardInfoVO> findAwardInfoByTeacherName(String teacherName) {
+        return awardInfoMapper.findAwardInfoByTeacherName(teacherName);
+    }
+
+    /**
+     * 根据比赛名称查询教师获奖信息
+     * @param gameName
+     * @return
+     */
+    public List<AwardInfoVO> findAwardInfoByGameName(String gameName) {
+        return awardInfoMapper.findAwardInfoByGameName(gameName);
+    }
 }

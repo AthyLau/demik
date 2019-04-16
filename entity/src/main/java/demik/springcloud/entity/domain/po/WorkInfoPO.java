@@ -15,16 +15,16 @@ public class WorkInfoPO {
     /**
      * 作品名字
      */
-    private Integer workName;
+    private String workName;
     /**
      * 教师名字
      */
-    private Integer teacherName;
+    private String teacherName;
 
     public WorkInfoPO() {
     }
 
-    public WorkInfoPO(Integer id, Integer workName, Integer teacherName) {
+    public WorkInfoPO(Integer id, String workName, String teacherName) {
         this.id = id;
         this.workName = workName;
         this.teacherName = teacherName;
@@ -47,19 +47,19 @@ public class WorkInfoPO {
         this.id = id;
     }
 
-    public Integer getWorkName() {
+    public String getWorkName() {
         return workName;
     }
 
-    public void setWorkName(Integer workName) {
+    public void setWorkName(String workName) {
         this.workName = workName;
     }
 
-    public Integer getTeacherName() {
+    public String getTeacherName() {
         return teacherName;
     }
 
-    public void setTeacherName(Integer teacherName) {
+    public void setTeacherName(String teacherName) {
         this.teacherName = teacherName;
     }
 }

@@ -19,11 +19,11 @@ public class AwardInfoVO {
     /**
      * 获奖比赛
      */
-    private Integer awardGameName;
+    private String awardGameName;
     /**
      * 获奖比赛的等级
      */
-    private Integer awardLevelName;
+    private String awardLevelName;
     /**
      * 获奖时间
      */
@@ -32,7 +32,7 @@ public class AwardInfoVO {
     public AwardInfoVO() {
     }
 
-    public AwardInfoVO(Integer awardId, Integer teacherName, Integer awardGameName, Integer awardLevelName, String awardTime) {
+    public AwardInfoVO(Integer awardId, Integer teacherName, String awardGameName, String awardLevelName, String awardTime) {
         this.awardId = awardId;
         this.teacherName = teacherName;
         this.awardGameName = awardGameName;
@@ -67,19 +67,19 @@ public class AwardInfoVO {
         this.teacherName = teacherName;
     }
 
-    public Integer getAwardGameName() {
+    public String getAwardGameName() {
         return awardGameName;
     }
 
-    public void setAwardGameName(Integer awardGameName) {
+    public void setAwardGameName(String awardGameName) {
         this.awardGameName = awardGameName;
     }
 
-    public Integer getAwardLevelName() {
+    public String getAwardLevelName() {
         return awardLevelName;
     }
 
-    public void setAwardLevelName(Integer awardLevelName) {
+    public void setAwardLevelName(String awardLevelName) {
         this.awardLevelName = awardLevelName;
     }
 

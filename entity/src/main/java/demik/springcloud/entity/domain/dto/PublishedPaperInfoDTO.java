@@ -29,11 +29,11 @@ public class PublishedPaperInfoDTO {
     /**
      * 教师姓名
      */
-    private Integer teacherName;
+    private String teacherName;
     public PublishedPaperInfoDTO() {
     }
 
-    public PublishedPaperInfoDTO(Integer id, String paperName, String paperTypeName, String publishedTime, Integer teacherName) {
+    public PublishedPaperInfoDTO(Integer id, String paperName, String paperTypeName, String publishedTime, String teacherName) {
         this.id = id;
         this.paperName = paperName;
         this.paperTypeName = paperTypeName;
@@ -84,11 +84,11 @@ public class PublishedPaperInfoDTO {
         this.publishedTime = publishedTime;
     }
 
-    public Integer getTeacherName() {
+    public String getTeacherName() {
         return teacherName;
     }
 
-    public void setTeacherName(Integer teacherName) {
+    public void setTeacherName(String teacherName) {
         this.teacherName = teacherName;
     }
 }

@@ -1,0 +1,139 @@
+2019-04-15_02 02:00:00.978 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-04-15_02 02:00:08.917 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-15_02 02:00:42.674 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-15_02 02:01:00.981 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-15_02 02:01:08.917 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2019-04-15_02 02:01:09.436 INFO  [AsyncResolver-bootstrap-executor-0] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2019-04-15_02 02:01:41.894 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2019-04-15_02 02:01:42.676 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-15_02 02:02:00.200 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2019-04-15_02 02:02:00.985 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-15_02 02:02:08.166 INFO  [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2019-04-15_02 02:02:08.919 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-15_02 02:02:26.096 INFO  [AsyncResolver-bootstrap-executor-0] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2019-04-15_02 02:02:42.681 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-04-15_02 02:03:00.986 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-15_02 02:03:08.922 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-15_02 02:03:42.681 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2019-04-15_02 02:04:00.987 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2019-04-15_02 02:04:08.926 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-15_02 02:04:42.684 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-15_02 02:05:00.990 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-15_02 02:05:08.926 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2019-04-15_02 02:05:42.687 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-15_02 02:06:00.994 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-15_02 02:06:08.929 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-15_02 02:06:09.457 INFO  [AsyncResolver-bootstrap-executor-0] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2019-04-15_02 02:06:42.690 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2019-04-15_02 02:07:00.998 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2019-04-15_02 02:07:08.933 INFO  [Eureka-EvictionTimer] com.netflix.eureka.registry.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2019-04-15_02 02:07:26.112 INFO  [AsyncResolver-bootstrap-executor-0] com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2019-04-15_02 02:07:33.283 INFO  [Thread-29] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1dd6d4b7: startup date [Mon Apr 15 01:01:35 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@484970b0
+2019-04-15_02 02:07:33.305 INFO  [Thread-29] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-04-15_02 02:07:33.317 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-04-15_02 02:07:33.318 INFO  [Thread-29] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-04-15_02 02:07:33.321 INFO  [Thread-27] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fcb4004: startup date [Mon Apr 15 01:01:55 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3e96bacf
+2019-04-15_02 02:07:33.343 INFO  [Thread-27] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-04-15_02 02:07:33.357 INFO  [Thread-27] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-04-15_02 02:07:33.362 INFO  [Thread-26] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fcb4004: startup date [Mon Apr 15 01:02:03 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3e96bacf
+2019-04-15_02 02:07:33.383 INFO  [Thread-29] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-04-15_02 02:07:33.394 INFO  [Thread-27] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-04-15_02 02:07:33.408 INFO  [Thread-30] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75f5fd58: startup date [Mon Apr 15 01:57:15 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@52102734
+2019-04-15_02 02:07:33.425 INFO  [Thread-26] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application unknown with eureka with status DOWN
+2019-04-15_02 02:07:33.431 INFO  [Thread-30] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application single-sign-on with eureka with status DOWN
+2019-04-15_02 02:07:33.431 WARN  [Thread-30] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1555265253431, current=DOWN, previous=UP]
+2019-04-15_02 02:07:33.433 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_SINGLE-SIGN-ON/single-sign-on-80: registering service...
+2019-04-15_02 02:07:33.437 INFO  [Thread-30] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-04-15_02 02:07:33.440 INFO  [Thread-29] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-04-15_02 02:07:33.442 INFO  [Thread-30] com.netflix.discovery.DiscoveryClient - Unregistering ...
+2019-04-15_02 02:07:33.446 INFO  [Thread-26] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-04-15_02 02:07:33.449 INFO  [Thread-26] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-04-15_02 02:07:33.470 INFO  [http-nio-7001-exec-2] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance SINGLE-SIGN-ON/single-sign-on-80 (replication=false)
+2019-04-15_02 02:07:33.470 INFO  [http-nio-7001-exec-9] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance SINGLE-SIGN-ON/single-sign-on-80 with status DOWN (replication=false)
+2019-04-15_02 02:07:33.471 INFO  [Thread-27] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-04-15_02 02:07:33.473 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_SINGLE-SIGN-ON/single-sign-on-80 - registration status: 204
+2019-04-15_02 02:07:33.473 INFO  [Thread-30] com.netflix.discovery.DiscoveryClient - DiscoveryClient_SINGLE-SIGN-ON/single-sign-on-80 - deregister  status: 200
+2019-04-15_02 02:07:33.493 INFO  [Thread-29] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-04-15_02 02:07:33.508 INFO  [Thread-30] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-04-15_02 02:07:33.514 INFO  [Thread-29] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-15_02 02:07:33.516 INFO  [Thread-29] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-04-15_02 02:07:33.521 INFO  [Thread-29] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-15_02 02:07:33.521 INFO  [Thread-29] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-04-15_02 02:07:33.551 INFO  [Thread-27] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-04-15_02 02:07:33.563 INFO  [Thread-26] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-04-15_02 02:07:33.566 INFO  [Thread-23] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@18230356: startup date [Mon Apr 15 01:56:02 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1329eff
+2019-04-15_02 02:07:33.580 INFO  [Thread-30] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-04-15_02 02:07:33.581 INFO  [Thread-29] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15_02 02:07:33.590 INFO  [Thread-30] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-04-15_02 02:07:33.598 INFO  [Thread-23] org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry - Unregistering application student-management-system with eureka with status DOWN
+2019-04-15_02 02:07:33.599 WARN  [Thread-23] com.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1555265253599, current=DOWN, previous=UP]
+2019-04-15_02 02:07:33.608 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001: registering service...
+2019-04-15_02 02:07:33.611 INFO  [Thread-30] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-15_02 02:07:33.613 INFO  [Thread-23] com.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2019-04-15_02 02:07:33.613 INFO  [Thread-30] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-04-15_02 02:07:33.615 INFO  [Thread-30] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-15_02 02:07:33.615 INFO  [Thread-30] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-04-15_02 02:07:33.616 INFO  [Thread-23] com.netflix.discovery.DiscoveryClient - Unregistering ...
+2019-04-15_02 02:07:33.618 INFO  [Thread-26] com.netflix.eureka.DefaultEurekaServerContext - Shutting down ...
+2019-04-15_02 02:07:33.632 INFO  [http-nio-7001-exec-10] com.netflix.eureka.registry.AbstractInstanceRegistry - Registered instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 with status DOWN (replication=false)
+2019-04-15_02 02:07:33.633 INFO  [Thread-27] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-04-15_02 02:07:33.634 INFO  [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - registration status: 204
+2019-04-15_02 02:07:33.643 INFO  [http-nio-7001-exec-6] com.netflix.eureka.registry.AbstractInstanceRegistry - Cancelled instance STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 (replication=false)
+2019-04-15_02 02:07:33.647 INFO  [Thread-29] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-15_02 02:07:33.649 INFO  [Thread-23] com.netflix.discovery.DiscoveryClient - DiscoveryClient_STUDENT-MANAGEMENT-SYSTEM/student-management-system-9001 - deregister  status: 200
+2019-04-15_02 02:07:33.657 INFO  [Thread-27] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-15_02 02:07:33.671 INFO  [Thread-27] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-04-15_02 02:07:33.677 INFO  [Thread-27] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-15_02 02:07:33.678 INFO  [Thread-27] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-04-15_02 02:07:33.678 INFO  [Thread-26] com.netflix.eureka.DefaultEurekaServerContext - Shut down
+2019-04-15_02 02:07:33.682 INFO  [Thread-23] com.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2019-04-15_02 02:07:33.703 WARN  [Thread-30] com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2019-04-15_02 02:07:33.704 INFO  [Thread-30] com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-04-15_02 02:07:33.708 INFO  [Thread-26] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-15_02 02:07:33.718 INFO  [Thread-26] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-04-15_02 02:07:33.722 INFO  [Thread-30] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15_02 02:07:33.723 INFO  [Thread-26] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-15_02 02:07:33.723 INFO  [Thread-26] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-04-15_02 02:07:33.731 INFO  [Thread-23] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2019-04-15_02 02:07:33.739 INFO  [Thread-23] org.springframework.context.support.DefaultLifecycleProcessor - Stopping beans in phase 0
+2019-04-15_02 02:07:33.742 INFO  [Thread-27] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15_02 02:07:33.748 INFO  [Thread-23] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-15_02 02:07:33.750 INFO  [Thread-23] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Unregistering JMX-exposed beans
+2019-04-15_02 02:07:33.752 INFO  [Thread-23] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-04-15_02 02:07:33.753 INFO  [Thread-23] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-04-15_02 02:07:33.754 INFO  [Thread-30] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-15_02 02:07:33.775 INFO  [Thread-26] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15_02 02:07:33.796 INFO  [Thread-23] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15_02 02:07:33.835 INFO  [Thread-27] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-15_02 02:07:33.853 INFO  [Thread-26] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-15_02 02:07:33.856 INFO  [Thread-23] com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2019-04-15_02 02:07:33.864 INFO  [Thread-23] org.springframework.context.annotation.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@37c175c2: startup date [Mon Apr 15 01:56:04 CST 2019]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@18230356
+2019-04-15_02 02:07:33.874 WARN  [Thread-23] org.springframework.context.annotation.AnnotationConfigApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaAutoServiceRegistration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:283)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:253)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:177)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:140)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:393)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:399)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:347)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:991)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:958)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:76)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1006)
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929)

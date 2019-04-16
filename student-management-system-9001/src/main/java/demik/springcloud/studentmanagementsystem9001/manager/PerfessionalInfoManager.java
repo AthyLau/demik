@@ -61,4 +61,13 @@ public class PerfessionalInfoManager {
     public PerfessionalInfoVO findPerfessionalInfoById(Integer perfessionalId) {
         return perfessionalInfoMapper.findPerfessionalInfoById(perfessionalId);
     }
+
+    /**
+     * 根据名称查询专业
+     * @param perfessionalName
+     * @return
+     */
+    public PerfessionalInfoVO findPerfessionalInfoByName(String perfessionalName) {
+        return perfessionalInfoMapper.findPerfessionalInfoByName(perfessionalName);
+    }
 }

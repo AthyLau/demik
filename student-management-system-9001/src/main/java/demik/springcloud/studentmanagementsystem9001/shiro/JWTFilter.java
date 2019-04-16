@@ -1,10 +1,13 @@
 package demik.springcloud.studentmanagementsystem9001.shiro;
 
+import demik.springcloud.entity.domain.dto.UserDTO;
+import demik.springcloud.entity.domain.vo.UserNameVO;
+import demik.springcloud.entity.feignservice.FeignService;
 import demik.springcloud.studentmanagementsystem9001.service.URLPermissionService;
+import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,8 +24,11 @@ import java.io.IOException;
  * Date: 2018/9/6 下午4:28
  * @since JDK 1.8
  */
+@Configuration
 public class JWTFilter extends BasicHttpAuthenticationFilter {
-
+    public static String error = "";
+    @Autowired
+    private FeignService feignService;
     @Autowired
     private URLPermissionService urlPermissionService;
     /**
@@ -62,9 +68,33 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
         JWTToken token = new JWTToken(authorization);
         //判断token是不是空或者默认token
         if(authorization==null||authorization.equals("Basic Og==")){
-            return false;
+            error = "Token is null!";
+            throw new AuthenticationException("Token is null!");
         }
-        String name = JWTUtil.getUsername(authorization);
+        // 解密获得username，用于和数据库进行对比
+        String username = JWTUtil.getUsername(authorization);
+        UserDTO userBean = feignService.checkUserInfo(new UserNameVO(username)).getData();
+        if (userBean == null) {
+            error = "User didn't existed!";
+            throw new AuthenticationException("User didn't existed!");
+        }
+
+        //用户名和密码校验失败
+        if (!JWTUtil.verify(authorization, username, userBean.getUserPassword())) {
+            error = "Username or password error!";
+            throw new AuthenticationException("Username or password error!");
+        }
+        //校验权限
+        String uri = ((HttpServletRequest) request).getRequestURI();
+        String[] uris = uri.split("/");
+        System.out.println(uri);
+        String url = uris[uris.length-1];
+        String permission = urlPermissionService.getPermissionByURL("/"+url);
+        if(!(userBean.getPermission()!=null&&permission!=null&&userBean.getPermission().contains(permission))){
+            error = "Permission error！";
+            //权限不正确
+            throw new AuthenticationException("Permission error");
+        }
 //        urlPermissionService.getPermissionByURL(name);
 ////        // 提交给realm进行登入，如果错误他会抛出异常并被捕获
 //        getSubject(request, response).login(token);
@@ -98,6 +128,7 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
 //                    io.printStackTrace();
 //                }
                 response401(request, response);
+                return false;
             }
         }
         return true;
@@ -120,7 +151,10 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
             httpServletResponse.setStatus(HttpStatus.OK.value());
             return false;
         }
-        return super.preHandle(request, response);
+        if(isAccessAllowed(request,response,null)){
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -130,7 +164,16 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
     private void response401(ServletRequest req, ServletResponse resp) {
         try {
             HttpServletResponse httpServletResponse = (HttpServletResponse) resp;
-            httpServletResponse.sendRedirect("/401");
+            //这边如果写返回到/401的话是不对的因为没有设置访问401不通过自己的过滤器访问。
+            if(error.equals("Token is null!")){
+                httpServletResponse.sendRedirect("http://127.0.0.1:8080/error/error_token_null");
+            }else if(error.equals("User didn't existed!")){
+                httpServletResponse.sendRedirect("http://127.0.0.1:8080/error/error_user_not_existed");
+            }else if(error.equals("Username or password error!")){
+                httpServletResponse.sendRedirect("http://127.0.0.1:8080/error/error_user_or_password");
+            }else if(error.equals("Permission error！")){
+                httpServletResponse.sendRedirect("http://127.0.0.1:8080/error/error_permission");
+            }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

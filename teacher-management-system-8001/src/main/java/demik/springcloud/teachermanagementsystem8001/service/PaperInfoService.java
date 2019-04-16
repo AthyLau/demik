@@ -101,4 +101,31 @@ public class PaperInfoService {
     public PaperTypePO findPaperTypeById(Integer id) {
         return paperInfoManager.findPaperTypeById(id);
     }
+
+    /**
+     * 根据id查询教师发布论文信息
+     * @param id
+     * @return
+     */
+    public PublishedPaperInfoDTO findPublishedPaperInfoById(Integer id) {
+        return paperInfoManager.findPublishedPaperInfoById(id);
+    }
+
+    /**
+     * 根据教师名称查询教师发布论文信息
+     * @param teacherName
+     * @return
+     */
+    public List<PublishedPaperInfoDTO> findPublishedPaperInfoByTeacherName(String teacherName) {
+        return paperInfoManager.findPublishedPaperInfoByTeacherName(teacherName);
+    }
+
+    /**
+     * 根据论文名称查询教师发布论文信息
+     * @param paperName
+     * @return
+     */
+    public List<PublishedPaperInfoDTO> findPublishedPaperInfoByPaperName(String paperName) {
+        return paperInfoManager.findPublishedPaperInfoByPaperName(paperName);
+    }
 }

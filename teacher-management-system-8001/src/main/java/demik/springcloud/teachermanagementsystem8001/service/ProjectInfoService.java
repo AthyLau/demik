@@ -62,6 +62,9 @@ public class ProjectInfoService {
      * @return
      */
     public boolean addProjectInfo(ProjectInfoPO po) {
+        if(projectInfoManager.findProjectByName(po.getProjectName())!=null){
+            return false;
+        }
         return projectInfoManager.addProjectInfo(po);
     }
 
@@ -75,5 +78,23 @@ public class ProjectInfoService {
             return pos.get(0).getProjectId();
         }
         return null;
+    }
+
+    /**
+     * 根据教师名称查询教师项目信息
+     * @param teacherName
+     * @return
+     */
+    public List<TeacherProjectPO> findTeacherProjectinfoByTeacherName(String teacherName) {
+        return projectInfoManager.findTeacherProjectinfoByTeacherName(teacherName);
+    }
+
+    /**
+     * 根据项目名称查询教师项目信息
+     * @param projectName
+     * @return
+     */
+    public List<TeacherProjectPO> findTeacherProjectinfoByProjectName(String projectName) {
+        return projectInfoManager.findTeacherProjectinfoByProjectName(projectName);
     }
 }

@@ -72,4 +72,22 @@ public class OtherInfoManager {
     public BookPO findBookById(Integer id) {
         return otherInfoMapper.findBookById(id);
     }
+
+    /**
+     * 根据名字查找教材名字
+     * @param name
+     * @return
+     */
+    public BookPO findBookByName(String name) {
+        return otherInfoMapper.findBookByName(name);
+    }
+
+    /**
+     * 添加教材
+     * @param bookPO
+     * @return
+     */
+    public Boolean addBook(BookPO bookPO) {
+        return otherInfoMapper.addBook(bookPO);
+    }
 }

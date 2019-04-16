@@ -10,7 +10,7 @@ package demik.springcloud.entity.domain.dto;
 public class TeacherWorkDTO {
     //如果前端要传入类型为1的话就是选择的已经存在的work如果是2的话就是手动输入work
     /**
-     * 作品id（可以是null）
+     * 作品id（可以是null）work_id   _i = I
      */
     private Integer workId;
     /**

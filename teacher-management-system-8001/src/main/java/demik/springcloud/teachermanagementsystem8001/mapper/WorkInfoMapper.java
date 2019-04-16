@@ -3,9 +3,7 @@ package demik.springcloud.teachermanagementsystem8001.mapper;
 import demik.springcloud.entity.domain.dto.TeacherWorkDTO;
 import demik.springcloud.entity.domain.po.WorkInfoPO;
 import demik.springcloud.entity.domain.po.WorkPO;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -64,6 +62,39 @@ public interface WorkInfoMapper {
      * @param workPO
      * @return
      */
+    @Options(useGeneratedKeys=true, keyProperty="workId", keyColumn="work_id")
     @Insert("insert into work_info(work_name) values(#{workName})")
     boolean addWork(WorkPO workPO);
+
+    /**
+     * 根据id查询教师作品信息
+     * @param id
+     * @return
+     */
+    @Select("SELECT tw.id,w.work_name,t.teacher_name from teacher_work as tw,work_info as w,teacher_info as t where tw.work_id = w.work_id and tw.teacher_id = t.teacher_id and tw.id = #{id};")
+    WorkInfoPO findTeacherWorkInfoById(Integer id);
+
+    /**
+     * 根据id删除教师作品信息
+     * @param id
+     * @return
+     */
+    @Delete("delete from teacher_work where id = #{id}")
+    boolean deleteTeacherWorkInfoById(Integer id);
+
+    /**
+     * 根据教师名字查询教师作品信息
+     * @param teacherName
+     * @return
+     */
+    @Select("SELECT tw.id,w.work_name,t.teacher_name from teacher_work as tw,work_info as w,teacher_info as t where tw.work_id = w.work_id and tw.teacher_id = t.teacher_id and t.teacher_name = #{teacherName};")
+    List<WorkInfoPO> findTeacherWorkInfoByTeacherName(String teacherName);
+
+    /**
+     * 根据作品名字查询教师作品信息
+     * @param workName
+     * @return
+     */
+    @Select("SELECT tw.id,w.work_name,t.teacher_name from teacher_work as tw,work_info as w,teacher_info as t where tw.work_id = w.work_id and tw.teacher_id = t.teacher_id and w.work_name = #{workName};")
+    List<WorkInfoPO> findTeacherWorkInfoByWorkName(String workName);
 }

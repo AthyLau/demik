@@ -66,4 +66,20 @@ public interface ProjectInfoMapper {
      */
     @Select("select project_id,project_name,project_value from project_info where project_name = #{name}")
     List<ProjectInfoPO> findProjectByName(String name);
+
+    /**
+     * 根据教师名称查询教师项目信息
+     * @param teacherName
+     * @return
+     */
+    @Select("select p.project_id,p.project_name,p.project_value,t.teacher_name from teacher_info as t,project_info as p,teacher_project as tp where tp.project_id = p.project_id and tp.teacher_id = t.teacher_id and t.teacher_name = #{teacherName}")
+    List<TeacherProjectPO> findTeacherProjectinfoByTeacherName(String teacherName);
+
+    /**
+     * 根据项目名称查询教师项目信息
+     * @param projectName
+     * @return
+     */
+    @Select("select p.project_id,p.project_name,p.project_value,t.teacher_name from teacher_info as t,project_info as p,teacher_project as tp where tp.project_id = p.project_id and tp.teacher_id = t.teacher_id and p.project_name = #{projectName}")
+    List<TeacherProjectPO> findTeacherProjectinfoByProjectName(String projectName);
 }

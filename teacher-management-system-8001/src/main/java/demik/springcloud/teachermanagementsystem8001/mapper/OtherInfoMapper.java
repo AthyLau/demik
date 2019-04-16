@@ -3,6 +3,7 @@ package demik.springcloud.teachermanagementsystem8001.mapper;
 import demik.springcloud.entity.domain.po.BookPO;
 import demik.springcloud.entity.domain.vo.DeptVO;
 import demik.springcloud.entity.domain.vo.EducationBackgroudVO;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -61,4 +62,20 @@ public interface OtherInfoMapper {
      */
     @Select("select book_id,book_name from book_info where book_id = #{id}")
     BookPO findBookById(Integer id);
+
+    /**
+     * 根据名字查找教材名字
+     * @param name
+     * @return
+     */
+    @Select("select book_id,book_name from book_info where book_name = #{name}")
+    BookPO findBookByName(String name);
+
+    /**
+     * 添加教材
+     * @param bookPO
+     * @return
+     */
+    @Insert("insert into book_info(book_name) values(#{bookName})")
+    Boolean addBook(BookPO bookPO);
 }

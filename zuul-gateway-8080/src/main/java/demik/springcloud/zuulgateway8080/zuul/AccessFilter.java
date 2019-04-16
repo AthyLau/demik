@@ -19,6 +19,7 @@ import demik.springcloud.entity.domain.vo.UserNameVO;
 import demik.springcloud.entity.feignservice.FeignService;
 import demik.springcloud.entity.util.ClientIp;
 import demik.springcloud.singlesignon80.service.AuthService;
+import demik.springcloud.singlesignon80.shiro.JWTUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,13 +74,16 @@ public class AccessFilter extends ZuulFilter {
         String requestType = request.getMethod();
         System.out.println(requestType);
         Boolean flag = true;
+        String errorUrl = "error_get";
         //todo 业务逻辑还得改
         //zuul外部的系统想访问zuul里边的接口肯定不让
         if(uri.contains("server_in")){
+            errorUrl = "error_url";
+            //请求路径问题
             flag = false;
         }
         //没带token而且不是想登陆的请求
-        if((token==null||token.equals("Basic Og=="))){
+        if((token==null||token.equals("Basic Og==")||token.trim().equals(""))){
             if(uri.equals("/demik/sso/user/temporary_token")){
                 //想调用获取临时token的接口
                 if(judgeIpAddr(request)){
@@ -87,19 +91,22 @@ public class AccessFilter extends ZuulFilter {
                     System.out.println("获取临时token,放行");
                 }else {
                     //ip地址不存在于数据库
+                    errorUrl = "error_ip_not_existed";
                     System.out.println("ip地址不存在于数据库");
                     flag = false;
                 }
             }else if(uri.contains("/error/")){
                 //没带token但是是想访问错误界面
                 System.out.println("没带token但是是想访问错误界面,放行");
-            }else {
+            }else{
+                errorUrl = "error_token_null";
                 //想调用应该带token的接口但是没带token
                 System.out.println("想调用应该带token的接口但是没带token");
                 flag = false;
             }
         }else {
             if(uri.equals("/demik/sso/user/temporary_token")){
+                errorUrl = "error_token_not_null";
                 //想调用获取临时token的接口但是带了token
                 System.out.println("想调用获取临时token的接口但是带了token");
                 flag = false;
@@ -107,15 +114,9 @@ public class AccessFilter extends ZuulFilter {
             //访问其他的接口不管他全部交给jwt
         }
         if(!flag){
-            String url = "http://127.0.0.1:8080/error/error_get";
-//            if(requestType.equals("POST")){
-//                url = "http://127.0.0.1:8080/error/error_post";
-//            }else {
-//                url = "http://127.0.0.1:8080/error/error_get";
-//            }
-            //替换请求的url到错误界面
-//            requestContext.put(FilterConstants.REQUEST_URI_KEY, url);
+            String url = "http://127.0.0.1:8080/error/"+errorUrl;
             try {
+                //跳转请求到不同的错误页面
                 response.sendRedirect(url);
             } catch (IOException e) {
                 e.printStackTrace();

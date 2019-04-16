@@ -6,6 +6,7 @@ import demik.springcloud.entity.commonbox.ResultCode;
 import demik.springcloud.entity.commonbox.ResultGenerator;
 import demik.springcloud.entity.domain.doo.GradeInfoDO;
 import demik.springcloud.entity.domain.dto.GradeInfoDTO;
+import demik.springcloud.entity.domain.dto.GradeNameDTO;
 import demik.springcloud.entity.domain.vo.GradeIdVO;
 import demik.springcloud.entity.domain.vo.GradeInfoVO;
 import demik.springcloud.studentmanagementsystem9001.service.GradeInfoService;
@@ -25,7 +26,7 @@ import java.util.*;
  * @since JDK 1.8
  */
 @RestController
-@RequestMapping("grade-info")
+@RequestMapping("/grade-info")
 @ApiModel(description = "年级管理模块")
 public class GradeInfoController {
     @Autowired
@@ -40,10 +41,13 @@ public class GradeInfoController {
     public Result addGrade(@RequestBody GradeInfoVO gradeInfoVO){
         GradeInfoDTO gradeInfoDTO = new GradeInfoDTO();
         BeanUtils.copyProperties(gradeInfoVO,gradeInfoDTO);
+        if(gradeInfoService.findGradeByGradeName(gradeInfoDTO.getGradeName())!=null){
+            return ResultGenerator.genFailResult("年级已经存在");
+        }
         if(gradeInfoService.addGrade(gradeInfoDTO)){
             return ResultGenerator.genSuccessResult();
         }
-        return ResultGenerator.genFailResult("添加班级失败");
+        return ResultGenerator.genFailResult("添加年级失败");
     }
 
     /**
@@ -122,5 +126,23 @@ public class GradeInfoController {
         return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
     }
 
-
+    /**
+     * 根据年级名称查询信息
+     * @param gradeNameDTO
+     * @return
+     */
+    @ApiOperation(value = "根据年级名称查询信息", httpMethod = "POST")
+    @PostMapping("/findGradeByGradeName")
+    public Result<GradeInfoVO> findGradeByGradeName(@RequestBody GradeNameDTO gradeNameDTO){
+        GradeInfoDTO gradeInfoDTO = gradeInfoService.findGradeByGradeName(gradeNameDTO.getGradeName());
+        if(gradeInfoDTO==null){
+            return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+        }
+        GradeInfoVO gradeInfoVO = new GradeInfoVO();
+        BeanUtils.copyProperties(gradeInfoDTO,gradeInfoVO);
+        if(gradeInfoVO!=null){
+            return ResultGenerator.genSuccessResult(gradeInfoVO);
+        }
+        return ResultGenerator.genSuccessResult(ResultCode.NONE_DATA);
+    }
 }

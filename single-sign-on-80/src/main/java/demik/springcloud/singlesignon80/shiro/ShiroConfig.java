@@ -68,17 +68,17 @@ public class ShiroConfig {
         // 自定义url规则
         Map<String, String> filterChainDefinitionMap = new HashMap<>(12);
         //放行swagger和druid资源
-        filterChainDefinitionMap.put("/api/swagger-ui.html","anon");
-        filterChainDefinitionMap.put("/api/swagger/**","anon");
-        filterChainDefinitionMap.put("/api/webjars/**", "anon");
-        filterChainDefinitionMap.put("/api/swagger-resources/**","anon");
-        filterChainDefinitionMap.put("/api/v2/**","anon");
-        filterChainDefinitionMap.put("/api/druid/**","anon");
+        filterChainDefinitionMap.put("/swagger-ui.html","anon");
+        filterChainDefinitionMap.put("/swagger/**","anon");
+        filterChainDefinitionMap.put("/webjars/**", "anon");
+        filterChainDefinitionMap.put("/swagger-resources/**","anon");
+        filterChainDefinitionMap.put("/v2/**","anon");
+        filterChainDefinitionMap.put("/druid/**","anon");
         // 访问401和404页面不通过我们的Filter
         filterChainDefinitionMap.put("/401", "anon");
         filterChainDefinitionMap.put("/404", "anon");
-        filterChainDefinitionMap.put("/api/401", "anon");
-        filterChainDefinitionMap.put("/api/404", "anon");
+        filterChainDefinitionMap.put("/401", "anon");
+        filterChainDefinitionMap.put("/404", "anon");
         //放行静态资源
         filterChainDefinitionMap.put("/static/**", "anon");
 

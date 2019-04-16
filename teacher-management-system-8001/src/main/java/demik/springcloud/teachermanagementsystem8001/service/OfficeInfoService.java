@@ -62,4 +62,13 @@ public class OfficeInfoService {
     public OfficeInfoVO findOfficeInfoById(Integer officeId) {
         return officeInfoManager.findOfficeInfoById(officeId);
     }
+
+    /**
+     * 根据名称查询教研室
+     * @param officeName
+     * @return
+     */
+    public OfficeInfoVO findOfficeInfoByOfficeName(String officeName) {
+        return officeInfoManager.findOfficeInfoByOfficeName(officeName);
+    }
 }

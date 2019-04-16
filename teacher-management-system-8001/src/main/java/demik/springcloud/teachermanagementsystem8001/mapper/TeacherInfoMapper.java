@@ -37,8 +37,8 @@ public interface TeacherInfoMapper {
      * @param teacherInfoDTO
      * @return
      */
-    @Insert("insert into teacher_info(teacher_name, teacher_id_card, teacher_number, teacher_phone, teacher_entrance_time, office_id, education_backgroud_id, school_id, dept_id, book_id) " +
-            "values(#{teacherName},#{teacherIdCard},#{teacherNumber},#{teacherPhone},#{teacherEntranceTime},#{officeId},#{educationBackgroudId},#{schoolId},#{deptId},#{bookId}) ")
+    @Insert("insert into teacher_info(teacher_name, teacher_id_card, teacher_number, teacher_phone, office_id, education_backgroud_id, school_id, dept_id, book_id) " +
+            "values(#{teacherName},#{teacherIdCard},#{teacherNumber},#{teacherPhone},#{officeId},#{educationBackgroudId},#{schoolId},#{deptId},#{bookId}) ")
     boolean addTeacherInfo(TeacherInfoDTO teacherInfoDTO);
 
     /**
@@ -54,6 +54,54 @@ public interface TeacherInfoMapper {
      * @param teacherId
      * @return
      */
-    @Select("select teacher_id from teacher_info where teacher_id = #{teacherId}")
-    TeacherIdVO findTeacherInfoById(Integer teacherId);
+    @Select("SELECT t.teacher_id,t.teacher_name,t.teacher_entrance_time,t.teacher_id_card," +
+            " t.teacher_number,t.teacher_phone,t.office_id,o.office_name,t.education_backgroud_id," +
+            " e.education_backgroud_name,t.school_id,s.school_name,t.dept_id,d.dept_name," +
+            " t.book_id,b.book_name from teacher_info as t,book_info as b," +
+            " dept_info as d,school_info as s,education_backgroud as e,office_info as o " +
+            " where t.office_id = o.office_id and t.education_backgroud_id = e.education_backgroud_id and " +
+            " t.school_id = s.school_id and t.dept_id = d.dept_id and t.book_id = b.book_id and t.teacher_id = #{teacherId};")
+    TeacherInfoPO findTeacherInfoById(Integer teacherId);
+
+    /**
+     * 根据教师的名字查询教师
+     * @param teacherName
+     * @return
+     */
+    @Select("SELECT t.teacher_id,t.teacher_name,t.teacher_entrance_time,t.teacher_id_card," +
+            " t.teacher_number,t.teacher_phone,t.office_id,o.office_name,t.education_backgroud_id," +
+            " e.education_backgroud_name,t.school_id,s.school_name,t.dept_id,d.dept_name," +
+            " t.book_id,b.book_name from teacher_info as t,book_info as b," +
+            " dept_info as d,school_info as s,education_backgroud as e,office_info as o " +
+            " where t.office_id = o.office_id and t.education_backgroud_id = e.education_backgroud_id and " +
+            " t.school_id = s.school_id and t.dept_id = d.dept_id and t.book_id = b.book_id and t.teacher_name = #{teacherName};")
+    List<TeacherInfoPO> findTeacherInfoByTeacherName(String teacherName);
+
+    /**
+     * 根据教师的身份证查询教师
+     * @param idCard
+     * @return
+     */
+    @Select("SELECT t.teacher_id,t.teacher_name,t.teacher_entrance_time,t.teacher_id_card," +
+            " t.teacher_number,t.teacher_phone,t.office_id,o.office_name,t.education_backgroud_id," +
+            " e.education_backgroud_name,t.school_id,s.school_name,t.dept_id,d.dept_name," +
+            " t.book_id,b.book_name from teacher_info as t,book_info as b," +
+            " dept_info as d,school_info as s,education_backgroud as e,office_info as o " +
+            " where t.office_id = o.office_id and t.education_backgroud_id = e.education_backgroud_id and " +
+            " t.school_id = s.school_id and t.dept_id = d.dept_id and t.book_id = b.book_id and t.teacher_id_card = #{idCard};")
+    TeacherInfoPO findTeacherInfoByTeacherIdCard(String idCard);
+
+    /**
+     * 根据教研室id查找教师
+     * @param officeId
+     * @return
+     */
+    @Select("SELECT t.teacher_id,t.teacher_name,t.teacher_entrance_time,t.teacher_id_card," +
+            " t.teacher_number,t.teacher_phone,t.office_id,o.office_name,t.education_backgroud_id," +
+            " e.education_backgroud_name,t.school_id,s.school_name,t.dept_id,d.dept_name," +
+            " t.book_id,b.book_name from teacher_info as t,book_info as b," +
+            " dept_info as d,school_info as s,education_backgroud as e,office_info as o " +
+            " where t.office_id = o.office_id and t.education_backgroud_id = e.education_backgroud_id and " +
+            " t.school_id = s.school_id and t.dept_id = d.dept_id and t.book_id = b.book_id and t.office_id = #{officeId};")
+    List<TeacherInfoPO> findTeacherInfoByOfficeId(Integer officeId);
 }
